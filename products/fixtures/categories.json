@@ -1,0 +1,65 @@
+[
+    {
+        "pk": 1,
+        "model": "products.category",
+        "fields": {
+            "name": "abstract_paintings",
+            "friendly_name": "Abstract Paintings",
+            "description": "Abstract Paintings focus on visual language of shape, form, color, and line to create compositions independent from visual references in the world."
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.category",
+        "fields": {
+            "name": "landscape_paintings",
+            "friendly_name": "Landscape Paintings",
+            "description": "Landscape Paintings depict the beauty of nature, from vast valleys to tranquil lakes, capturing the essence of the outdoors."
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.category",
+        "fields": {
+            "name": "portrait_paintings",
+            "friendly_name": "Portrait Paintings",
+            "description": "Portrait Paintings focus on depicting the appearance, personality, and even the mood of the person being portrayed."
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.category",
+        "fields": {
+            "name": "street_art",
+            "friendly_name": "Street Art",
+            "description": "Street Art is a vibrant and dynamic form of artistic expression that takes place in public spaces, often with a strong message or social commentary."
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.category",
+        "fields": {
+            "name": "pop_art",
+            "friendly_name": "Pop Art",
+            "description": "Pop Art is an art movement that challenges traditional fine art by incorporating imagery from popular and mass culture, such as advertising, comic books, and mundane cultural objects."
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.category",
+        "fields": {
+            "name": "modern_paintings",
+            "friendly_name": "Modern Paintings",
+            "description": "Modern Paintings break away from traditional styles, experimenting with new ways of seeing and with fresh ideas about the nature of materials and functions of art."
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.category",
+        "fields": {
+            "name": "new_arrivals",
+            "friendly_name": "New Arrivals",
+            "description": "New Arrivals feature the latest and most innovative works from emerging and established artists, showcasing contemporary trends and styles."
+        }
+    }
+]
