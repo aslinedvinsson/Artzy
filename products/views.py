@@ -30,6 +30,9 @@ def all_products(request):
                     F('artist'),
                     StrIndex(F('artist'), Value(' '), position='reverse') + 1
                 ))
+            if sortkey == 'category':
+                sortkey = 'category__name'
+
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':

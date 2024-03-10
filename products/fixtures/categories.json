@@ -4,7 +4,7 @@
         "model": "products.category",
         "fields": {
             "name": "abstract_paintings",
-            "friendly_name": "Abstract Paintings",
+            "friendly_name": "Abstract Art",
             "description": "Abstract Paintings focus on visual language of shape, form, color, and line to create compositions independent from visual references in the world."
         }
     },
@@ -49,7 +49,7 @@
         "model": "products.category",
         "fields": {
             "name": "modern_paintings",
-            "friendly_name": "Modern Paintings",
+            "friendly_name": "Modern Art",
             "description": "Modern Paintings break away from traditional styles, experimenting with new ways of seeing and with fresh ideas about the nature of materials and functions of art."
         }
     },
@@ -62,4 +62,5 @@
             "description": "New Arrivals feature the latest and most innovative works from emerging and established artists, showcasing contemporary trends and styles."
         }
     }
+
 ]
