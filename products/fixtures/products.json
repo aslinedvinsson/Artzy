@@ -5,12 +5,13 @@
         "fields": {
             "sku": "art000001",
             "name": "Artistic Expression 1",
-            "description": "This is a description for Artistic Expression 1, a beautiful piece of art.",
+            "description": "A mesmerizing artwork that captures the essence of abstract beauty.",
             "price": 100.0,
             "category": 1,
             "rating": 3.0,
             "image_url": "https://example.com/images/steve-johnson-VjZrXj5rO70-unsplash.jpg",
-            "image": "steve-johnson-VjZrXj5rO70-unsplash.jpg"
+            "image": "steve-johnson-VjZrXj5rO70-unsplash.jpg",
+            "artist": "Claude Monet"
         }
     },
     {
@@ -19,12 +20,13 @@
         "fields": {
             "sku": "art000002",
             "name": "Artistic Expression 2",
-            "description": "This is a description for Artistic Expression 2, a beautiful piece of art.",
+            "description": "An evocative piece that blends vibrant colors with emotional depth.",
             "price": 101.5,
             "category": 2,
             "rating": 3.2,
             "image_url": "https://example.com/images/steve-johnson-3Sf_G9m0gcQ-unsplash (1).jpg",
-            "image": "steve-johnson-3Sf_G9m0gcQ-unsplash (1).jpg"
+            "image": "steve-johnson-3Sf_G9m0gcQ-unsplash (1).jpg",
+            "artist": "Vincent van Gogh"
         }
     },
     {
@@ -33,12 +35,13 @@
         "fields": {
             "sku": "art000003",
             "name": "Artistic Expression 3",
-            "description": "This is a description for Artistic Expression 3, a beautiful piece of art.",
+            "description": "This artwork showcases the striking contrast between light and shadow.",
             "price": 103.0,
             "category": 3,
             "rating": 3.4,
             "image_url": "https://example.com/images/jene-stephaniuk--MCrF6hnojU-unsplash (1).jpg",
-            "image": "jene-stephaniuk--MCrF6hnojU-unsplash (1).jpg"
+            "image": "jene-stephaniuk--MCrF6hnojU-unsplash (1).jpg",
+            "artist": "Pablo Picasso"
         }
     },
     {
@@ -47,27 +50,28 @@
         "fields": {
             "sku": "art000004",
             "name": "Artistic Expression 4",
-            "description": "This is a description for Artistic Expression 4, a beautiful piece of art.",
+            "description": "A bold exploration of geometric forms and their interaction with color.",
             "price": 104.5,
             "category": 4,
             "rating": 3.6,
             "image_url": "https://example.com/images/mgg-vitchakorn-98Xi5vMGKck-unsplash (2).jpg",
-            "image": "mgg-vitchakorn-98Xi5vMGKck-unsplash (2).jpg"
+            "image": "mgg-vitchakorn-98Xi5vMGKck-unsplash (2).jpg",
+            "artist": "Wassily Kandinsky"
         }
     },
-
     {
         "pk": 5,
         "model": "products.product",
         "fields": {
             "sku": "art000005",
             "name": "Artistic Expression 5",
-            "description": "This is a description for Artistic Expression 5, a beautiful piece of art.",
+            "description": "This piece captures the serene beauty of nature in a unique abstract form.",
             "price": 106.0,
             "category": 5,
             "rating": 3.8,
             "image_url": "https://example.com/images/steve-johnson-3Sf_G9m0gcQ-unsplash.jpg",
-            "image": "steve-johnson-3Sf_G9m0gcQ-unsplash.jpg"
+            "image": "steve-johnson-3Sf_G9m0gcQ-unsplash.jpg",
+            "artist": "Georgia O'Keeffe"
         }
     },
     {
@@ -76,12 +80,13 @@
         "fields": {
             "sku": "art000006",
             "name": "Artistic Expression 6",
-            "description": "This is a description for Artistic Expression 6, a beautiful piece of art.",
+            "description": "An artistic representation of urban life, capturing its dynamic and vibrant essence.",
             "price": 107.5,
             "category": 6,
             "rating": 3.0,
             "image_url": "https://example.com/images/jene-stephaniuk--MCrF6hnojU-unsplash.jpg",
-            "image": "jene-stephaniuk--MCrF6hnojU-unsplash.jpg"
+            "image": "jene-stephaniuk--MCrF6hnojU-unsplash.jpg",
+            "artist": "Edward Hopper"
         }
     },
     {
@@ -90,12 +95,13 @@
         "fields": {
             "sku": "art000007",
             "name": "Artistic Expression 7",
-            "description": "This is a description for Artistic Expression 7, a beautiful piece of art.",
+            "description": "Inspired by the harmony of the cosmos, this artwork reflects the beauty of the stars.",
             "price": 109.0,
             "category": 7,
             "rating": 3.2,
             "image_url": "https://example.com/images/jene-stephaniuk-wsVOc34cQ_Q-unsplash.jpg",
-            "image": "jene-stephaniuk-wsVOc34cQ_Q-unsplash.jpg"
+            "image": "jene-stephaniuk-wsVOc34cQ_Q-unsplash.jpg",
+            "artist": "Michelangelo"
         }
     },
     {
@@ -104,12 +110,13 @@
         "fields": {
             "sku": "art000008",
             "name": "Artistic Expression 8",
-            "description": "This is a description for Artistic Expression 8, a beautiful piece of art.",
+            "description": "This piece weaves together the threads of ancient myths with a modern twist.",
             "price": 110.5,
             "category": 1,
             "rating": 3.4,
             "image_url": "https://example.com/images/codioful-formerly-gradienta-m_7p45JfXQo-unsplash.jpg",
-            "image": "codioful-formerly-gradienta-m_7p45JfXQo-unsplash.jpg"
+            "image": "codioful-formerly-gradienta-m_7p45JfXQo-unsplash.jpg",
+            "artist": "Leonardo da Vinci"
         }
     },
     {
@@ -118,12 +125,13 @@
         "fields": {
             "sku": "art000009",
             "name": "Artistic Expression 9",
-            "description": "This is a description for Artistic Expression 9, a beautiful piece of art.",
+            "description": "Evoking the delicate balance of life, this art piece touches on themes of growth and decay.",
             "price": 112.0,
             "category": 2,
             "rating": 3.6,
             "image_url": "https://example.com/images/jene-stephaniuk-esRJtEsvJhU-unsplash.jpg",
-            "image": "jene-stephaniuk-esRJtEsvJhU-unsplash.jpg"
+            "image": "jene-stephaniuk-esRJtEsvJhU-unsplash.jpg",
+            "artist": "Rembrandt"
         }
     },
     {
@@ -132,12 +140,13 @@
         "fields": {
             "sku": "art000010",
             "name": "Artistic Expression 10",
-            "description": "This is a description for Artistic Expression 10, a beautiful piece of art.",
+            "description": "A journey through the abstract, this artwork invites viewers into a dreamlike world.",
             "price": 113.5,
             "category": 3,
             "rating": 3.8,
             "image_url": "https://example.com/images/yucel-moran-a9YsSySonUc-unsplash.jpg",
-            "image": "yucel-moran-a9YsSySonUc-unsplash.jpg"
+            "image": "yucel-moran-a9YsSySonUc-unsplash.jpg",
+            "artist": "Salvador Dalí"
         }
     },
     {
@@ -146,12 +155,13 @@
         "fields": {
             "sku": "art000011",
             "name": "Artistic Expression 11",
-            "description": "This is a description for Artistic Expression 11, a beautiful piece of art.",
+            "description": "An expression of emotion through the dance of color and form, inviting contemplation.",
             "price": 115.0,
             "category": 4,
             "rating": 3.0,
             "image_url": "https://example.com/images/jon-tyson-FKkK1hnTe-Q-unsplash.jpg",
-            "image": "jon-tyson-FKkK1hnTe-Q-unsplash.jpg"
+            "image": "jon-tyson-FKkK1hnTe-Q-unsplash.jpg",
+            "artist": "Frida Kahlo"
         }
     },
     {
@@ -160,12 +170,13 @@
         "fields": {
             "sku": "art000012",
             "name": "Artistic Expression 12",
-            "description": "This is a description for Artistic Expression 12, a beautiful piece of art.",
+            "description": "Capturing the fleeting beauty of nature, this piece offers a window into the artist's soul.",
             "price": 116.5,
             "category": 5,
             "rating": 3.2,
             "image_url": "https://example.com/images/jon-tyson-WB9TRkyrlzk-unsplash.jpg",
-            "image": "jon-tyson-WB9TRkyrlzk-unsplash.jpg"
+            "image": "jon-tyson-WB9TRkyrlzk-unsplash.jpg",
+            "artist": "John Constable"
         }
     },
     {
@@ -174,12 +185,13 @@
         "fields": {
             "sku": "art000013",
             "name": "Artistic Expression 13",
-            "description": "This is a description for Artistic Expression 13, a beautiful piece of art.",
+            "description": "A dialogue between the abstract and the real, this piece challenges perceptions of reality.",
             "price": 118.0,
             "category": 6,
             "rating": 3.4,
             "image_url": "https://example.com/images/daniele-levis-pelusi-l0iFviUyJg8-unsplash.jpg",
-            "image": "daniele-levis-pelusi-l0iFviUyJg8-unsplash.jpg"
+            "image": "daniele-levis-pelusi-l0iFviUyJg8-unsplash.jpg",
+            "artist": "Marcel Duchamp"
         }
     },
     {
@@ -188,12 +200,13 @@
         "fields": {
             "sku": "art000014",
             "name": "Artistic Expression 14",
-            "description": "This is a description for Artistic Expression 14, a beautiful piece of art.",
+            "description": "Exploring the intersection of light and texture, this artwork radiates a soothing energy.",
             "price": 119.5,
             "category": 7,
             "rating": 3.6,
             "image_url": "https://example.com/images/julian-hochgesang-pVikeJwYOFA-unsplash.jpg",
-            "image": "julian-hochgesang-pVikeJwYOFA-unsplash.jpg"
+            "image": "julian-hochgesang-pVikeJwYOFA-unsplash.jpg",
+            "artist": "J.M.W. Turner"
         }
     },
     {
@@ -202,12 +215,13 @@
         "fields": {
             "sku": "art000015",
             "name": "Artistic Expression 15",
-            "description": "This is a description for Artistic Expression 15, a beautiful piece of art.",
+            "description": "This artwork embodies the chaotic beauty of urban landscapes, capturing their essence in every stroke.",
             "price": 121.0,
             "category": 1,
             "rating": 3.8,
             "image_url": "https://example.com/images/photo-boards-KZNTEn2r6tw-unsplash.jpg",
-            "image": "photo-boards-KZNTEn2r6tw-unsplash.jpg"
+            "image": "photo-boards-KZNTEn2r6tw-unsplash.jpg",
+            "artist": "Gustav Klimt"
         }
     },
     {
@@ -216,12 +230,13 @@
         "fields": {
             "sku": "art000016",
             "name": "Artistic Expression 16",
-            "description": "This is a description for Artistic Expression 16, a beautiful piece of art.",
+            "description": "Through a fusion of colors, this piece captures the vibrant spirit of the natural world.",
             "price": 122.5,
             "category": 2,
             "rating": 3.0,
             "image_url": "https://example.com/images/ricardo-gomez-angel-GsZLXA4JPcM-unsplash.jpg",
-            "image": "ricardo-gomez-angel-GsZLXA4JPcM-unsplash.jpg"
+            "image": "ricardo-gomez-angel-GsZLXA4JPcM-unsplash.jpg",
+            "artist": "Henri Rousseau"
         }
     },
     {
@@ -230,12 +245,13 @@
         "fields": {
             "sku": "art000017",
             "name": "Artistic Expression 17",
-            "description": "This is a description for Artistic Expression 17, a beautiful piece of art.",
+            "description": "A thought-provoking piece that plays with the concepts of identity and reflection.",
             "price": 124.0,
             "category": 3,
             "rating": 3.2,
             "image_url": "https://example.com/images/sean-sinclair-C_NJKfnTR5A-unsplash.jpg",
-            "image": "sean-sinclair-C_NJKfnTR5A-unsplash.jpg"
+            "image": "sean-sinclair-C_NJKfnTR5A-unsplash.jpg",
+            "artist": "René Magritte"
         }
     },
     {
@@ -244,12 +260,13 @@
         "fields": {
             "sku": "art000018",
             "name": "Artistic Expression 18",
-            "description": "This is a description for Artistic Expression 18, a beautiful piece of art.",
+            "description": "This artwork offers a serene exploration of space and form, inviting introspection.",
             "price": 125.5,
             "category": 4,
             "rating": 3.4,
             "image_url": "https://example.com/images/efe-kurnaz-RnCPiXixooY-unsplash.jpg",
-            "image": "efe-kurnaz-RnCPiXixooY-unsplash.jpg"
+            "image": "efe-kurnaz-RnCPiXixooY-unsplash.jpg",
+            "artist": "Mark Rothko"
         }
     },
     {
@@ -258,12 +275,13 @@
         "fields": {
             "sku": "art000019",
             "name": "Artistic Expression 19",
-            "description": "This is a description for Artistic Expression 19, a beautiful piece of art.",
+            "description": "Drawing inspiration from the rhythm of music, this piece visually represents sound in vibrant hues.",
             "price": 127.0,
             "category": 5,
             "rating": 3.6,
             "image_url": "https://example.com/images/steve-johnson-VjZrXj5rO70-unsplash.jpg",
-            "image": "steve-johnson-VjZrXj5rO70-unsplash.jpg"
+            "image": "steve-johnson-VjZrXj5rO70-unsplash.jpg",
+            "artist": "Kandinsky"
         }
     },
     {
@@ -272,12 +290,13 @@
         "fields": {
             "sku": "art000020",
             "name": "Artistic Expression 20",
-            "description": "This is a description for Artistic Expression 20, a beautiful piece of art.",
+            "description": "An exploration of the duality of human nature, this piece juxtaposes chaos and order.",
             "price": 128.5,
             "category": 6,
             "rating": 3.8,
             "image_url": "https://example.com/images/steve-johnson-3Sf_G9m0gcQ-unsplash (1).jpg",
-            "image": "steve-johnson-3Sf_G9m0gcQ-unsplash (1).jpg"
+            "image": "steve-johnson-3Sf_G9m0gcQ-unsplash (1).jpg",
+            "artist": "Francisco Goya"
         }
     }
 ]
