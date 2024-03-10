@@ -22,11 +22,11 @@
                 aria-haspopup="true" aria-expanded="false">
                 Art Categories
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Abstract &amp; Modern</a>
-                <a href="" class="dropdown-item">Landsacape &amp; Portrait</a>
-                <a href="" class="dropdown-item">Street Art &amp; Pop Art</a>
-                <a href="" class="dropdown-item">New Arrivals</a>
+            <div class="dropdown-menu border-0" aria-labelledby="art-category-link">
+                <a href="{% url 'products' %}?category=abstract_paintings, modern_paintings" class="dropdown-item">Abstract &amp; Modern</a>
+                <a href="{% url 'products' %}?category=landscape_paintings, portrait_paintings" class="dropdown-item">Landsacape &amp; Portrait</a>
+                <a href="{% url 'products' %}?category=street_art, pop_art" class="dropdown-item">Street Art &amp; Pop Art</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
             </div>
         </li>
 
