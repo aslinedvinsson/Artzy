@@ -46,6 +46,18 @@
                     <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
+                            {% with product.is_print as p %}
+                            {% if p %}
+                                <div class="col-12">
+                                    <p><strong>Print paper:</strong></p>
+                                    <select class="form-control rounded-0 w-50" name="print_paper" id='id_print_paper'>
+                                        <option value="japanese_washi">Japanese Washi</option>
+                                        <option value="cotton_rag" selected>Cotton Rag</option>
+                                        <option value="bristol_paper">Bristol Paper</option>
+                                        <option value="photo_paper">Photo Paper</option>
+                                    </select>
+                                </div>
+                            {% endif %}
                             <div class="col-12">
                                 <p class="mt-3"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
@@ -65,6 +77,7 @@
                                 <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to cart">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            {% endwith %}
                         </div>
                     </form>
                 </div>
