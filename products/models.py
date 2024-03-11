@@ -17,7 +17,7 @@ class Category(models.Model):
         return self.friendly_name
 
 
-# Minor adjusment of model by adding artist
+# Minor adjusment of model by adding artist and is_print
 class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)

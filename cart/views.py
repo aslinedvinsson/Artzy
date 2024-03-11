@@ -12,12 +12,24 @@ def add_to_cart(request, item_id):
 
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
+    print_type = None
+    if 'print_paper' in request.POST:
+        print_type = request.POST['print_paper']
     cart = request.session.get('cart', {})
 
-    if item_id in list(cart.keys()):
-        cart[item_id] += quantity
+    if print_type:
+        if item_id in list(cart.keys()):
+            if print_type in cart[item_id]['items_by_print'].keys():
+                cart[item_id]['items_by_print'][print_type] += quantity
+            else:
+                cart[item_id]['items_by_print'][print_type] = quantity
+        else:
+            cart[item_id] = {'items_by_print': {print_type: quantity}}
     else:
-        cart[item_id] = quantity
+        if item_id in list(cart.keys()):
+            cart[item_id] += quantity
+        else:
+            cart[item_id] = quantity
 
     request.session['cart'] = cart
     return redirect(redirect_url)
