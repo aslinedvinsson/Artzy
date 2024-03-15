@@ -31,7 +31,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = False
 
 ALLOWED_HOSTS = ['8000-aslinedvinsson-artzy-wmr4pmrjiwh.ws-eu108.gitpod.io',
-'8000-aslinedvinsson-artzy-wmr4pmrjiwh.ws-eu110.gitpod.io', '.herokuapp.com']
+'8000-aslinedvinsson-artzy-wmr4pmrjiwh.ws-eu110.gitpod.io',
+'8080-aslinedvinsson-artzy-wmr4pmrjiwh.ws-eu110.gitpod.io', ' .herokuapp.com']
 
 
 # Application definition
@@ -140,7 +141,7 @@ else:
         }
     }
 
-# testing
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
