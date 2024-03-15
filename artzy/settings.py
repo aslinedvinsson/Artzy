@@ -32,7 +32,7 @@ DEBUG = False
 # test
 ALLOWED_HOSTS = ['8000-aslinedvinsson-artzy-wmr4pmrjiwh.ws-eu108.gitpod.io',
 '8000-aslinedvinsson-artzy-wmr4pmrjiwh.ws-eu110.gitpod.io',
-'8080-aslinedvinsson-artzy-wmr4pmrjiwh.ws-eu110.gitpod.io', ' .herokuapp.com']
+'8080-aslinedvinsson-artzy-wmr4pmrjiwh.ws-eu110.gitpod.io', '.herokuapp.com']
 
 
 # Application definition
