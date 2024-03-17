@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
-#DEBUG=True
+
 
 ALLOWED_HOSTS = ['8000-aslinedvinsson-artzy-wmr4pmrjiwh.ws-eu108.gitpod.io',
 '8000-aslinedvinsson-artzy-wmr4pmrjiwh.ws-eu110.gitpod.io',
@@ -212,12 +212,12 @@ STRIPE_CURRENCY = 'usd'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
-DEFAULT_FROM_EMAIL = 'artzy@example.com'
+DEFAULT_FROM_EMAIL = 'info@artzycom'
 
 if 'DEVELOPMENT' in os.environ:
     print('DEVELOPMENT')
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = 'artzy@example.com'
+    DEFAULT_FROM_EMAIL = 'infoy@artzy.com'
 else:
     print('NO DEVELOPMENT')
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
