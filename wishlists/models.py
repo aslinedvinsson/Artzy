@@ -3,8 +3,7 @@ from django.contrib.auth.models import User
 from profiles.models import UserProfile
 from products.models import Product
 
-# Create your models here.
-
+# Custom models
 class Wishlist(models.Model):
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE,
     related_name='wishlist')

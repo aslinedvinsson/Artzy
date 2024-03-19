@@ -1,0 +1,46 @@
+<!-- Code inspired from the CodeInstitute Walkthrough 'I think, therefor I blog',
+and then modified -->
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-12 col-md-8 text-center">
+            {% if newsletter.newsletter_image %}
+            <img src="{{ newsletter.newsletter_image.url }}" class="newsletter_image"
+                alt="{{ newsletter.title }}" style="width: 100%;">
+            {% else %}
+            <!-- Fallback to static image 'about.webp' -->
+            <img src="{% static 'images/about.webp' %}" class="about_image"
+                alt="About Us" style="width: 100%;">
+            {% endif %}
+            <div class="text-start mt-3">
+                <!-- Add margin top for the text -->
+                <h2>{{ newsletter.title }}</h2>
+                <div class="text-muted">{{ newsletter.content | safe }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col text-end me-5">
+        <p class=""><em>Created on: {{ newsletter.created_on }}</em></p>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-12 col-md-6 my-5">
+        <h2>Sign up for our newsletter</h2>
+        <p>Some text about signing up to newsletter
+        </p>
+        <!-- Sign up newsletter form -->
+        <form method="post">
+            {{ signup_newsletter_form | crispy }}
+            {% csrf_token %}
+            <button class="btn btn-secondary" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}
