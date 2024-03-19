@@ -7,9 +7,6 @@ from profiles.models import UserProfile
 from products.models import Product
 from .models import Wishlist, WishlistItem
 
-
-# Create your views here.
-
 @login_required
 def user_wishlists(request):
     """ List all the wishlists associated with the currently logged-in user """
@@ -46,4 +43,22 @@ def remove_from_wishlist(request, item_id):
     wishlist_item = get_object_or_404(WishlistItem, pk=item_id)
     wishlist_item.delete()
     messages.success(request, 'Product removed from wishlist')
+    return redirect('wishlists:user_wishlists')
+
+@login_required
+def add_wish_to_cart(request, item_id):
+    product = get_object_or_404(Product, pk=item_id)
+    quantity = int(request.POST.get('quantity', 1))
+    cart = request.session.get('cart', {})
+
+    item_id_str = str(item_id)
+
+    if item_id_str in cart:
+        cart[item_id_str] += quantity
+        messages.success(request, f'Updated {product.name} quantity to {cart[item_id_str]}')
+    else:
+        cart[item_id_str] = quantity
+        messages.success(request, f'Added {product.name} to your cart')
+
+    request.session['cart'] = cart
     return redirect('wishlists:user_wishlists')
