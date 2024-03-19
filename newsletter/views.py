@@ -1,7 +1,8 @@
-from django.shortcuts import render
-from django.http import JsonResponse
+from django.shortcuts import render, redirect
+from django.contrib import messages
 import re
 from .models import Newsletter, Subscriber
+from .forms import SubscriberForm
 from django.core.mail import send_mail
 from django.conf import settings
 
@@ -12,32 +13,26 @@ def newsletter(request):
         request,
         "newsletter/newsletter.html", {
                         "newsletter": newsletter,
+                        "subscriber_form": SubscriberForm(),
                      },
     )
 
 def subscribe_to_newsletter(request):
     if request.method == 'POST':
-        email = request.POST.get("email", None)
-        name = request.POST.get("name", None)
-        if not Subscriber.objects.filter(email=email).exists():
-            subscriber = Subscriber(email=email, name=name)
-            subscriber.save()
-            # Send a confirmation mail
+        form = SubscriberForm(request.POST)
+        if form.is_valid():
+            subscriber = form.save()
             subject = 'Newsletter Subscription'
-            message = f'Hello {name}, thanks for subscribing to our newsletter.'
+            message = f'Hello {subscriber.name}, thanks for subscribing to our newsletter.'
             email_from = settings.EMAIL_HOST_USER
-            recipient_list = [email]
+            recipient_list = [subscriber.email]
             send_mail(subject, message, email_from, recipient_list)
-            return JsonResponse({'msg': 'Thanks for subscribing!'})
+            messages.success(request, 'Thanks for subscribing!')
+            return redirect('subscribe_to_newsletter')
         else:
-            return JsonResponse({'msg': 'Email already subscribed!'})
-    return render(request, 'index.html')
-
-def validate_email(request):
-    email = request.POST.get("email", None)
-    if not re.match(r"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$", email):
-        return JsonResponse({'msg': 'Invalid Email Address'})
-    elif SubscribedUsers.objects.filter(email=email).exists():
-        return JsonResponse({'msg': 'Email already exists'})
+            if 'email' in form.errors:
+                messages.error(request, 'Email already subscribed or invalid!')
     else:
-        return JsonResponse({'msg': ''})
+        form = SubscriberForm()
+
+    return render(request, 'newsletter/newsletter.html', {'subscriber_form': form})

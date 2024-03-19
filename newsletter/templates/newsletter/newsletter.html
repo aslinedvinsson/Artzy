@@ -9,8 +9,9 @@ and then modified -->
     <div class="row justify-content-center align-items-center">
         <div class="col-12 col-md-8 text-center">
             {% if newsletter.newsletter_image %}
-            <img src="{{ newsletter.newsletter_image.url }}" class="newsletter_image"
-                alt="{{ newsletter.title }}" style="width: 100%;">
+            <img src="{{ newsletter.newsletter_image.url }}"
+                class="newsletter_image" alt="{{ newsletter.title }}"
+                style="width: 100%;">
             {% else %}
             <!-- Fallback to static image 'about.webp' -->
             <img src="{% static 'images/about.webp' %}" class="about_image"
@@ -30,16 +31,26 @@ and then modified -->
     </div>
 </div>
 <div class="row justify-content-center">
+
     <div class="col-12 col-md-6 my-5">
         <h2>Sign up for our newsletter</h2>
         <p>Some text about signing up to newsletter
         </p>
         <!-- Sign up newsletter form -->
-        <form method="post">
-            {{ signup_newsletter_form | crispy }}
+        <form method="post" action="{% url 'subscribe_to_newsletter' %}">
+            {{ subscriber_form | crispy }}
             {% csrf_token %}
             <button class="btn btn-secondary" type="submit">Submit</button>
         </form>
+        {% if messages %}
+        <div class="alert alert-dismissible">
+            {% for message in messages %}
+            <div {% if message.tags %} class="alert {{ message.tags }}" {% endif %}>
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
     </div>
 </div>
 
