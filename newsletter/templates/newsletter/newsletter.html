@@ -37,7 +37,7 @@ and then modified -->
         <p>Some text about signing up to newsletter
         </p>
         <!-- Sign up newsletter form -->
-        <form method="post" action="{% url 'subscribe_to_newsletter' %}">
+        <form method="post" action="{% url 'newsletter:subscribe_to_newsletter' %}">
             {{ subscriber_form | crispy }}
             {% csrf_token %}
             <button class="btn btn-secondary" type="submit">Submit</button>

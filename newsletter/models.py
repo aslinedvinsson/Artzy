@@ -1,4 +1,5 @@
 from django.db import models
+import uuid
 
 # custom models
 class Newsletter(models.Model):
@@ -14,6 +15,7 @@ class Newsletter(models.Model):
 class Subscriber(models.Model):
     email = models.CharField(unique=True, max_length=50)
     name = models.CharField(max_length=50)
+    identifier = models.UUIDField(default=uuid.uuid4, editable=False)
 
     def __str__(self):
         return self.email
