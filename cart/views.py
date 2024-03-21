@@ -25,20 +25,20 @@ def add_to_cart(request, item_id):
         if item_id in list(cart.keys()):
             if print_type in cart[item_id]['items_by_print'].keys():
                 cart[item_id]['items_by_print'][print_type] += quantity
-                messages.success(request, f'Updated print {print_type} {product.name} quantity to {cart[item_id]["items_by_print"][print_type]}')
+                messages.success(request, f'Updated print {print_type} {product.name} quantity to {cart[item_id]["items_by_print"][print_type]}', extra_tags='cart')
             else:
                 cart[item_id]['items_by_print'][print_type] = quantity
-                messages.success(request, f'Added print {print_type} {product.name} to your cart')
+                messages.success(request, f'Added print {print_type} {product.name} to your cart', extra_tags='cart')
         else:
             cart[item_id] = {'items_by_print': {print_type: quantity}}
-            messages.success(request, f'Added print {print_type} {product.name} to your cart')
+            messages.success(request, f'Added print {print_type} {product.name} to your cart', extra_tags='cart')
     else:
         if item_id in list(cart.keys()):
             cart[item_id] += quantity
-            messages.success(request, f'Updated {product.name} quantity to {cart[item_id]}')
+            messages.success(request, f'Updated {product.name} quantity to {cart[item_id]}', extra_tags='cart')
         else:
             cart[item_id] = quantity
-            messages.success(request, f'Added {product.name} to your cart')
+            messages.success(request, f'Added {product.name} to your cart', extra_tags='cart')
 
     request.session['cart'] = cart
     return redirect(redirect_url)
@@ -57,7 +57,7 @@ def adjust_cart(request, item_id):
     if print_type:
         if quantity > 0:
             cart[item_id]['items_by_print'][print_type] = quantity
-            messages.success(request, f'Updated print {print_type} {product.name} quantity to {cart[item_id]["items_by_print"][print_type]}')
+            messages.success(request, f'Updated print {print_type} {product.name} quantity to {cart[item_id]["items_by_print"][print_type]}', extra_tags='cart')
         else:
             del cart[item_id]['items_by_print'][print_type]
             if not cart[item_id]['items_by_print']:
@@ -65,10 +65,10 @@ def adjust_cart(request, item_id):
     else:
         if quantity > 0:
             cart[item_id] = quantity
-            messages.success(request, f'Updated {product.name} quantity to {cart[item_id]}')
+            messages.success(request, f'Updated {product.name} quantity to {cart[item_id]}', extra_tags='cart')
         else:
             cart.pop(item_id)
-            messages.success(request, f'Removed print {print_type} {product.name} from your cart')
+            messages.success(request, f'Removed print {print_type} {product.name} from your cart', extra_tags='cart')
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
@@ -88,10 +88,10 @@ def remove_from_cart(request, item_id):
             del cart[item_id]['items_by_print'][print_type]
             if not cart[item_id]['items_by_print']:
                 cart.pop(item_id)
-                messages.success(request, f'Removed print {print_type} {product.name} from your cart')
+                messages.success(request, f'Removed print {print_type} {product.name} from your cart', extra_tags='cart')
         else:
             cart.pop(item_id)
-            messages.success(request, f'Removed {product.name} from your cart')
+            messages.success(request, f'Removed {product.name} from your cart', extra_tags='cart')
 
         request.session['cart'] = cart
         return HttpResponse(status=200)
