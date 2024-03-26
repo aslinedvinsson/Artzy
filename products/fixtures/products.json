@@ -4,7 +4,7 @@
         "model": "products.product",
         "fields": {
             "sku": "art000001",
-            "name": "Artistic Expression 1",
+            "name": "Whimsical Whorls",
             "description": "A mesmerizing artwork that captures the essence of abstract beauty.",
             "is_print": false,
             "price": 100.0,
@@ -12,7 +12,7 @@
             "rating": 3.0,
             "image_url": "https://example.com/images/steve-johnson-VjZrXj5rO70-unsplash.jpg",
             "image": "steve-johnson-VjZrXj5rO70-unsplash.jpg",
-            "artist": "Claude Monet"
+            "artist": "Fluffy D'Brushstroke"
         }
     },
     {
@@ -20,7 +20,7 @@
         "model": "products.product",
         "fields": {
             "sku": "art000002",
-            "name": "Artistic Expression 2",
+            "name": "Vibrant Vexations",
             "description": "An evocative piece that blends vibrant colors with emotional depth.",
             "is_print": false,
             "price": 101.5,
@@ -28,7 +28,7 @@
             "rating": 3.2,
             "image_url": "https://example.com/images/steve-johnson-3Sf_G9m0gcQ-unsplash (1).jpg",
             "image": "steve-johnson-3Sf_G9m0gcQ-unsplash (1).jpg",
-            "artist": "Vincent van Gogh"
+            "artist": "Van Glitch"
         }
     },
     {
@@ -36,7 +36,7 @@
         "model": "products.product",
         "fields": {
             "sku": "art000003",
-            "name": "Artistic Expression 3",
+            "name": "Shadows 'n Swirls",
             "description": "This artwork showcases the striking contrast between light and shadow.",
             "is_print": true,
             "price": 103.0,
@@ -44,7 +44,7 @@
             "rating": 3.4,
             "image_url": "https://example.com/images/jene-stephaniuk--MCrF6hnojU-unsplash (1).jpg",
             "image": "jene-stephaniuk--MCrF6hnojU-unsplash (1).jpg",
-            "artist": "Pablo Picasso"
+            "artist": "Picassy Shadowman"
         }
     },
     {
@@ -52,7 +52,7 @@
         "model": "products.product",
         "fields": {
             "sku": "art000004",
-            "name": "Artistic Expression 4",
+            "name": "Geometric Jamboree",
             "description": "A bold exploration of geometric forms and their interaction with color.",
             "is_print": false,
             "price": 104.5,
@@ -60,7 +60,7 @@
             "rating": 3.6,
             "image_url": "https://example.com/images/mgg-vitchakorn-98Xi5vMGKck-unsplash (2).jpg",
             "image": "mgg-vitchakorn-98Xi5vMGKck-unsplash (2).jpg",
-            "artist": "Wassily Kandinsky"
+            "artist": "Circle deSquaro"
         }
     },
     {
@@ -68,7 +68,7 @@
         "model": "products.product",
         "fields": {
             "sku": "art000005",
-            "name": "Artistic Expression 5",
+            "name": "Abstract Arbor",
             "description": "This piece captures the serene beauty of nature in a unique abstract form.",
             "is_print": true,
             "price": 106.0,
@@ -76,7 +76,7 @@
             "rating": 3.8,
             "image_url": "https://example.com/images/steve-johnson-3Sf_G9m0gcQ-unsplash.jpg",
             "image": "steve-johnson-3Sf_G9m0gcQ-unsplash.jpg",
-            "artist": "Georgia O'Keeffe"
+            "artist": "Georgia O'Leaf"
         }
     },
     {
@@ -84,7 +84,7 @@
         "model": "products.product",
         "fields": {
             "sku": "art000006",
-            "name": "Artistic Expression 6",
+            "name": "Urban Pulse",
             "description": "An artistic representation of urban life, capturing its dynamic and vibrant essence.",
             "is_print": false,
             "price": 107.5,
@@ -92,7 +92,7 @@
             "rating": 3.0,
             "image_url": "https://example.com/images/jene-stephaniuk--MCrF6hnojU-unsplash.jpg",
             "image": "jene-stephaniuk--MCrF6hnojU-unsplash.jpg",
-            "artist": "Edward Hopper"
+            "artist": "Ed Hoppin'"
         }
     },
     {
@@ -100,7 +100,7 @@
         "model": "products.product",
         "fields": {
             "sku": "art000007",
-            "name": "Artistic Expression 7",
+            "name": "Cosmic Chorus",
             "description": "Inspired by the harmony of the cosmos, this artwork reflects the beauty of the stars.",
             "is_print": true,
             "price": 109.0,
@@ -108,7 +108,7 @@
             "rating": 3.2,
             "image_url": "https://example.com/images/jene-stephaniuk-wsVOc34cQ_Q-unsplash.jpg",
             "image": "jene-stephaniuk-wsVOc34cQ_Q-unsplash.jpg",
-            "artist": "Michelangelo"
+            "artist": "Mike L'Angelo"
         }
     },
     {
@@ -116,7 +116,7 @@
         "model": "products.product",
         "fields": {
             "sku": "art000008",
-            "name": "Artistic Expression 8",
+            "name": "Mythic Mashup",
             "description": "This piece weaves together the threads of ancient myths with a modern twist.",
             "is_print": false,
             "price": 110.5,
@@ -124,7 +124,7 @@
             "rating": 3.4,
             "image_url": "https://example.com/images/codioful-formerly-gradienta-m_7p45JfXQo-unsplash.jpg",
             "image": "codioful-formerly-gradienta-m_7p45JfXQo-unsplash.jpg",
-            "artist": "Leonardo da Vinci"
+            "artist": "Leo DaVinki"
         }
     },
     {
@@ -132,7 +132,7 @@
         "model": "products.product",
         "fields": {
             "sku": "art000009",
-            "name": "Artistic Expression 9",
+            "name": "Life's Layers",
             "description": "Evoking the delicate balance of life, this art piece touches on themes of growth and decay.",
             "is_print": true,
             "price": 112.0,
@@ -140,15 +140,15 @@
             "rating": 3.6,
             "image_url": "https://example.com/images/jene-stephaniuk-esRJtEsvJhU-unsplash.jpg",
             "image": "jene-stephaniuk-esRJtEsvJhU-unsplash.jpg",
-            "artist": "Rembrandt"
+            "artist": "Remmy Doodle"
         }
     },
     {
         "pk": 10,
         "model": "products.product",
-        "fields": {
-            "sku": "art000010",
-            "name": "Artistic Expression 10",
+        "fields":{
+        "sku": "art000010",
+            "name": "Dreamscapes Unleashed",
             "description": "A journey through the abstract, this artwork invites viewers into a dreamlike world.",
             "is_print": false,
             "price": 113.5,
@@ -156,7 +156,7 @@
             "rating": 3.8,
             "image_url": "https://example.com/images/yucel-moran-a9YsSySonUc-unsplash.jpg",
             "image": "yucel-moran-a9YsSySonUc-unsplash.jpg",
-            "artist": "Salvador Dalí"
+            "artist": "Sally Dali"
         }
     },
     {
@@ -164,7 +164,7 @@
         "model": "products.product",
         "fields": {
             "sku": "art000011",
-            "name": "Artistic Expression 11",
+            "name": "Colorful Contemplations",
             "description": "An expression of emotion through the dance of color and form, inviting contemplation.",
             "is_print": true,
             "price": 115.0,
@@ -172,7 +172,7 @@
             "rating": 3.0,
             "image_url": "https://example.com/images/jon-tyson-FKkK1hnTe-Q-unsplash.jpg",
             "image": "jon-tyson-FKkK1hnTe-Q-unsplash.jpg",
-            "artist": "Frida Kahlo"
+            "artist": "Freda Kahoolawe"
         }
     },
     {
@@ -180,7 +180,7 @@
         "model": "products.product",
         "fields": {
             "sku": "art000012",
-            "name": "Artistic Expression 12",
+            "name": "Ephemeral Elegance",
             "description": "Capturing the fleeting beauty of nature, this piece offers a window into the artist's soul.",
             "is_print": false,
             "price": 116.5,
@@ -188,7 +188,7 @@
             "rating": 3.2,
             "image_url": "https://example.com/images/jon-tyson-WB9TRkyrlzk-unsplash.jpg",
             "image": "jon-tyson-WB9TRkyrlzk-unsplash.jpg",
-            "artist": "John Constable"
+            "artist": "John Constellation"
         }
     },
     {
@@ -196,7 +196,7 @@
         "model": "products.product",
         "fields": {
             "sku": "art000013",
-            "name": "Artistic Expression 13",
+            "name": "Reality's Ripple",
             "description": "A dialogue between the abstract and the real, this piece challenges perceptions of reality.",
             "is_print": true,
             "price": 118.0,
@@ -204,7 +204,7 @@
             "rating": 3.4,
             "image_url": "https://example.com/images/daniele-levis-pelusi-l0iFviUyJg8-unsplash.jpg",
             "image": "daniele-levis-pelusi-l0iFviUyJg8-unsplash.jpg",
-            "artist": "Marcel Duchamp"
+            "artist": "Marsell Doochomp"
         }
     },
     {
@@ -212,7 +212,7 @@
         "model": "products.product",
         "fields": {
             "sku": "art000014",
-            "name": "Artistic Expression 14",
+            "name": "Luminous Textures",
             "description": "Exploring the intersection of light and texture, this artwork radiates a soothing energy.",
             "is_print": true,
             "price": 119.5,
@@ -220,7 +220,7 @@
             "rating": 3.6,
             "image_url": "https://example.com/images/julian-hochgesang-pVikeJwYOFA-unsplash.jpg",
             "image": "julian-hochgesang-pVikeJwYOFA-unsplash.jpg",
-            "artist": "J.M.W. Turner"
+            "artist": "Julian Huesplash"
         }
     },
     {
@@ -228,7 +228,7 @@
         "model": "products.product",
         "fields": {
             "sku": "art000015",
-            "name": "Artistic Expression 15",
+            "name": "Urban Chaos Charm",
             "description": "This artwork embodies the chaotic beauty of urban landscapes, capturing their essence in every stroke.",
             "is_print": true,
             "price": 121.0,
@@ -236,7 +236,7 @@
             "rating": 3.8,
             "image_url": "https://example.com/images/photo-boards-KZNTEn2r6tw-unsplash.jpg",
             "image": "photo-boards-KZNTEn2r6tw-unsplash.jpg",
-            "artist": "Gustav Klimt"
+            "artist": "Gusty Klumt"
         }
     },
     {
@@ -244,7 +244,7 @@
         "model": "products.product",
         "fields": {
             "sku": "art000016",
-            "name": "Artistic Expression 16",
+            "name": "Nature's Neon",
             "description": "Through a fusion of colors, this piece captures the vibrant spirit of the natural world.",
             "is_print": false,
             "price": 122.5,
@@ -252,7 +252,7 @@
             "rating": 3.0,
             "image_url": "https://example.com/images/ricardo-gomez-angel-GsZLXA4JPcM-unsplash.jpg",
             "image": "ricardo-gomez-angel-GsZLXA4JPcM-unsplash.jpg",
-            "artist": "Henri Rousseau"
+            "artist": "Henry Rooster"
         }
     },
     {
@@ -260,7 +260,7 @@
         "model": "products.product",
         "fields": {
             "sku": "art000017",
-            "name": "Artistic Expression 17",
+            "name": "Reflections on the Self",
             "description": "A thought-provoking piece that plays with the concepts of identity and reflection.",
             "is_print": true,
             "price": 124.0,
@@ -268,7 +268,7 @@
             "rating": 3.2,
             "image_url": "https://example.com/images/sean-sinclair-C_NJKfnTR5A-unsplash.jpg",
             "image": "sean-sinclair-C_NJKfnTR5A-unsplash.jpg",
-            "artist": "René Magritte"
+            "artist": "Renee Mirror"
         }
     },
     {
@@ -276,7 +276,7 @@
         "model": "products.product",
         "fields": {
             "sku": "art000018",
-            "name": "Artistic Expression 18",
+            "name": "Serene Complexity",
             "description": "This artwork offers a serene exploration of space and form, inviting introspection.",
             "is_print": true,
             "price": 125.5,
@@ -284,7 +284,7 @@
             "rating": 3.4,
             "image_url": "https://example.com/images/efe-kurnaz-RnCPiXixooY-unsplash.jpg",
             "image": "efe-kurnaz-RnCPiXixooY-unsplash.jpg",
-            "artist": "Mark Rothko"
+            "artist": "Mark Rothless"
         }
     },
     {
@@ -292,7 +292,7 @@
         "model": "products.product",
         "fields": {
             "sku": "art000019",
-            "name": "Artistic Expression 19",
+            "name": "Rhythmic Hues",
             "description": "Drawing inspiration from the rhythm of music, this piece visually represents sound in vibrant hues.",
             "is_print": true,
             "price": 127.0,
@@ -300,7 +300,7 @@
             "rating": 3.6,
             "image_url": "https://example.com/images/steve-johnson-VjZrXj5rO70-unsplash.jpg",
             "image": "steve-johnson-VjZrXj5rO70-unsplash.jpg",
-            "artist": "Kandinsky"
+            "artist": "Cadenza Colorato"
         }
     },
     {
@@ -308,7 +308,7 @@
         "model": "products.product",
         "fields": {
             "sku": "art000020",
-            "name": "Artistic Expression 20",
+            "name": "Dichotomy of Doodles",
             "description": "An exploration of the duality of human nature, this piece juxtaposes chaos and order.",
             "is_print": false,
             "price": 128.5,
@@ -316,7 +316,7 @@
             "rating": 3.8,
             "image_url": "https://example.com/images/steve-johnson-3Sf_G9m0gcQ-unsplash (1).jpg",
             "image": "steve-johnson-3Sf_G9m0gcQ-unsplash (1).jpg",
-            "artist": "Francisco Goya"
+            "artist": "Francis Goghya"
         }
     }
 ]
