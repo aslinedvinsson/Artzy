@@ -13,11 +13,11 @@
             </a>
             <div class="dropdown-menu border-0"
                 aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
-                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
-                <a href="{% url 'products' %}?sort=artist&direction=asc" class="dropdown-item ">By Artist</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Art</a>
+                <a href="{% url 'products:products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products:products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
+                <a href="{% url 'products:products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
+                <a href="{% url 'products:products' %}?sort=artist&direction=asc" class="dropdown-item ">By Artist</a>
+                <a href="{% url 'products:products' %}" class="dropdown-item">All Art</a>
             </div>
         </li>
 
@@ -28,13 +28,13 @@
                 Art Categories
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="art-category-link">
-                <a href="{% url 'products' %}?category=abstract_paintings" class="dropdown-item">Abstract Art</a>
-                <a href="{% url 'products' %}?category=landscape_paintings" class="dropdown-item">Landscape Paintings</a>
-                <a href="{% url 'products' %}?category=street_art" class="dropdown-item">Street Art</a>
-                <a href="{% url 'products' %}?category=modern_paintings" class="dropdown-item">Modern Art</a>
-                <a href="{% url 'products' %}?category=portrait_paintings" class="dropdown-item">Portrait Paintings</a>
-                <a href="{% url 'products' %}?category=pop_art" class="dropdown-item">Pop Art</a>
-                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products:products' %}?category=abstract_paintings" class="dropdown-item">Abstract Art</a>
+                <a href="{% url 'products:products' %}?category=landscape_paintings" class="dropdown-item">Landscape Paintings</a>
+                <a href="{% url 'products:products' %}?category=street_art" class="dropdown-item">Street Art</a>
+                <a href="{% url 'products:products' %}?category=modern_paintings" class="dropdown-item">Modern Art</a>
+                <a href="{% url 'products:products' %}?category=portrait_paintings" class="dropdown-item">Portrait Paintings</a>
+                <a href="{% url 'products:products' %}?category=pop_art" class="dropdown-item">Pop Art</a>
+                <a href="{% url 'products:products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
             </div>
         </li>
 

@@ -28,6 +28,9 @@ def user_wishlists(request):
 @login_required
 def add_to_wishlist(request, item_id):
     product = get_object_or_404(Product, pk=item_id)
+    print_type = None
+    if 'print_paper' in request.POST:
+        print_type = request.POST['print_paper']
     user_profile = UserProfile.objects.get(user=request.user)
     wishlist, created = Wishlist.objects.get_or_create(user=user_profile)
     if WishlistItem.objects.filter(wishlist=wishlist, product=product).exists():
@@ -48,6 +51,9 @@ def remove_from_wishlist(request, item_id):
 @login_required
 def add_wish_to_cart(request, item_id):
     product = get_object_or_404(Product, pk=item_id)
+    print_type = None
+    if 'print_paper' in request.POST:
+        print_type = request.POST['print_paper']
     quantity = int(request.POST.get('quantity', 1))
     cart = request.session.get('cart', {})
 
