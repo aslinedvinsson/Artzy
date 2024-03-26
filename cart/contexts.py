@@ -3,6 +3,7 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
 
+# Code from Code Institute Boutique Ado Walksthrough
 def cart_contents(request):
     """
     Calculate and return the cart contents context.
@@ -31,7 +32,7 @@ def cart_contents(request):
                 'quantity': item_data,
                 'product': product,
             })
-            # Minor custom adjustment by adding print_type
+            # Minor custom adjustment to code by adding print_type
         else:
             product = get_object_or_404(Product, pk=item_id)
             for print_type, quantity in item_data['items_by_print'].items():

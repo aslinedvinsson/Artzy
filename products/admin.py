@@ -1,9 +1,11 @@
 from django.contrib import admin
 from .models import Product, Category
 
-# Register your models here.
-
+# Code from Code Institute Boutique Ado Walksthrough
 class ProductAdmin(admin.ModelAdmin):
+    """
+    Admin view for Product.
+    """
     list_display = (
         'sku',
         'name',
@@ -17,6 +19,9 @@ class ProductAdmin(admin.ModelAdmin):
     ordering = ('sku',)
 
 class CategoryAdmin(admin.ModelAdmin):
+    """
+    Admin view for Category.
+    """
     list_display = (
         'friendly_name',
         'name',

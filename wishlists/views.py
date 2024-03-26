@@ -27,6 +27,15 @@ def user_wishlists(request):
 
 @login_required
 def add_to_wishlist(request, item_id):
+    """
+    Adds a product to the user's wishlist.
+    Parameters:
+    - request (HttpRequest): The HTTP request object.
+    - item_id (int): The ID of the product to add to the wishlist.
+    If the product is already in the wishlist, a message is displayed to the
+    user. Otherwise, the product is added, and a success message is displayed.
+    Redirects to the 'product_detail' view with the product_id as an argument.
+    """
     product = get_object_or_404(Product, pk=item_id)
     print_type = None
     if 'print_paper' in request.POST:
@@ -43,6 +52,14 @@ def add_to_wishlist(request, item_id):
 
 @login_required
 def remove_from_wishlist(request, item_id):
+    """
+    Removes a product from the user's wishlist.
+    Parameters:
+    - request (HttpRequest): The HTTP request object.
+    - item_id (int): The ID of the wishlist item to remove.
+    After removing the product, a success message is displayed.
+    Redirects to the 'user_wishlists' view.
+    """
     wishlist_item = get_object_or_404(WishlistItem, pk=item_id)
     wishlist_item.delete()
     messages.success(request, 'Product removed from wishlist')
@@ -50,6 +67,16 @@ def remove_from_wishlist(request, item_id):
 
 @login_required
 def add_wish_to_cart(request, item_id):
+    """
+    Adds a product from the wishlist to the shopping cart.
+    Parameters:
+    - request (HttpRequest): The HTTP request object.
+    - item_id (int): The ID of the product to add to the cart.
+    The quantity of the product to add can be specified in the POST request.
+    If the product is already in the cart, its quantity is updated.
+    Otherwise, the product is added to the cart with the specified quantity.
+    Redirects to the 'user_wishlists' view.
+    """
     product = get_object_or_404(Product, pk=item_id)
     print_type = None
     if 'print_paper' in request.POST:

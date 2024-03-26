@@ -1,8 +1,14 @@
 from django import forms
 from .models import UserProfile
 
-
+# Code from Code Institute Boutique Ado Walksthrough
 class UserProfileForm(forms.ModelForm):
+    """
+    A form for editing user profile information. The form allows users to
+    update their profile details, excluding the user field. It customizes field
+    widgets to improve the user experience by adding placeholders, classes, and
+    removing labels.
+    """
     class Meta:
         model = UserProfile
         exclude = ('user',)

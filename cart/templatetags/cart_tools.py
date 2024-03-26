@@ -1,6 +1,6 @@
 from django import template
 
-
+# Code from Code Institute Boutique Ado Walksthrough
 register = template.Library()
 
 @register.filter(name='calc_subtotal')

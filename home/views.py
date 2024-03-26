@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+# Code from Code Institute Boutique Ado Walksthrough
 
 def index(request):
     """ A view to return the index page """

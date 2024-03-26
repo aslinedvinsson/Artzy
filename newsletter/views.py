@@ -16,6 +16,16 @@ from .forms import SubscriberForm
 
 
 def newsletter(request):
+    """
+    Renders the latest newsletter using the 'newsletter/newsletter.html' template.
+    Retrieves the most recent Newsletter instance from the database,
+    ordered by creation date in descending order, and renders it along with a
+    new SubscriberForm instance for subscription.
+    Args:
+        request: HttpRequest object.
+    Returns:
+        HttpResponse object with rendered newsletter page.
+    """
     newsletter = Newsletter.objects.all().order_by('-created_on').first()
     return render(
         request,
@@ -26,6 +36,18 @@ def newsletter(request):
     )
 
 def subscribe_to_newsletter(request):
+    """
+    Handles subscription to the newsletter via POST request; renders
+    subscription form otherwise. If the request method is POST and the
+    submitted form is valid, saves the new subscriber, sends a confirmation
+    email, and redirects to the 'home' page. If the form is invalid,
+    it displays an error message.
+    Args:
+        request: HttpRequest object.
+    Returns:
+        If POST and form is valid, redirects to 'home'. Otherwise, renders
+        the subscription form with an errors.
+    """
     if request.method == 'POST':
         form = SubscriberForm(request.POST)
         if form.is_valid():
@@ -43,6 +65,14 @@ def subscribe_to_newsletter(request):
     return render(request, 'newsletter/newsletter.html', {'subscriber_form': form})
 
 def send_confirmation_email(subscriber, request):
+    """
+    Sends a confirmation email to a new subscriber. Constructs an unsubscribe
+    URL, prepares both HTML and plain text versions of the confirmation message,
+    and sends an email to the subscriber's email address.
+    Args:
+        subscriber: Subscriber instance to whom the confirmation email is sent.
+        request: HttpRequest object, used to build absolute URIs.
+    """
     unsubscribe_url = request.build_absolute_uri(reverse('newsletter:unsubscribe', args=[subscriber.id]))
     context = {
         'unsubscribe_url': unsubscribe_url,
@@ -60,6 +90,17 @@ def send_confirmation_email(subscriber, request):
     )
 
 def unsubscribe(request, subscriber_id):
+    """
+    Unsubscribes a subscriber from the newsletter and returns a confirmation
+    message. Attempts to find a Subscriber instance by ID and delete it.
+    If the subscriber does not exist, returns a 404 response.
+    Args:
+        request: HttpRequest object.
+        subscriber_id: ID of the Subscriber instance to be deleted.
+    Returns:
+        HttpResponse object with a success message if unsubscribed, or a 404
+        response if subscriber does not exist.
+    """
     try:
         subscriber = Subscriber.objects.get(id=subscriber_id)
         subscriber.delete()

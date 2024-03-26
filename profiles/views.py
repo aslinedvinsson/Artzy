@@ -3,10 +3,9 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import UserProfile
 from .forms import UserProfileForm
-
 from checkout.models import Order
 
-
+# Code from Code Institute Boutique Ado Walksthrough
 @login_required
 def profile(request):
     """ Display the user's profile. """
@@ -34,6 +33,14 @@ def profile(request):
 
 
 def order_history(request, order_number):
+    """
+    Displays order history for a given order number.
+    Args:
+        request: HttpRequest object.
+        order_number (str): Unique order number.
+    Returns:
+        HttpResponse: Rendered checkout success page with order details.
+    """
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (

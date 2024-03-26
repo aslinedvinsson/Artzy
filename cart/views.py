@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.urls import reverse
 from products.models import Product
 
-
+# customized code based on Code Institute Boutique Ado Walkthrough #
 def view_cart(request):
     """ A view that renders the cart contents page """
     return render(request, 'cart/cart.html')

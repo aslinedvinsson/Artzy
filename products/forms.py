@@ -2,8 +2,13 @@ from django import forms
 from .widgets import CustomClearableFileInput
 from .models import Product, Category
 
-
+# Code from Code Institute Boutique Ado Walksthrough
 class ProductForm(forms.ModelForm):
+    """
+    A form for creating or updating Product instances. The form generates
+    category choices from the Category model and applies a custom widget to the
+    'image' field for file input handling.
+    """
 
     class Meta:
         model = Product

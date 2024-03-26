@@ -4,9 +4,10 @@ from django.db import models
 from django.db.models import Sum
 from django.conf import settings
 from django_countries.fields import CountryField
-
 from products.models import Product
 from profiles.models import UserProfile
+
+# Code from Code Institute Boutique Ado Walksthrough
 
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
@@ -59,7 +60,7 @@ class Order(models.Model):
     def __str__(self):
         return self.order_number
 
-
+# Minor adjustment to model from Boutique Ado, by adding print_paper
 class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
     product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)

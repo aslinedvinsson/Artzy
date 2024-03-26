@@ -1,13 +1,20 @@
 from django.contrib import admin
 from .models import Order, OrderLineItem
 
+# Code from Code Institute Boutique Ado Walksthrough
 
 class OrderLineItemAdminInline(admin.TabularInline):
+    """
+    Allows editing OrderLineItem details directly within an Order's admin page.
+    """
     model = OrderLineItem
     readonly_fields = ('lineitem_total',)
 
 
 class OrderAdmin(admin.ModelAdmin):
+    """
+    Admin view for Order model with inline OrderLineItems
+    """
     inlines = (OrderLineItemAdminInline,)
 
     readonly_fields = ('order_number', 'date',

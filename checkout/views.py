@@ -1,19 +1,20 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import render, redirect, get_object_or_404, HttpResponse
+from django.urls import reverse
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
-
 from .forms import OrderForm
 from .models import Order, OrderLineItem
-
 from products.models import Product
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 from cart.contexts import cart_contents
-
 import stripe
 import json
 
+
+
+# Code from Code Institute Boutique Ado Walksthrough
 
 @require_POST
 def cache_checkout_data(request):
@@ -23,7 +24,7 @@ def cache_checkout_data(request):
         stripe.PaymentIntent.modify(pid, metadata={
             'cart': json.dumps(request.session.get('cart', {})),
             'save_info': request.POST.get('save_info'),
-            'username': request.user,
+            'username': request.user.username,
         })
         return HttpResponse(status=200)
     except Exception as e:
@@ -89,8 +90,7 @@ def checkout(request):
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
-            messages.error(request, 'There was an error with your form. \
-                Please double check your information.')
+            messages.error(request, 'There was an error with your form. Please double check your information.')
     else:
         cart = request.session.get('cart', {})
         if not cart:
