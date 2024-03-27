@@ -2,7 +2,7 @@ Newsletter Subscription Confirmation
 
 Hello,
 
-Thank you for subscribing to our newsletter. If you wish to unsubscribe at any time, please copy and paste the following link into your browser: {{ unsubscribe_url }}
+Thank you for subscribing to our newsletter. If you wish to unsubscribe at any time, just follow the link {{ unsubscribe_url }}
 
 Best regards,
 Artzy
