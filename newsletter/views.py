@@ -82,14 +82,13 @@ def send_confirmation_email(subscriber, request):
     plain_message = strip_tags(html_message)
 
     send_mail(
-    subject='Newsletter Subscription',
-    message=plain_message,
-    from_email='aslin.ann@gmail.com',  # The real email you're sending from
-    recipient_list=[subscriber.email],
-    html_message=html_message,
-    fail_silently=False,
-    headers={'Reply-To': 'info@artzy.com'}  # Set 'Reply-To' to your preferred address
-)
+        'Newsletter Subscription',
+        plain_message,
+        'info@artzy.com',
+        [subscriber.email],
+        html_message=html_message,
+        fail_silently=False,
+    )
 
 def unsubscribe(request, subscriber_id):
     """
