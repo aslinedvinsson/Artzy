@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'profiles',
     'wishlists',
     'newsletter',
+    'about',
 
     # Other
     'crispy_forms',
@@ -73,6 +74,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'artzy.urls'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 
 TEMPLATES = [
     {
