@@ -219,7 +219,7 @@ DEFAULT_FROM_EMAIL = 'info@artzycom'
 if 'DEVELOPMENT' in os.environ:
     print('DEVELOPMENT')
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = 'infoy@artzy.com'
+    DEFAULT_FROM_EMAIL = 'info@artzy.com'
 else:
     print('NO DEVELOPMENT')
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -228,7 +228,7 @@ else:
     EMAIL_HOST = 'smtp.gmail.com'
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
-    DEFAULT_FROM_EMAIL = 'infoy@artzy.com'
+    DEFAULT_FROM_EMAIL = 'info@artzy.com'
 
 print('DEBUG: ', DEBUG)
 # Default primary key field type

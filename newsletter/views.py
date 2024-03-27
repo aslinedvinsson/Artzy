@@ -80,14 +80,16 @@ def send_confirmation_email(subscriber, request):
     }
     html_message = render_to_string('newsletter/confirmation_newsletter.html', context)
     plain_message = strip_tags(html_message)
+
     send_mail(
-        'Newsletter Subscription',
-        plain_message,
-        'info@artzy.com',
-        [subscriber.email],
-        html_message=html_message,
-        fail_silently=False,
-    )
+    subject='Newsletter Subscription',
+    message=plain_message,
+    from_email='aslin.ann@gmail.com',  # The real email you're sending from
+    recipient_list=[subscriber.email],
+    html_message=html_message,
+    fail_silently=False,
+    headers={'Reply-To': 'info@artzy.com'}  # Set 'Reply-To' to your preferred address
+)
 
 def unsubscribe(request, subscriber_id):
     """
