@@ -47,7 +47,7 @@ def add_to_wishlist(request, item_id):
     else:
         WishlistItem.objects.create(wishlist=wishlist, product=product)
         messages.success(request, 'Product added to wishlist.')
-    return redirect('product_detail', product_id=item_id)
+    return redirect('products:product_detail', product_id=item_id)
 
 
 @login_required
