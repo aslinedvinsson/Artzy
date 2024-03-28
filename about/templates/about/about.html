@@ -26,7 +26,8 @@ and then modified -->
 </div>
 <div class="row">
     <div class="col text-center">
-        <p class=""><em>Updated on: {{ about.updated_on }}</em></p>
+        <p class=""><em>Updated on: {{ about.updated_on|date:"F d, Y"  }}</em></p>
+
     </div>
 </div>
 <div id='contact-us' class="row justify-content-center mt-5">
