@@ -1,17 +1,17 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.core.mail import send_mail
 from django.conf import settings
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 from django.urls import reverse
-from django.conf import settings
+from django.contrib.auth.decorators import login_required
 from django.utils.http import urlsafe_base64_encode
 from django.utils.encoding import force_bytes
 from django.http import HttpResponse
 import re
 from .models import Newsletter, Subscriber
-from .forms import SubscriberForm
+from .forms import SubscriberForm, SendNewsletterForm, CreateNewsletterForm
 
 
 
@@ -34,6 +34,56 @@ def newsletter(request):
                         "subscriber_form": SubscriberForm(),
                      },
     )
+
+
+
+@login_required
+def newsletter_management(request):
+
+    create_form = CreateNewsletterForm()
+    send_form = SendNewsletterForm()
+
+    if request.method == 'POST':
+        if 'create_newsletter' in request.POST:
+
+            create_form = CreateNewsletterForm(request.POST, request.FILES)
+            if create_form.is_valid():
+                create_form.save()
+                messages.success(request, 'Newsletter created successfully!')
+
+                return redirect('newsletter:newsletter')
+
+        elif 'send_newsletter' in request.POST:
+            send_form = SendNewsletterForm(request.POST)
+            if send_form.is_valid():
+                newsletter = send_form.cleaned_data['newsletter']
+
+                title = newsletter.title
+                content = newsletter.content
+                subscribers = Subscriber.objects.all()
+                emails = [subscriber.email for subscriber in subscribers]
+
+                send_mail(
+                    title,
+                    strip_tags(content),
+                    'aslin.ann@gmail.com',
+                    emails,
+                    fail_silently=False,
+                    html_message=content,
+                )
+
+                messages.success(request, 'Newsletter sent successfully!')
+
+                return redirect('newsletter:newsletter')
+
+
+    return render(request, 'newsletter/newsletter_management.html', {
+        'create_form': create_form,
+        'send_form': send_form
+    })
+
+
+
 
 def subscribe_to_newsletter(request):
     """

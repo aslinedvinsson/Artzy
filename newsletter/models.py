@@ -5,7 +5,7 @@ import uuid
 class Newsletter(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
-    created_on = models.DateTimeField(auto_now=True)
+    created_on = models.DateTimeField(auto_now_add=True)
     newsletter_image = models.ImageField(null=True, blank=True)
 
     def __str__(self):

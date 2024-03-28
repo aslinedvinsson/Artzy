@@ -1,5 +1,5 @@
 from django import forms
-from .models import Subscriber
+from .models import Subscriber, Newsletter
 
 
 class SubscriberForm(forms.ModelForm):
@@ -27,3 +27,12 @@ class SubscriberForm(forms.ModelForm):
             self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'border-black rounded-0 profile-form-input'
             self.fields[field].label = False
+
+class CreateNewsletterForm(forms.ModelForm):
+    class Meta:
+        model = Newsletter
+        fields = ['title', 'content', 'newsletter_image']
+
+
+class SendNewsletterForm(forms.Form):
+    newsletter = forms.ModelChoiceField(queryset=Newsletter.objects.all(), label="Select Newsletter")

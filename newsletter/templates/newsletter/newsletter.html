@@ -1,5 +1,3 @@
-<!-- Code inspired from the CodeInstitute Walkthrough 'I think, therefor I blog',
-and then modified -->
 {% extends 'base.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
@@ -20,14 +18,17 @@ and then modified -->
             <div class="text-start mt-3">
                 <!-- Add margin top for the text -->
                 <h2>{{ newsletter.title }}</h2>
-                <div class="text-muted">{{ newsletter.content | safe }}</div>
+                <div><p>{{ newsletter.content | safe }}</p></div>
             </div>
         </div>
     </div>
 </div>
 <div class="row">
-    <div class="col text-end me-5">
-        <p class=""><em>Created on: {{ newsletter.created_on }}</em></p>
+    <div class="col text-center">
+        <p class="mb-2"><em>Created on: {{ newsletter.created_on|date:"F d, Y" }}</em></p>
+        {% if request.user.is_superuser %}
+        <a href="{% url 'newsletter:newsletter_management' %}" class="btn btn-primary btn-lg">Create or Send Newsletter</a>
+        {% endif %}
     </div>
 </div>
 <div class="row justify-content-center">
