@@ -14,27 +14,25 @@ from .models import Newsletter, Subscriber
 from .forms import SubscriberForm, SendNewsletterForm, CreateNewsletterForm
 
 
-
 def newsletter(request):
     """
-    Renders the latest newsletter using the 'newsletter/newsletter.html' template.
-    Retrieves the most recent Newsletter instance from the database,
-    ordered by creation date in descending order, and renders it along with a
-    new SubscriberForm instance for subscription.
-    Args:
-        request: HttpRequest object.
-    Returns:
-        HttpResponse object with rendered newsletter page.
+    Renders a specific newsletter if an 'id' query parameter is provided,
+    otherwise renders the latest newsletter.
     """
-    newsletter = Newsletter.objects.all().order_by('-created_on').first()
-    return render(
-        request,
-        "newsletter/newsletter.html", {
-                        "newsletter": newsletter,
-                        "subscriber_form": SubscriberForm(),
-                     },
-    )
 
+    newsletter_id = request.GET.get('id', None)
+
+    if newsletter_id:
+        newsletter = get_object_or_404(Newsletter, id=newsletter_id)
+    else:
+        newsletter = Newsletter.objects.all().order_by('-created_on').first()
+
+    all_newsletters = Newsletter.objects.all().order_by('-created_on')
+    return render(request, "newsletter/newsletter.html", {
+    "newsletter": newsletter,
+    "all_newsletters": all_newsletters,
+    "subscriber_form": SubscriberForm(),
+})
 
 
 @login_required
@@ -82,8 +80,22 @@ def newsletter_management(request):
         'send_form': send_form
     })
 
+"""
+def display_newsletter(request):
+    # Get newsletter ID from query parameter, default to None
+    newsletter_id = request.GET.get('id', None)
 
+    if newsletter_id:
+        # If an ID is provided, try to get the corresponding newsletter
+        newsletter = get_object_or_404(Newsletter, id=newsletter_id)
+    else:
+        # If no ID is provided, get the most recent newsletter
+        newsletter = Newsletter.objects.all().order_by('-created_on').first()
 
+    # Render the template with the selected newsletter
+    return render(request, 'newsletter/newsletter.html', {'newsletter': newsletter})
+
+"""
 
 def subscribe_to_newsletter(request):
     """

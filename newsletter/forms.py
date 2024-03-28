@@ -1,4 +1,5 @@
 from django import forms
+from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 from .models import Subscriber, Newsletter
 
 
@@ -29,6 +30,7 @@ class SubscriberForm(forms.ModelForm):
             self.fields[field].label = False
 
 class CreateNewsletterForm(forms.ModelForm):
+    content = forms.CharField(widget=SummernoteWidget())
     class Meta:
         model = Newsletter
         fields = ['title', 'content', 'newsletter_image']

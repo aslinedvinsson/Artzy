@@ -15,7 +15,7 @@
             <img src="{% static 'images/about.webp' %}" class="about_image"
                 alt="About Us" style="width: 100%;">
             {% endif %}
-            <div class="text-start mt-3">
+            <div class="text-left mt-3">
                 <!-- Add margin top for the text -->
                 <h2>{{ newsletter.title }}</h2>
                 <div><p>{{ newsletter.content | safe }}</p></div>
@@ -28,6 +28,15 @@
         <p class="mb-2"><em>Created on: {{ newsletter.created_on|date:"F d, Y" }}</em></p>
         {% if request.user.is_superuser %}
         <a href="{% url 'newsletter:newsletter_management' %}" class="btn btn-primary btn-lg">Create or Send Newsletter</a>
+
+
+        <form action="" method="get"><p>Change to another newsletter in the list:</p>
+            <select name="id" onchange="this.form.submit()">
+                {% for n in all_newsletters %}
+                    <option value="{{ n.id }}" {% if n.id == newsletter.id %}selected{% endif %}>{{ n.title }}</option>
+                {% endfor %}
+            </select>
+        </form>
         {% endif %}
     </div>
 </div>
