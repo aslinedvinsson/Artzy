@@ -177,67 +177,86 @@
     {% block content %}
     {% endblock %}
 
-    <!-- Footer-->
-    <footer class="text-center text-white bg-dark">
-        <div id="delivery-banner" class="row text-center">
-            <div class="col bg-black text-white">
-                <h4 class="logo-font my-1">Free delivery on orders over
-                    ${{ free_delivery_threshold }}!</h4>
+<!-- Footer Inspired by https://mdbootstrap.com/docs/standard/navigation/footer/-->
+
+<footer class="bg-body-tertiary bg-dark text-white p-5">
+    <!-- Section: Links -->
+    <div class="container text-left">
+        <div class="row">
+            <!-- Grid column: Shop Hours -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Shop Hours</h5>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-3">Mon - Fri: 9 AM - 5 PM. Live help for all your shopping needs!</li>
+                    <li>Weekends: Our team takes a rest, but our site stays awake for you 24/7. Shop anytime!</li>
+                </ul>
+            </div>
+
+            <!-- Grid column: Follow Us -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Follow Us</h5>
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <a class="btn btn-link btn-floating btn-lg text-white" href="https://www.facebook.com" role="button" data-mdb-ripple-color="white"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a class="btn btn-link btn-floating btn-lg text-white" href="https://www.instagram.com" role="button" data-mdb-ripple-color="white"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li><a class="btn btn-link btn-floating btn-lg text-white" href="https://www.youtube.com" role="button" data-mdb-ripple-color="white"><i class="fab fa-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Grid column: Contact Us -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Contact Us</h5>
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <p>For inquiries or support, contact us via mail<a class="btn btn-link btn-floating btn-lg text-white" href="{% url 'about:about' %}#contact-us" role="button" data-mdb-ripple-color="white"><i class="fas fa-envelope"></i></a>or social media</p>
+                    </li>
+                    <li>
+                        <a href="https://www.termsfeed.com/live/1ef9e4d0-3b73-4a97-9672-a1939610d116" target="_blank" rel="nofollow">
+                            <p class="text-white">Privacy Policy</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Grid column: Newsletter Form -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Newsletter</h5>
+                <form method="post" action="{% url 'newsletter:subscribe_to_newsletter' %}">
+                    {% csrf_token %}
+                    <div class="form-outline mb-4">
+                        <input type="text" name="name" id="id_name" class="form-control text-white bg-dark border-white  profile-form-input" placeholder="Name *" autofocus {% if form.name.value %}value="{{ form.name.value }}"{% endif %}>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input type="email" name="email" id="id_email" class="form-control text-white bg-dark border-white profile-form-input" placeholder="Email Address *" {% if form.email.value %}value="{{ form.email.value }}"{% endif %}>
+                    </div>
+                    <button type="submit" class="btn btn-outline-light mb-4">
+                        Subscribe
+                    </button>
+                </form>
             </div>
         </div>
-        <div class="container pt-4">
-            <!-- Section: Social media -->
-            <section class="mb-4">
+    </div>
 
-                <a class="btn btn-link btn-floating btn-lg text-white m-1"
-                    href="https://www.facebook.com" role="button"
-                    data-mdb-ripple-color="white"><i
-                        class="fab fa-facebook-f"></i></a>
+    <!-- Copyright -->
+    <div class="text-center p-3 mt-1">
+        © 2024 Copyright: Artzy
 
-
-                <a class="btn btn-link btn-floating btn-lg text-white m-1"
-                    href="https://www.twitter.com" role="button"
-                    data-mdb-ripple-color="white"><i
-                        class="fab fa-twitter"></i></a>
-
-
-                <a class="btn btn-link btn-floating btn-lg text-white m-1"
-                    href="https://www.google.com" role="button"
-                    data-mdb-ripple-color="white"><i
-                        class="fab fa-google"></i></a>
-
-                <a class="btn btn-link btn-floating btn-lg text-white m-1"
-                    href="https://www.instagram.com" role="button"
-                    data-mdb-ripple-color="white"><i
-                        class="fab fa-instagram"></i></a>
-
-
-                <a class="btn btn-link btn-floating btn-lg text-white m-1"
-                    href="https://www.linkedin.com" role="button"
-                    data-mdb-ripple-color="white"><i
-                        class="fab fa-linkedin"></i></a>
-
-                <a class="btn btn-link btn-floating btn-lg text-white m-1"
-                    href="https://www.github.com" role="button"
-                    data-mdb-ripple-color="white"><i
-                        class="fab fa-github"></i></a>
-
-                <a class="btn btn-outline-light mb-4 btn-lg text-white m-1"
-                    href="{% url 'newsletter:newsletter' %}" role="button"
-                    data-mdb-ripple-color="white">
-                    Subscribe to Newsletter
-                </a>
-            </section>
-        </div>
-        <div class="text-center text-white p-3 bg-dark">
-            © 2024 Copyright: Artzy
-        </div>
+        <p class="small mt-1">This website is solely for educational purposes and does not offer real products or services for purchase. All product images have been borrowed from <a href="https://unsplash.com/" class="text-white" target="_blank" rel="nofollow">Unsplash</a></p>
+    </div>
+</footer>
+  <!-- Footer -->
+</div>
     </footer>
 
     {% block postloadjs %}
     <script type="text/javascript">
         $('.toast').toast('show');
     </script>
+
     {% endblock %}
 
 
