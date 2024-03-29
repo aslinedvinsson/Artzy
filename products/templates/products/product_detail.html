@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
+{% block title %}{{ product.name }} by {{ product.artist }} - Unique Artwork | Artzy{% endblock %}
+{% block description %}Explore "{{ product.name }}" by {{ product.artist }}, a standout piece in our collection. Priced at ${{ product.price }}, this artwork combines quality and style for art enthusiasts of all levels. Whether enhancing your home or looking for the perfect gift, find exclusive art that tells a story. Shop now on Artzy and add a touch of elegance to your collection.{% endblock %}
 
 {% block page_header %}
 <div class="container header-container">

@@ -4,7 +4,9 @@
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
+{% block title %}Order Complete - Thank You | Artzy{% endblock %}
 
+{% block meta_description %}Thank you for your purchase! Your order with Artzy is complete, and a confirmation email is on its way to {{ order.email }}. Discover more unique artworks anytime. We're excited to have you as part of our art-loving community.{% endblock %}
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
