@@ -3,7 +3,7 @@
     <div class="form-group">
         <div class="input-group input-group-{{ item.item_id }}">
             <div class="input-group-prepend">
-                <button class="decrement-qty btn btn-sm btn-black rounded-0 decrement-qty_{{ item.item_id }}
+                <button class="decrement-qty btn btn-sm btn-black decrement-qty_{{ item.item_id }}
                     {% if item.print_type %}decrement-print_type_{{ item.item_id }}_{{ item.print_type }}{% endif %}"
                     data-item_id="{{ item.item_id }}" data-print_type="{{ item.print_type }}">
                     <span>

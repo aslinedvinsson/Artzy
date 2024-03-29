@@ -54,13 +54,13 @@
                             </div>
                             <div class="row"><div class="col"><hr></div></div>
                         {% endfor %}
-                        <div class="btt-button shadow-sm rounded-0 border border-black">
+                        <div class="btt-button shadow-sm border border-black">
                             <a class="btt-link d-flex h-100">
                                 <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
                             </a>
                         </div>
                     </div>
-                    <div class="table-responsive rounded d-none d-md-block">
+                    <div class="table-responsive d-none d-md-block">
                         <table class="table table-sm table-borderless">
                             <thead class="text-black">
                                 <tr>
@@ -105,7 +105,7 @@
                     </div>
                 {% else %}
                     <p class="lead mb-5">Your cart is empty.</p>
-                    <a href="{% url 'products:products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                    <a href="{% url 'products:products' %}" class="btn btn-outline-black btn-lg">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>

@@ -99,7 +99,7 @@
                                         min="1" max="99"
                                         data-item_id="{{ product.id }}">
                                     <div class="input-group-append">
-                                        <button class="increment-qty btn btn-black rounded-0 increment-qty_{{ product.id }}"
+                                        <button class="increment-qty btn btn-black increment-qty_{{ product.id }}"
                                                 data-item_id="{{ product.id }}">
                                             <span class="icon">
                                                 <i class="fas fa-plus"></i>
@@ -119,7 +119,7 @@
 
                         <div class="col-12">
                             <a href="{% url 'products:products' %}"
-                                class="btn btn-outline-black rounded-0 mt-5">
+                                class="btn btn-outline-black mt-5">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
@@ -127,7 +127,7 @@
                                     Shopping</span>
                             </a>
                             <input type="submit"
-                                class="btn btn-black rounded-0 text-uppercase mt-5"
+                                class="btn btn-black text-uppercase mt-5"
                                 value="Add to cart">
                         </div>
                         <input type="hidden" name="redirect_url"
