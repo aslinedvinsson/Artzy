@@ -10,7 +10,8 @@
     <meta charset="utf-8">
     <meta name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="{% block description %}Explore Artzy's curated collection of accessible art, from contemporary pieces to classic treasures. Whether you're a curious beginner or an avid collector, discover the perfect piece to inspire your space. Shop now and start your art journey with us today!{% endblock %}">
+    <meta name="description"
+        content="{% block description %}Explore Artzy's curated collection of accessible art, from contemporary pieces to classic treasures. Whether you're a curious beginner or an avid collector, discover the perfect piece to inspire your space. Shop now and start your art journey with us today!{% endblock %}">
 
     {% endblock %}
 
@@ -18,16 +19,19 @@
     {% endblock %}
 
     {% block corecss %}
-    <link rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-        crossorigin="anonymous">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
         rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous">
+
 
     <!-- Custom css -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
@@ -38,6 +42,14 @@
     {% endblock %}
 
     {% block corejs %}
+ <script>
+        window.addEventListener('load', function () {
+            if (!window.location.href.endsWith('/about/#contact-us')) {
+                window.scrollTo(0, 0);
+            }
+        });
+    </script>.
+
     <script src="https://kit.fontawesome.com/5322e9124b.js"
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -58,8 +70,10 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>Buy Art Online | Accessible Art for Beginners to Collectors - Artzy {% block extra_title %}{% endblock %}</title>
+    <title>Buy Art Online | Accessible Art for Beginners to Collectors - Artzy
+        {% block extra_title %}{% endblock %}</title>
 </head>
+
 <body>
     <header class="container-fluid fixed- header-background">
         <div class="row">
@@ -175,37 +189,50 @@
     {% endblock %}
 
     {% block content %}
+    <div class="flex-container">
+        </div>
     {% endblock %}
 
-<!-- Footer Inspired by https://mdbootstrap.com/docs/standard/navigation/footer/-->
+    <!-- Footer Inspired by https://mdbootstrap.com/docs/standard/navigation/footer/-->
 
-<footer class="bg-body-tertiary bg-dark text-white p-5">
-    <!-- Section: Links -->
-    <div class="container text-left">
-        <div class="row">
-            <!-- Grid column: Shop Hours -->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Shop Hours</h5>
-                <ul class="list-unstyled mb-0">
-                    <li class="mb-3">Mon - Fri: 9 AM - 5 PM. Live help for all your shopping needs!</li>
-                    <li>Weekends: Our team takes a rest, but our site stays awake for you 24/7. Shop anytime!</li>
-                </ul>
+    <footer class="bg-body-tertiary bg-black text-white p-5 mt-3">
+
+            <div class="col bg-black text-white text-center">
+                <h4 class="mb-4">Free delivery on orders over
+                    ${{ free_delivery_threshold }}!</h4>
             </div>
 
-            <!-- Grid column: Follow Us -->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Follow Us</h5>
-                <ul class="list-unstyled mb-0">
-                    <li>
-                        <a class="btn btn-link btn-floating btn-lg text-white" href="https://www.facebook.com" role="button" data-mdb-ripple-color="white"><i class="fab fa-facebook-f"></i></a>
-                    </li>
-                    <li>
-                        <a class="btn btn-link btn-floating btn-lg text-white" href="https://www.instagram.com" role="button" data-mdb-ripple-color="white"><i class="fab fa-instagram"></i></a>
-                    </li>
-                    <li><a class="btn btn-link btn-floating btn-lg text-white" href="https://www.youtube.com" role="button" data-mdb-ripple-color="white"><i class="fab fa-youtube"></i></a>
-                    </li>
-                </ul>
-            </div>
+        <!-- Section: Links -->
+        <div class="container text-left">
+            <div class="row">
+                <!-- Grid column: Shop Hours -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0 px-lg-5">
+                    <h5 class="text-uppercase">Shop Hours</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-3">Mon - Fri: 9 AM - 5 PM. Live help for
+                            all your shopping needs!</li>
+                        <li class="mb-3">Weekends: Our team takes a rest, but our site stays
+                            awake for you 24/7. Shop anytime!</li>
+                    </ul>
+                </div>
+
+                <!-- Grid column: Follow Us -->
+
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0 px-lg-5">
+                    <h5 class="text-uppercase">Follow Us</h5>
+                    <ul class="list-unstyled mb-0 d-flex align-items-start justify-content-start">
+                        <li style="margin-left: 0; padding-left: 0;">
+                            <a class="btn btn-link btn-floating btn-lg text-white" href="https://www.facebook.com" target="_blank" role="button" data-mdb-ripple-color="white"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a class="btn btn-link btn-floating btn-lg text-white" href="https://www.instagram.com" target="_blank" role="button" data-mdb-ripple-color="white"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a class="btn btn-link btn-floating btn-lg text-white" href="https://www.youtube.com" target="_blank" role="button" data-mdb-ripple-color="white"><i class="fab fa-youtube"></i></a>
+                        </li>
+                    </ul>
+                </div>
 
             <!-- Grid column: Contact Us -->
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
@@ -222,37 +249,52 @@
                 </ul>
             </div>
 
-            <!-- Grid column: Newsletter Form -->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Newsletter</h5>
-                <form method="post" action="{% url 'newsletter:subscribe_to_newsletter' %}">
-                    {% csrf_token %}
-                    <div class="form-outline mb-4">
-                        <input type="text" name="name" id="id_name" class="form-control text-white bg-dark border-white  profile-form-input" placeholder="Name *" autofocus {% if form.name.value %}value="{{ form.name.value }}"{% endif %}>
-                    </div>
-                    <div class="form-outline mb-4">
-                        <input type="email" name="email" id="id_email" class="form-control text-white bg-dark border-white profile-form-input" placeholder="Email Address *" {% if form.email.value %}value="{{ form.email.value }}"{% endif %}>
-                    </div>
-                    <button type="submit" class="btn btn-outline-light mb-4">
-                        Subscribe
-                    </button>
-                </form>
+                <!-- Grid column: Newsletter Form -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0 px-lg-5">
+                    <h5 class="text-uppercase">Newsletter</h5>
+                    <form method="post"
+                        action="{% url 'newsletter:subscribe_to_newsletter' %}">
+                        {% csrf_token %}
+                        <div class="form-outline mb-4">
+                            <input type="text" name="name" id="id_name"
+                                class="form-control text-white bg-dark border-white  profile-form-input"
+                                placeholder="Name *" autofocus
+                                {% if form.name.value %}value="{{ form.name.value }}"
+                                {% endif %}>
+                        </div>
+                        <div class="form-outline mb-4">
+                            <input type="email" name="email" id="id_email"
+                                class="form-control text-white bg-dark border-white profile-form-input"
+                                placeholder="Email *"
+                                {% if form.email.value %}value="{{ form.email.value }}"
+                                {% endif %}>
+                        </div>
+                        <button type="submit"
+                            class="btn btn-outline-light mb-4">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Copyright -->
-    <div class="text-center p-3 mt-1">
-        © 2024 Copyright: Artzy
+        <!-- Copyright -->
+        <div class="text-center p-3 mt-1">
+            © 2024 Copyright: Artzy
 
-        <p class="small mt-1">This website is solely for educational purposes and does not offer real products or services for purchase. All product images have been borrowed from <a href="https://unsplash.com/" class="text-white" target="_blank" rel="nofollow">Unsplash</a></p>
+            <p class="small mt-1">This website is solely for educational
+                purposes and does not offer real products or services for
+                purchase. All product images have been borrowed from <a
+                    href="https://unsplash.com/" class="text-white"
+                    target="_blank" rel="nofollow">Unsplash</a></p>
+        </div>
+    </footer>
+    <!-- Footer -->
     </div>
-</footer>
-  <!-- Footer -->
-</div>
     </footer>
 
     {% block postloadjs %}
+
     <script type="text/javascript">
         $('.toast').toast('show');
     </script>
