@@ -3,53 +3,37 @@
 {% block title %}My Art Wishlist | Curate Your Favorite Artworks on Artzy{% endblock %}
 {% block description %}Create and manage your personalized wishlist on Artzy, your premier online destination for unique and captivating artworks. From contemporary masterpieces to timeless classics, effortlessly save and contemplate your next art acquisition. Keep track of your favorite pieces and make your art collection dreams a reality. Explore now and curate your perfect wishlist today!{% endblock %}
 {% block page_header %}
-<div class="container header-container">
+<div class="container-fluid header-container">
     <div class="row">
-        <div class="col"></div>
+        <div class="col-12"></div>
     </div>
 </div>
 {% endblock %}
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container mb-2">
+<div class="container-fluid mb-2">
     <div class="row">
-        <div class="col">
-            <h2 class="logo-font mb-4">Wishlist</h2>
+        <div class="product-container col-10 offset-1">
+            <h2 class="logo-font mb-4">My Wishlist</h2>
             {% if wishlist_items %}
             <div class="table-responsive">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Product Image</th>
-                            <th>Product Name</th>
-                            <th>If Print</th>
-                            <th>Price</th>
+                <table class="table wishlist-table">
 
-                        </tr>
-                    </thead>
                     <tbody>
                         {% for item in wishlist_items %}
                         <tr>
                             <td>
                                 <!-- Display the product image with a link to the product_detail page -->
-                                <a
-                                    href="{% url 'products:product_detail' item.product.id %}">
-                                    <img src="{{ item.product.image.url }}"
-                                        alt="{{ item.product.name }}"
-                                        width="100">
+                                <a href="{% url 'products:product_detail' item.product.id %}">
+                                    <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" class="img-fluid" width="100">
                                 </a>
                             </td>
                             <td>
                                 <!-- Display the product name with a link to the product_detail page -->
-                                <a
-                                    href="{% url 'products:product_detail' item.product.id %}">
+                                <a href="{% url 'products:product_detail' item.product.id %}">
                                     {{ item.product.name }}
                                 </a>
-                            </td>
-                            <td>
-                                <!-- Display the print type if print -->
-                                {% if item.product.is_print %}{{ item.print_type|upper }}{% endif %}
                             </td>
                             <td>
                                 <!-- Display the product price -->
@@ -57,14 +41,15 @@
                             </td>
                             <td>
                                 <!-- Link to remove the item from the wishlist -->
-                                <a href="{% url 'wishlists:remove_from_wishlist' item_id=item.id %}"
-                                    class="btn btn-danger">Remove</a>
+                                <a href="{% url 'wishlists:remove_from_wishlist' item_id=item.id %}" class="btn btn-danger">
+                                    Remove
+                                </a>
                             </td>
                             <td>
                                 <!-- Link to add the item from the cart -->
-                                <a href="{% url 'wishlists:add_wish_to_cart' item.product.id %}"
-                                    class="btn btn-success">Add to shopping
-                                    cart</a>
+                                <a href="{% url 'wishlists:add_wish_to_cart' item.product.id %}" class="btn btn-success">
+                                    <i class="fas fa-shopping-cart fa-lg"></i>
+                                </a>
                             </td>
                         </tr>
                         {% endfor %}
@@ -83,30 +68,24 @@
 {{ block.super }}
 <script type="text/javascript">
     $('.btt-link').click(function (e) {
-        window.scrollTo(0, 0)
-    })
-</script>
-<script type="text/javascript">
-    var removeWishlistItemBaseUrl =
-        "{% url 'wishlists:remove_from_wishlist' item_id=0 %}".replace('/0/',
-            '');
+        window.scrollTo(0, 0);
+    });
+
+    var removeWishlistItemBaseUrl = "{% url 'wishlists:remove_from_wishlist' item_id=0 %}".replace('/0/', '');
     // Remove item and reload on click
     $('.remove-wishlistitem').click(function (e) {
         e.preventDefault();
         var csrfToken = "{{ csrf_token }}";
         var wishlistItemId = $(this).attr('id').split('remove_')[1];
         var url = removeWishlistItemBaseUrl + wishlistItemId + '/';
-        var data = {
-            'csrfmiddlewaretoken': csrfToken
-        };
+        var data = {'csrfmiddlewaretoken': csrfToken};
 
         $.post(url, data)
             .done(function () {
                 location.reload();
             })
             .fail(function (jqXHR, textStatus, errorThrown) {
-                alert("Failed to remove the product: " +
-                    textStatus + ", " + errorThrown);
+                alert("Failed to remove the product: " + textStatus + ", " + errorThrown);
             });
     });
 </script>
