@@ -1,9 +1,10 @@
 from django.contrib import admin
+from django_summernote.admin import SummernoteModelAdmin
 from .models import About, ContactRequest
 
 
 @admin.register(About)
-class AboutAdmin(admin.ModelAdmin):
+class AboutAdmin(SummernoteModelAdmin):
     """
       Attributes:
         list_display: Defines the columns that should be displayed in the admin
@@ -12,6 +13,7 @@ class AboutAdmin(admin.ModelAdmin):
         editing.
     """
     list_display = ('title', 'updated_on')
+    summernote_fields = ('content',)
 
 
 
@@ -29,5 +31,3 @@ class ContactRequestAdmin(admin.ModelAdmin):
     list_display = ('message', 'read',)
 
 
-#admin.site.register(About, AboutAdmin)
-#admin.site.register(ContactRequest, ContactRequestAdmin)
