@@ -7,6 +7,7 @@
 <div class="container mt-5">
     <div class="row justify-content-center align-items-center">
         <div class="col-12 col-md-8 text-center">
+            <h1 class="text-left">Lastest Newsletter</h1>
             {% if newsletter.newsletter_image %}
             <img src="{{ newsletter.newsletter_image.url }}"
                 class="newsletter_image" alt="{{ newsletter.title }}"
@@ -19,6 +20,7 @@
             <div class="text-left mt-3">
                 <!-- Add margin top for the text -->
                 <h2>{{ newsletter.title }}</h2>
+                <p class="mb-2"><em>Created on: {{ newsletter.created_on|date:"F d, Y" }}</em></p>
                 <div><p>{{ newsletter.content | safe }}</p></div>
             </div>
         </div>
@@ -26,7 +28,7 @@
 </div>
 <div class="row">
     <div class="col text-center">
-        <p class="mb-2"><em>Created on: {{ newsletter.created_on|date:"F d, Y" }}</em></p>
+
         {% if request.user.is_superuser %}
         <a href="{% url 'newsletter:newsletter_management' %}" class="btn btn-primary btn-lg">Create or Send Newsletter</a>
 
@@ -42,16 +44,18 @@
     </div>
 </div>
 
-<div class="row justify-content-center">
-    <div class="col-12 col-md-8 text-center my-5">
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-12 col-md-8 text-left">
         <h3>Explore More on Artzy</h3>
         <p>While you wait for our next newsletter, dive deeper into the art world with these curated resources:</p>
-        <ul class="list-unstyled">
+        <ul class="list-unstyled link-dark">
             <li><a href="https://www.metmuseum.org/art/collection" target="_blank" rel="noopener noreferrer">Explore The Met's Art Collection</a></li>
             <li><a href="https://www.tate.org.uk/visit/tate-modern" target="_blank" rel="noopener noreferrer">Visit Tate Modern Exhibitions</a></li>
             <li><a href="https://www.deviantart.com" target="_blank" rel="noopener noreferrer">Join the DeviantArt Community</a></li>
         </ul>
     </div>
+</div>
 </div>
 <div class="row justify-content-center">
 
