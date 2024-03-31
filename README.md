@@ -1,18 +1,18 @@
 ***Must haves to include except everything i PP4***
 
-# Artzy 
+# Artzy
 screenshot am i responsive
 
-Artzy is a unique e-commerce platform created as part of the Portfolio Project 5 for the Code Institute's Full Stack Software Developer Cthese. Leveraging Django, HTML, CSS, JavaScript, and Python, Artzy breaks down the barriers to art appreciation, offering a wide range of paintings and prints accessible to all, regardless of their art knowledge.
+Artzy is a distinctive e-commerce platform developed as a part of Portfolio Project 5 for the Code Institute's Full Stack Software Developer Course. Utilizing Django, HTML, CSS, JavaScript, and Python, Artzy dismantles the barriers to art appreciation, offering an extensive array of paintings and prints accessible to everyone, irrespective of their art knowledge.
 
-With a focus on emotional resonance over academic credentials, Artzy curates art that speaks directly to the heart. It's built on the belief that art should be a sthece of joy and inspiration for everyone, fostering a connection betIen the artwork and the vieIr without the need for expertise.
+With a focus on emotional resonance rather than academic credentials, Artzy curates art that speaks directly to the heart. It is founded on the belief that art should be a source of joy and inspiration for all, fostering a connection between the viewer and the artwork without necessitating expertise.
 
-The vision behind Artzy is more than just selling art; it's about enctheaging a mindful engagement with art, supporting a lifestyle where beauty, creativity, and personal expression are paramount. This approach aligns with modern values of meaningful consumption and the increasing desire for experiences that genuinely enrich the lives.
+The vision behind Artzy extends beyond merely selling art; it's about encouraging mindful engagement with art, supporting a lifestyle where beauty, creativity, and personal expression are paramount. This approach is in line with modern values of meaningful consumption and the growing desire for experiences that truly enrich lives.
 
-In essence, Artzy is not just a platform; it's a movement towards making art accessible and enjoyable for everyone, promoting a deeper, more personal interaction with the world of art.
+In essence, Artzy is not just a platform; it's a movement toward making art accessible and enjoyable for everyone, promoting a deeper, more personal interaction with the world of art.
 
-The Ibsite was deployed via Heroku - the live site can be found here - 
-[Artzy](https://xxxxxxherokuapp.com/)
+The site was deployed via Heroku - the live site can be found here -
+[Artzy](https://artzy-f5e67145006a.herokuapp.com/)
 
 ## Table of Contents ////
 
@@ -25,171 +25,410 @@ The Ibsite was deployed via Heroku - the live site can be found here -
 * [References and Credits](#References and Credits)
 
 
-# Project Rationale
-Artzy emerges as a response to the observed gap between the art world and potential art enthusiasts intimidated by their lack of knowledge. Recognizing the poIr of art to inspire and provoke emotion, Artzy aims to democratize art appreciation and acquisition through an accessible e-commerce platform.
+# Project Rationale - Bridging the Art Appreciation Gap
+Artzy was created to bridge the gap between the art community and those who feel intimidated by their limited knowledge of art. It aims to make art appreciation and acquisition more accessible to everyone through an easy-to-use e-commerce platform.
 
-## Purpose and Goal
-The clear, Ill-defined purpose of Artzy is to simplify the process of discovering and purchasing art, making it accessible to everyone, regardless of their prior knowledge of art. By curating a diverse selection of paintings and prints, Artzy’s goal is to facilitate an emotional connection betIen individuals and art, enctheaging exploration and self-expression through art ownership.
+## Purpose and Goal: Mission to Simplify Art Discovery and Ownership
+Artzy's mission is to simplify the process of discovering and purchasing art, making it welcoming for everyone, regardless of their art background. The platform offers a wide range of paintings and prints to foster emotional connections between individuals and art, encouraging exploration and expression through art ownership.
 
-## Target audience
-Artzy is designed for art enthusiasts, gift shoppers, and decorators who may feel overwhelmed by traditional art purchasing avenues. This includes individuals seeking to personalize their living spaces, those looking for unique gifts, and anyone eager to explore art but unsure where to start.
+## Target Audience: Who Artzy Serves - Connecting with Our Audience
+Artzy serves art enthusiasts, gift shoppers, and decorators who are overwhelmed by traditional art purchasing processes. It targets those looking to enhance their personal spaces, find unique gifts, or embark on an art discovery journey.
 
-## Addressing the Needs of the Target Audience
-Artzy addresses the needs of its target audience by offering an intuitive, user-friendly platform that removes the intimidation factor from art selection. Features like detailed descriptions, emotion-based recommendations, and accessible educational content help users make informed decisions. Moreover, Artzy's inclusive approach ensures that every visitor can find art that resonates with them, fostering a Ilcoming environment for all art lovers, from novices to aficionados. This alignment betIen the application's purpose and the needs of the target audience establishes Artzy as a pioneering force in making art accessible and enjoyable for a broader community.
+## Addressing Target Audience Needs: A Tailored Approach to Meeting Our Audience's Needs
+Artzy offers an intuitive platform with features such as detailed art descriptions and emotion-based recommendations, making art selection more informative and less intimidating. It strives to create a welcoming space for art lovers of all levels by tailoring the platform’s services to meet the diverse needs and preferences of its users.
 
-## Business model and Customer Goals
-Artzy is a B2C e-commerce platform focused on making art accessible to everyone. Designed for scalability and ease of use, the online store offers a curated selection of paintings and prints for various tastes and preferences. Without the need for a physical presence, I efficiently cater to a growing customer base, enhancing the reach and impact in the art world.
+## Business Model and Customer Goals: Accessibility at Scale and Enhancing Customer Experience through Art
+Artzy operates as a B2C e-commerce platform dedicated to democratizing access to art. The platform is scalable and user-friendly, featuring a diverse collection to suit various tastes. With a digital-first marketing strategy, including social media and newsletters, Artzy engages with its community and promotes new art pieces. Its business model emphasizes a seamless shopping experience, ensuring customer satisfaction and fostering a culture of art appreciation among a broad audience.
 
-the marketing strategy is centered around digital engagement, particularly through social media channels like the Facebook business page, to connect with art enthusiasts and expand the community. I also utilize a newsletter to showcase new arrivals and feature art pieces, driving interest and sales.
+## SEO Strategies
+To maximize SEO for Artzy, I conduct research on specific, relevant keywords that potential customers might use when searching for art online. This involves using tools like Google Trends and Keyword Planner to identify terms related to popular art styles, mediums (e.g., paintings, prints), and broader art-related queries. The aim is to strike a balance between high-traffic keywords and those with lower competition to attract both broad and niche audiences. Incorporating these keywords naturally into the site content, metadata, and newsletters enhances Artzy's online visibility and search engine ranking.
+I employ different meta titles and descriptions on various pages to improve SEO, providing search engines and potential visitors with a concise summary of the page’s content.
 
-The core of Artzy's business model is to provide a seamless shopping experience, enabling customers to easily find, select, and purchase art that enriches their lives. With a streamlined Ibsite and checkout process, I ensure customer satisfaction and foster a culture of art appreciation for all.
+## Sitemap.xml
+Adding a sitemap.xml to Artzy aids search engines in quickly finding and indexing the pages, thereby improving the site's visibility and SEO, leading to increased traffic. The sitemap.xml acts as a roadmap of the website, listing all important pages and content. This facilitates easier discovery, indexing, and understanding of the site’s structure and content hierarchy by search engine crawlers, enhancing SEO by ensuring all art collections and related content are found and ranked appropriately, ultimately driving more organic traffic to Artzy.
 
-## SEO
-To maximize SEO for Artzy, an art e-commerce platform, I research specific, relevant keywords that potential customers might use when searching for art online. This involves utilizing tools like Google Trends and Keyword Planner to identify terms related to popular art styles, mediums (e.g., paintings, prints), and broader art-related queries. I also analyze competitors to uncover gaps in their keyword strategies. The goal is to find a balance betIen high-traffic keywords and those with loIr competition to capture both broad and niche audiences. Incorporating these keywords naturally into Ibsite content, metadata, and newsletter enhance Artzy's visibility and search engine ranking.
-
-I use different meta titles and descriptions on different pages to improve SEO because it provides search engines and potential visitors with a concise summary of the page's content. This summary appears in search engine results, influencing the user's decision to click through to the Ibsite. 
-
-### Sitemap.xml
-Adding a sitemap.xml to Artzy helps search engines quickly find and index the pages, improving the site's visibility and SEO, leading to more traffic. The sitemap.xml serves as a roadmap of the Ibsite, listing all important pages and content. This makes it easier for search engine crawlers to discover, index, and understand the site's structure and content hierarchy. As a result, it enhances SEO by ensuring that all the art collections and related content are found and ranked appropriately, ultimately driving more organic traffic to Artzy.
-
-### Robots.txt
-Using a robots.txt file for Artzy guides search engine bots on which pages to crawl and index, enhancing site navigation and SEO efficiency. The file acts as a directive for search engine bots, indicating which areas of the site should be crawled and which should be ignored. By managing bot traffic, I can prioritize the indexing of key pages and prevent overloading the servers with unnecessary crawling. This not only improves Artzy's SEO by ensuring relevant content is quickly found and indexed but also enhances the overall user experience by focusing on the most important content.
+## Robots.txt
+Utilizing a robots.txt file for Artzy directs search engine bots on which pages to crawl and index, improving site navigation and SEO efficiency. The file serves as a directive for search engine bots, specifying which areas of the site should be crawled and which should be ignored. By managing bot traffic, I ensure the indexing of key pages and prevent server overload from unnecessary crawling. This not only improves Artzy’s SEO by ensuring relevant content is quickly found and indexed but also enhances the overall user experience by highlighting the most important content.
 
 
-## Agile//////
-/////
-This project folloId agile methods. First, I made a list of tasks for users and store owners, imagining what they would need. I then explained these tasks clearly, including what needs to be done to finish each one. There's a part called "Tasks" that shows what work is needed to solve a problem.
+## Agile
+This project followes agile methods. I identified Epics and broke them down to user stories to map out what needs the customer and seller have. For every user story there are Acceptance criteria that needs to be met and in some cases more concrete tasks. The userstories are sorted with the use of the MoSCoW method, giving the userstories labels like "Must Have", "Should Have", "Could Have" and "Wount have". Git Hub projects is used to document it and track the progress of the deveoplment. The Epics and User stories are divided into to Milestone. The first one is Requirements Specification and Analysis, Technical set up and Design and the second one is Interface and user experience including CRUD functionality, search and sort.
 
-Next, I sorted these tasks by how important or urgent they Ire, using a simple method called MoSCoW. I used GitHub to keep everything organized, giving tasks labels like "Must Have", "Should Have", "Could Have" and "Wount have" Ire the most important because they Ire needed for the project's goals, especially from the users' view. "Good to Have" tasks made the project better but Iren't needed to finish it. "Nice to Have" Ire extras I wanted to add if I had time. Since this project was just a starting version, I didn't get to do everything. But, I made sure all the "Must Have" tasks Ire done.
+The Epics and User stories are documented on a Kanban board on Git Hub and can be viewed [here](https://github.com/users/aslinedvinsson/projects/8/views/1)
 
-## Work approaach 
-This project started as a template from a Code Institute project named Boutique Ado. Once I had all the features from Boutique Ado working, I began to make it the own project. I changed the look of the front end and added the own features to the back end. I used Bootstrap for a lot of the design work.
-
-///
-
-Document Purpose and the Value to the User and Business
-document Purpose Testing
-Map Project goals to user stories which user story is mapped to which goal
+## Work approaach
+This project originated from a template provided by a Code Institute project called Boutique Ado. After implementing all the features from Boutique Ado, I transitioned the project into a unique creation of my own. I modified aspects of the front end and introduced new features to the back end. For much of the design work, I utilized Bootstrap.
 
 ## Marketing strategies
-To effectively market Artzy, the art e-commerce platform, I'll employ a multi-faceted strategy designed to engage the target audience and enhance the online presence.
+To effectively market Artzy, the art e-commerce platform, I will employ a multi-faceted strategy designed to engage our target audience and enhance our online presence.
 
 ### Content Marketing
-Develop newsletter and social media content that educates and inspires the audience about art, focusing on storytelling to highlight artists and their work, making art more relatable and accessible.
+We will develop newsletters and social media content that educates and inspires our audience about art. By focusing on storytelling, we aim to highlight artists and their work, making art more relatable and accessible to everyone.
 
-### SEO 
-Optimize the Ibsite with relevant keywords identified through research, improving the visibility in search engine results and attracting organic traffic interested in art purchasing.
+### SEO
+We will optimize the website with relevant keywords identified through research. This will improve our visibility in search engine results and attract organic traffic from individuals interested in purchasing art.
 
-### Social Media Engagement 
-Utilize platforms like Instagram and Facebook, where visual content thrives, to showcase the art pieces, create engaging posts, and connect with the audience through comments and stories.
+### Social Media Engagement
+We will utilize platforms like Instagram and Facebook, where visual content thrives, to showcase our art pieces. Creating engaging posts and connecting with our audience through comments and stories will be key.
 
 #### Facebook
-printscreen on mockup
+//////// Include a mockup of a Facebook post or page here.
 
 ### Email Marketing
-Launch an email newsletter to keep subscribers informed about new arrivals, exclusive offers, and upcoming sales, enctheaging repeat visits and fostering a community around the brand.
-
-
-
+We will launch an email newsletter to keep subscribers informed about new arrivals, exclusive offers, and upcoming sales. This strategy is intended to encourage repeat visits and foster a community around the brand.
 
 
 # UI/UX Design
+Artzy e-commerce platform is a vibrant gateway to creativity, featuring an inspiring homepage alive with color, designed to captivate and draw art lovers into a world of visual delight. With a minimalist approach, I’ve chosen a white background for browsing art, ensuring each piece stands out with its true colors and details, offering a clean and focused viewing experience akin to an exclusive gallery.
+
+Navigation on my site is intentionally streamlined and intuitive, allowing you to explore curated collections effortlessly. The visual design emphasizes a user-friendly interface, highlighting simplicity and ease, making the discovery and acquisition of art an enjoyable and straightforward journey for every visitor.
+
+By focusing on a clean, engaging, and easy-to-navigate experience, I aim to enrich the art buying process, turning it into a journey of discovery and inspiration for all who visit.
+
 ## Wireframes
-## Color scheme
+
+<details open>
+    <summary>Desktop Home Page Wireframe</summary>
+    <img src="docs/wireframes/home_dt.png">
+</details>
+
+<details>
+    <summary>Mobile Home Page Wireframe</summary>
+    <img src="docs/wireframes/home.png">
+</details>
+
+<details>
+    <summary>Desktop Products Page Wireframe</summary>
+    <img src="docs/wireframes/products_dt.png">
+</details>
+
+<details>
+    <summary>Mobile Products Page Wireframe</summary>
+    <img src="docs/wireframes/products.png">
+</details>
+
+<details>
+    <summary>Desktop Product Detail Page Wireframe</summary>
+    <img src="docs/wireframes/product_detail_dt.png">
+</details>
+
+<details>
+    <summary>Mobile Product Detail Page Wireframe</summary>
+    <img src="docs/wireframes/product_detail.png">
+</details>
+
+<details>
+    <summary>Desktop Newsletter Page Wireframe</summary>
+    <img src="docs/wireframes/newsletter_dt.png">
+</details>
+
+<details>
+    <summary>Mobile Newsletter Page Wireframe</summary>
+    <img src="docs/wireframes/newsletter.png">
+</details>
+
+<details>
+    <summary>Desktop Shopping Cart Page Wireframe</summary>
+    <img src="docs/wireframes/shopping_cart_dt.png">
+</details>
+
+<details>
+    <summary>Mobile Shopping Cart Page Wireframe</summary>
+    <img src="docs/wireframes/shopping_cart.png">
+</details>
+
+<details>
+    <summary>Desktop About Page Wireframe</summary>
+    <img src="docs/wireframes/about_dt.png">
+</details>
+
+<details>
+    <summary>Mobile About Page Wireframe</summary>
+    <img src="docs/wireframes/about.png">
+</details>
+
+<details>
+    <summary>Desktop Contact Page Wireframe</summary>
+    <img src="docs/wireframes/contact_dt.png">
+</details>
+
+<details>
+    <summary>Mobile Contact Page Wireframe</summary>
+    <img src="docs/wireframes/contact.png">
+</details>
+
+<details>
+    <summary>Desktop Profile Page Wireframe</summary>
+    <img src="docs/wireframes/profile_dt.png">
+</details>
+
+<details>
+    <summary>Mobile Profile Page Wireframe</summary>
+    <img src="docs/wireframes/profile.png">
+</details>
+
+<details>
+    <summary>Desktop Checkout Page Wireframe</summary>
+    <img src="docs/wireframes/checkout_dt.png">
+</details>
+
+<details>
+    <summary>Mobile Checkout Page Wireframe</summary>
+    <img src="docs/wireframes/checkout.png">
+</details>
+
+<details>
+    <summary>Desktop Product Management Page Wireframe</summary>
+    <img src="docs/wireframes/product_management_dt.png">
+</details>
+
+<details>
+    <summary>Mobile Product Management Page Wireframe</summary>
+    <img src="docs/wireframes/product_management.png">
+</details>
+
+<details>
+    <summary>Desktop Wishlist Page Wireframe</summary>
+    <img src="docs/wireframes/wishlist_dt.png">
+</details>
+
+<details>
+    <summary>Mobile Wishlist Page Wireframe</summary>
+    <img src="docs/wireframes/wishlist.png">
+</details>
+
+<details>
+    <summary>Sign Up for Newsletter Wireframe</summary>
+    <img src="docs/wireframes/signup_newsletter.png">
+</details>
+
+
+## Colors
+Choosing a vibrant and colorful image for the homepage against a white background with black text is a strategic move designed to instantly grab the visitor's attention. This pop of color makes a bold statement, ensuring the artwork and, by extension, the products, are the stars of the show.
+
+The contrasting white header and black footer enhance readability and frame the homepage art beautifully, without overshadowing the main attraction. On subsequent pages, the white background with black text continues this theme of simplicity and focus, ensuring that the colorful homepage art remains the visual highlight of the website.
+
+This color scheme is not just about aesthetics; it's a deliberate choice to make the shopping experience more engaging and memorable. By keeping the design elements minimal and focused, the website directs visitors' attention exactly where it needs to be: on the products and the vibrant imagery that represents them. This approach not only improves user engagement but also strengthens the site's branding.
 ## Fonts
 * The Ibsite uses googlefonts/////
 ## Images
-* The Ibsite uses images from [Unsplash]( https://unsplash.com/).
-## Icons 
-* The Ibsite uses icons from [Font AIsome]( https://fontaIsome.com/ ).
+* The site uses images from [Unsplash]( https://unsplash.com/).
+## Icons
+* The site uses icons from [Font AIsome]( https://fontaIsome.com/ ).
 
 
 ## User stories
-issues in github project
-include acceptance critera
+<details>
+<summary><b>Epic: About page</b></summary>
+<ul>
+  <li><b>As a user, I want to read a concise overview of the art e-commerce site on the About page.</b>
+    <ul>
+      <li>The About page should contain a brief history of the company.</li>
+      <li>The page should have contact information available.</li>
+      <li>The About page should be easy to navigate.</li>
+    </ul>
+  </li>
+</ul>
+</details>
+
+<details>
+<summary><b>Epic: Newsletter Subscription</b></summary>
+<ul>
+  <li><b>As a website visitor, I want to fill out the newsletter subscription form, so that I can receive updates through a newsletter.</b>
+    <ul>
+      <li>The subscription form is easy to find on the website.</li>
+      <li>The form requires minimal information (e.g., name and email address).</li>
+      <li>Users receive a confirmation email upon subscription.</li>
+    </ul>
+  </li>
+  <li><b>As a subscriber, I want to easily unsubscribe from the newsletter.</b>
+    <ul>
+      <li>Subscribers can unsubscribe via a link in the newsletter.</li>
+      <li>Changes to subscription preferences are processed immediately.</li>
+    </ul>
+  </li>
+  <li><b>As a seller, I want to create and send newsletters to subscribers.</b>
+    <ul>
+      <li>There is an interface for creating newsletter content.</li>
+      <li>Newsletters can be sent to all subscribers.</li>
+    </ul>
+  </li>
+</ul>
+</details>
+
+<details>
+<summary><b>Epic: Message Notification to Users</b></summary>
+<ul>
+  <li><b>As a user, I receive notifications for important updates or messages.</b>
+    <ul>
+      <li>User receives notifications for account-related activities like registration, login/logout, and password changes.</li>
+      <li>User receives notifications for shopping cart-related activities like changes the user does in the shopping cart before submitting the order.</li>
+      <li>User receives notifications for order-related activities like order confirmation, delivery.</li>
+    </ul>
+  </li>
+</ul>
+</details>
+
+<details>
+<summary><b>Epic: Wishlist</b></summary>
+<ul>
+  <li><b>As a customer, I want to add products to my wishlist so that I can return to them later.</b>
+    <ul>
+      <li>The customer can add a product to the wishlist from the product page.</li>
+      <li>The customer can see the number of products in their wishlist on the main menu.</li>
+      <li>The customer can view their wishlist by clicking on the wishlist in the main menu.</li>
+    </ul>
+  </li>
+  <li><b>As a customer, I want to see my saved products in my wishlist so that I can plan my purchases.</b>
+    <ul>
+      <li>The wishlist shows all products that the customer has added.</li>
+      <li>The customer can see product images, names, prices for each product in the wishlist.</li>
+    </ul>
+  </li>
+  <li><b>As a customer, I want to remove products from my wishlist so that I can manage my desires.</b>
+    <ul>
+      <li>The customer can remove a product from the wishlist from the wishlist page.</li>
+      <li>When a product is removed from the wishlist, the wishlist is immediately updated.</li>
+    </ul>
+  </li>
+</ul>
+</details>
+
+<details>
+<summary><b>Epic: Checkout management</b></summary>
+<ul>
+  <li><b>As a user, I can proceed to checkout and complete the purchase.</b>
+    <ul>
+      <li>User can navigate to the checkout page from the shopping cart.</li>
+      <li>User can view the summary of items in the cart.</li>
+      <li>User can input delivery and payment details.</li>
+      <li>User receives confirmation upon successful payment completion.</li>
+    </ul>
+  </li>
+</ul>
+</details>
+
+<details>
+<summary><b>Epic: Shopping cart management</b></summary>
+<ul>
+  <li><b>As a user, I can add items to my shopping cart for purchase.</b>
+    <ul>
+      <li>User can click on the "Add to Cart" button on the item details page.</li>
+      <li>Item is added to the user's shopping cart.</
+
+li>
+      <li>User can view the updated cart with the added item.</li>
+      <li>User can add multiple items to the cart.</li>
+    </ul>
+  </li>
+  <li><b>As a user, I can update items in my shopping cart to change their quantities or remove them altogether before finalizing my purchase.</b>
+    <ul>
+      <li>Next to each item in the cart, there are options to adjust the quantity of the item or remove it from the cart.</li>
+      <li>When the user adjusts the quantity, the cart updates to reflect the new quantity of the item.</li>
+      <li>User can remove multiple items from the cart in one session.</li>
+    </ul>
+  </li>
+</ul>
+</details>
+
+<details>
+<summary><b>Epic: System setup</b></summary>
+<ul>
+  <li><b>User story: As a developer, I set up a new Django project to develop a web application.</b>
+    <ul>
+      <li>Start Django project.</li>
+      <li>Create .gitignore file.</li>
+      <li>Add allowed hosts in settings.py.</li>
+      <li>Create superuser account.</li>
+      <li>Install Django allauth.</li>
+    </ul>
+  </li>
+</ul>
+</details>
+
+<details>
+<summary><b>Epic: Product Management</b></summary>
+<ul>
+  <li><b>As a user, I can view the list of items and details of an item listed on the e-commerce site.</b>
+    <ul>
+      <li>User can view a list of items and select some to purchase.</li>
+      <li>User can view a specific category of items without having to search through all items.</li>
+      <li>User can navigate to the item details page.</li>
+      <li>User can view item name, description, price, and images.</li>
+      <li>User can see seller information.</li>
+      <li>User can see reviews and ratings if available.</li>
+    </ul>
+  </li>
+</ul>
+</details>
+
+Git Hub Kanban board can be viewed [here](https://github.com/users/aslinedvinsson/projects/8/views/1)
 
 ## Features
-#### Navigation Bar 
-|         |         |
-|-------|---------|
-| Logout/ Not Registered User- displays links, logo- redirects user to home page, search bar,  Login/Sign Up link, shopping bag | print screen////|
+#### Navigation Bar
+Logout/ Not Registered User- displays links, logo- redirects user to home page, search bar,  Login/Sign Up link, shopping bag | print screen////|
 | Login User - displays links, logo- redirects user to home page, search bar, username Account, shopping cart | screen shot///|
 #### Home Page///
-|        |       |
-|-------|--------|
-| Logout/ Not Registered User | print sceen////|
+
+
+Logout/ Not Registered User | print sceen////|
 #### Register Account Page
-|      |       |
-|------|------|
+
+
 | Dispays registration form, login link | printscreen////|
 #### Login Page
-|      |       |
-|-----|------|
-| Displays register link, login form, remeber label, home link, forgot pasword link| printscreen////| 
+
+
+| Displays register link, login form, remeber label, home link, forgot pasword link| printscreen////|
 #### Logout Page
-|    |      |
-|------|-----|
-| Displays logout button,  | printscreen////>| 
+
+| Displays logout button,  | printscreen////>|
 #### Product Page ////vad heter den
-|      |       |
-|-------|-------|
-| Displays product image, name, artist, category price, back to top button | printscreen////>| 
-|       |       |
-|-------|-------|
+
+| Displays product image, name, artist, category price, back to top button | printscreen////>|
+
 | Product Detail Page  - Displays product name, artist, category price, product description, quantity, keep shopping button, add to bag button, add to wishlist button| printscreen////|
 
-#### Wishlist page 
-|      |       |
-|-------|-------|
-|Displays //////| printscreen////>| 
-#### About page 
-|      |       |
-|-------|-------|
-|Displays image and a text about Artzy | printscreen////>| 
-#### Contact page 
-|      |       |
-|-------|-------|
-|Displays a contact form for the user to fill in | printscreen////>| 
-#### Newsletter page 
-|      |       |
-|-------|-------|
-|Displays image and the latest newsletter posted by Artzy witch is also sent to all subscribers | printscreen////>| 
+#### Wishlist page
+
+|Displays //////| printscreen////>|
+#### About page
+
+|Displays image and a text about Artzy | printscreen////>|
+#### Contact page
+
+|Displays a contact form for the user to fill in | printscreen////>|
+#### Newsletter page
+
+|Displays image and the latest newsletter posted by Artzy witch is also sent to all subscribers | printscreen////>|
 
 #### Display difference for registered and unregistered users
-|       |        |
-|-------|---------|
+
 |Login User-displays  of different sites what can be seen an not
 
 #### Shopping Cart Page
-|      |       |
-|--------|-------|
+
 | Displays order info, price, quantity, subtotal, update and remove item, shopping cart total, delivery, total free delivery availability, keep shopping button, checkout button| printscreen///|
 #### Checkout Page
-|     |      |
-|------|-----|
+
 | Displays order form- ythe details, order oIrvie| printscreen///|
 | Displays delivery info, save delivery info tag, add payment, ythe card charges, adjust cart button, complete order button|printscreen|
 #### Checkout Success Page
-|       |        |
-|------|-------|
+
 | Displays order confirmation, info confirmation email sent to user email| printscreen///|
 ### User Profile Page
-|       |       |
-|------|------|
-| Displays user default picture, delivery information, order history, order number link- redirects to past order confirmation page, update profile button, homelink| printscreen///| 
+
+| Displays user default picture, delivery information, order history, order number link- redirects to past order confirmation page, update profile button, homelink| printscreen///|
 #### Update User Profile Page//////
-|       |       |
-|-------|------| 
+
 | Displays update profile form, select image button, order history, delete order histor, order number link- redirects to past order confirmation page, update button, cancel link| screenscreen////|
 #### Super User - Product Management
-|       |      |
-|------|------|
+
 | Add Product- displays add product form, select image button, home page link, cancel button, add button|screenscreen//// |
 | Update and Delete product displayed in product detail page| screenscreen////|
 | Update product page - displays update product form, curent image, select image button, cancel button, update product button | screenscreen////|
 #### Footer////
-|      |      |
-|------|------|
+
 | Footer displayed on all pages, free delivery baner,| screenscreen////|
 
 
@@ -205,14 +444,12 @@ wishlistitem
 
 ## Technoligies
 
-
 ### Language
 * HTML5 - Provides the content and structure for the Ibsite.
 * CSS - Provides the styling for the Ibsite.
 * Python - Provides the functionality for the site.
-* Django - Used as the Python framework for the Ibsite. 
+* Django - Used as the Python framework for the Ibsite.
 * Javascript - Used to add card payment, country field, sorting products, back to top click function, update the item quantity, and remove the item from the shopping cart
-
 
 
 ### Systems
@@ -257,7 +494,7 @@ wishlistitem
 
 ## Testing
 Full testing can be seen in [TESTING.md](https://github.com/Ixxxxxxxx/TESTING.md) file.
-
+/////
 responsive testing
 browser compatability
 bugs resolved and unresolved
@@ -314,14 +551,14 @@ feature testing
 ### Forking repository
 - Forking enables you to create a personal copy of an existing repository on a remote server. To do so with the specified repository:
 
-- Navigate to the **xxxxxs** repository on GitHub.
+- Navigate to the **[repository](https://github.com/aslinedvinsson/Artzy.git)**  on GitHub.
 - Click on the **"Fork"** button located at the top right corner of the page.
 - This action will generate a copy of the repository under ythe own GitHub account.
 
 ### Cloning repository
 - Cloning creates a local version of a repository, maintaining a connection to the original sthece. To contribute modifications to a repository you have access to, begin with cloning before applying changes and pushing them:
 
-- Navigate to the **XXXX** repository on GitHub.
+- Navigate to the **[repository](https://github.com/aslinedvinsson/Artzy.git)** on GitHub.
 - Click on the **"Code"** dropdown menu and choose ythe cloning method: **HTTPS**, **SSH**, or **GitHub CLI**, then copy the URL provided.
 - Open a **Terminal** window.
 - Change to the directory where you wish the cloned repository to be located.
@@ -332,7 +569,7 @@ feature testing
 ## References and Credits ////
 //////boutique Ado boilerploate
 additional tutorials
-media and content used for educational purpose 
+media and content used for educational purpose
 
 ### Disclaimer
 The content available on this site is solely for educational purposes and should not be interpreted as professional advice.
