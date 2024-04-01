@@ -41,8 +41,8 @@
                                 <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Art work name (Z-A)</option>
                                 <option value="artist_asc" {% if current_sorting == 'artist_asc' %}selected{% endif %}>Artist (A-Z)</option>
                                 <option value="artist_desc" {% if current_sorting == 'artist_desc' %}selected{% endif %}>Artist (Z-A)</option>
-                                <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
-                                <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                                <option value="type_print" {% if current_sorting == 'type_print' %}selected{% endif %}>Print</option>
+                                <option value="type_painting" {% if current_sorting == 'type_painting' %}selected{% endif %}>Painting</option>
                             </select>
                         </div>
                     </div>
@@ -142,26 +142,31 @@
         });
     </script>
 
-    <script type="text/javascript">
-        $('#sort-selector').change(function() {
-            var selector = $(this);
-            var currentUrl = new URL(window.location);
+<script type="text/javascript">
+    $('#sort-selector').change(function() {
+        var selector = $(this);
+        var currentUrl = new URL(window.location);
 
-            var selectedVal = selector.val();
-            if(selectedVal != "reset"){
+        var selectedVal = selector.val();
+        if(selectedVal != "reset"){
+            if(selectedVal == "type_print" || selectedVal == "type_painting") {
+                currentUrl.searchParams.set("sort", "type");
+                currentUrl.searchParams.set("direction", selectedVal.split("_")[1]);
+            } else {
                 var sort = selectedVal.split("_")[0];
                 var direction = selectedVal.split("_")[1];
 
                 currentUrl.searchParams.set("sort", sort);
                 currentUrl.searchParams.set("direction", direction);
-
-                window.location.replace(currentUrl);
-            } else {
-                currentUrl.searchParams.delete("sort");
-                currentUrl.searchParams.delete("direction");
-
-                window.location.replace(currentUrl);
             }
-        })
-    </script>
+
+            window.location.replace(currentUrl);
+        } else {
+            currentUrl.searchParams.delete("sort");
+            currentUrl.searchParams.delete("direction");
+
+            window.location.replace(currentUrl);
+        }
+    })
+</script>
 {% endblock %}

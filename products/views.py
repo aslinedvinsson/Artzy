@@ -6,7 +6,7 @@ from django.db.models.functions import Lower
 from .models import Product, Category
 from .forms import ProductForm
 
-# Code from Code Institute Boutique Ado Walksthrough
+# Code from Code Institute Boutique Ado Walksthrough customized with sorting on print or painting
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
     products = Product.objects.all()
@@ -22,11 +22,16 @@ def all_products(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
-            if sortkey == 'category':
+            elif sortkey == 'category':
                 sortkey = 'category__name'
+            elif sortkey == 'type':
+                if 'direction' in request.GET and request.GET['direction'] == 'print':
+                    sortkey = '-is_print'
+                else:
+                    sortkey = 'is_print'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
-                if direction == 'desc':
+                if direction == 'desc' and sortkey != 'is_print' and sortkey != '-is_print':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
 
@@ -39,7 +44,7 @@ def all_products(request):
             query = request.GET['q']
             if not query:
                 messages.error(request, "You didn't enter any search criteria!")
-                return redirect(reverse('products:products'))
+                return redirect(reverse('products'))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
@@ -52,6 +57,7 @@ def all_products(request):
         'current_sorting': current_sorting,
     }
     return render(request, 'products/products.html', context)
+
 
 
 def product_detail(request, product_id):
