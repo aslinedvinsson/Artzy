@@ -17,24 +17,23 @@ def all_products(request):
     sort = None
     direction = None
 
-
-if request.GET:
-    if 'sort' in request.GET:
-        sortkey = request.GET['sort']
-        sort = sortkey
-        if sortkey == 'name':
-            sortkey = 'lower_name'
-            products = products.annotate(lower_name=Lower('name'))
-        elif sortkey == 'category':
-            sortkey = 'category__name'
-        elif sortkey == 'type':
-            direction = request.GET.get('direction', '')
-            sortkey = '-is_print' if direction == 'print' else 'is_print'
-        if 'direction' in request.GET:
-            direction = request.GET['direction']
-            if direction == 'desc' and sortkey not in ['is_print', '-is_print']:
-                sortkey = f'-{sortkey}'
-        products = products.order_by(sortkey)
+    if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                products = products.annotate(lower_name=Lower('name'))
+            elif sortkey == 'category':
+                sortkey = 'category__name'
+            elif sortkey == 'type':
+                direction = request.GET.get('direction', '')
+                sortkey = '-is_print' if direction == 'print' else 'is_print'
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc' and sortkey not in ['is_print', '-is_print']:
+                    sortkey = f'-{sortkey}'
+            products = products.order_by(sortkey)
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
@@ -44,13 +43,10 @@ if request.GET:
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search "
-                                        "criteria!")
-                return redirect(reverse('products'))
-
-            queries = Q(name__icontains=query) | Q(
-                    description__icontains=query)
-            products = products.filter(queries)
+                messages.error(request, "You didn't enter any search criteria!")
+            else:
+                queries = Q(name__icontains=query) | Q(description__icontains=query)
+                products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
     context = {
