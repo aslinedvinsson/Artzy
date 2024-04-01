@@ -1,7 +1,8 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item d-block d-md-none">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}" id="home-link">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5"
+                href="{% url 'home' %}" id="home-link">
                 Home
             </a>
         </li>
@@ -13,11 +14,16 @@
             </a>
             <div class="dropdown-menu border-0"
                 aria-labelledby="all-products-link">
-                <a href="{% url 'products:products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'products:products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
-                <a href="{% url 'products:products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
-                <a href="{% url 'products:products' %}?sort=artist&direction=asc" class="dropdown-item ">By Artist</a>
-                <a href="{% url 'products:products' %}" class="dropdown-item">All Art</a>
+                <a href="{% url 'products:products' %}?sort=price&direction=asc"
+                    class="dropdown-item">By Price</a>
+                <a href="{% url 'products:products' %}?sort=rating&direction=desc"
+                    class="dropdown-item ">By Rating</a>
+                <a href="{% url 'products:products' %}?sort=category&direction=asc"
+                    class="dropdown-item ">By Category</a>
+                <a href="{% url 'products:products' %}?sort=artist&direction=asc"
+                    class="dropdown-item ">By Artist</a>
+                <a href="{% url 'products:products' %}"
+                    class="dropdown-item">All Art</a>
             </div>
         </li>
 
@@ -27,14 +33,22 @@
                 aria-haspopup="true" aria-expanded="false">
                 Art Categories
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="art-category-link">
-                <a href="{% url 'products:products' %}?category=abstract_paintings" class="dropdown-item">Abstract Art</a>
-                <a href="{% url 'products:products' %}?category=landscape_paintings" class="dropdown-item">Landscape Paintings</a>
-                <a href="{% url 'products:products' %}?category=street_art" class="dropdown-item">Street Art</a>
-                <a href="{% url 'products:products' %}?category=modern_paintings" class="dropdown-item">Modern Art</a>
-                <a href="{% url 'products:products' %}?category=portrait_paintings" class="dropdown-item">Portrait Paintings</a>
-                <a href="{% url 'products:products' %}?category=pop_art" class="dropdown-item">Pop Art</a>
-                <a href="{% url 'products:products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+            <div class="dropdown-menu border-0"
+                aria-labelledby="art-category-link">
+                <a href="{% url 'products:products' %}?category=abstract_paintings"
+                    class="dropdown-item">Abstract Art</a>
+                <a href="{% url 'products:products' %}?category=landscape_paintings"
+                    class="dropdown-item">Landscape Paintings</a>
+                <a href="{% url 'products:products' %}?category=street_art"
+                    class="dropdown-item">Street Art</a>
+                <a href="{% url 'products:products' %}?category=modern_paintings"
+                    class="dropdown-item">Modern Art</a>
+                <a href="{% url 'products:products' %}?category=portrait_paintings"
+                    class="dropdown-item">Portrait Paintings</a>
+                <a href="{% url 'products:products' %}?category=pop_art"
+                    class="dropdown-item">Pop Art</a>
+                <a href="{% url 'products:products' %}?category=new_arrivals"
+                    class="dropdown-item">New Arrivals</a>
             </div>
         </li>
 
@@ -45,9 +59,12 @@
                 About
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="about-link">
-                <a href="{% url 'about:about' %}" class="dropdown-item">About Us</a>
-                <a href="{% url 'newsletter:newsletter' %}" class="dropdown-item">Neswletter</a>
-                <a href="{% url 'about:about' %}#contact-us" class="dropdown-item">Contact</a>
+                <a href="{% url 'about:about' %}" class="dropdown-item">About
+                    Us</a>
+                <a href="{% url 'newsletter:newsletter' %}"
+                    class="dropdown-item">Neswletter</a>
+                <a href="{% url 'about:about' %}#contact-us"
+                    class="dropdown-item">Contact</a>
             </div>
         </li>
 

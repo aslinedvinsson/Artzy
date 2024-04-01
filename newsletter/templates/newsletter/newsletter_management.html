@@ -13,16 +13,19 @@
 
 {% block content %}
 <div class="container">
-    <form method="post" action="{% url 'newsletters:newsletter_management' %}" enctype="multipart/form-data">
+    <form method="post" action="{% url 'newsletters:newsletter_management' %}"
+        enctype="multipart/form-data">
         {% csrf_token %}
         {{ create_form|crispy }}
-        <button type="submit" name="create_newsletter" class="btn btn-primary">Create Newsletter</button>
+        <button type="submit" name="create_newsletter"
+            class="btn btn-primary">Create Newsletter</button>
     </form>
 
     <form method="post" action="">
         {% csrf_token %}
         {{ send_form|crispy }}
-        <button type="submit" name="send_newsletter" class="btn btn-primary">Send Newsletter</button>
+        <button type="submit" name="send_newsletter"
+            class="btn btn-primary">Send Newsletter</button>
     </form>
 </div>
 {% endblock %}
