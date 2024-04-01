@@ -42,7 +42,7 @@
     {% endblock %}
 
     {% block corejs %}
- <script>
+    <script>
         window.addEventListener('load', function () {
             if (!window.location.href.endsWith('/about/#contact-us')) {
                 window.scrollTo(0, 0);
@@ -70,8 +70,8 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>Buy Art Online | Accessible Art for Beginners to Collectors - Artzy
-        {% block extra_title %}{% endblock %}</title>
+    <title>{% block extra_title %}Buy Art Online | Accessible Art for Beginners
+        to Collectors{% endblock %} - Artzy</title>
 </head>
 
 <body>
@@ -192,17 +192,17 @@
     {% block content %}
     <div class="overlay"></div>
     <div class="flex-container">
-        </div>
+    </div>
     {% endblock %}
 
     <!-- Footer Inspired by https://mdbootstrap.com/docs/standard/navigation/footer/-->
 
     <footer class="bg-body-tertiary bg-black text-white p-5 mt-3">
 
-            <div class="col bg-black text-white text-center">
-                <h4 class="mb-4">Free delivery on orders over
-                    ${{ free_delivery_threshold }}!</h4>
-            </div>
+        <div class="col bg-black text-white text-center">
+            <h4 class="mb-4">Free delivery on orders over
+                ${{ free_delivery_threshold }}!</h4>
+        </div>
 
         <!-- Section: Links -->
         <div class="container text-left">
@@ -213,7 +213,8 @@
                     <ul class="list-unstyled mb-0">
                         <li class="mb-3">Mon - Fri: 9 AM - 5 PM. Live help for
                             all your shopping needs!</li>
-                        <li class="mb-3">Weekends: Our team takes a rest, but our site stays
+                        <li class="mb-3">Weekends: Our team takes a rest, but
+                            our site stays
                             awake for you 24/7. Shop anytime!</li>
                     </ul>
                 </div>
@@ -223,33 +224,50 @@
 
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0 px-lg-5">
                     <h5 class="text-uppercase">Follow Us</h5>
-                    <ul class="list-unstyled mb-0 d-flex align-items-start justify-content-start">
+                    <ul
+                        class="list-unstyled mb-0 d-flex align-items-start justify-content-start">
                         <li style="margin-left: 0; padding-left: 0;">
-                            <a class="btn btn-link btn-floating btn-lg text-white" href="https://www.facebook.com" target="_blank" role="button" data-mdb-ripple-color="white"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-link btn-floating btn-lg text-white"
+                                href="https://www.facebook.com" target="_blank"
+                                role="button" data-mdb-ripple-color="white"><i
+                                    class="fab fa-facebook-f"></i></a>
                         </li>
                         <li>
-                            <a class="btn btn-link btn-floating btn-lg text-white" href="https://www.instagram.com" target="_blank" role="button" data-mdb-ripple-color="white"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-link btn-floating btn-lg text-white"
+                                href="https://www.instagram.com" target="_blank"
+                                role="button" data-mdb-ripple-color="white"><i
+                                    class="fab fa-instagram"></i></a>
                         </li>
                         <li>
-                            <a class="btn btn-link btn-floating btn-lg text-white" href="https://www.youtube.com" target="_blank" role="button" data-mdb-ripple-color="white"><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-link btn-floating btn-lg text-white"
+                                href="https://www.youtube.com" target="_blank"
+                                role="button" data-mdb-ripple-color="white"><i
+                                    class="fab fa-youtube"></i></a>
                         </li>
                     </ul>
                 </div>
 
-            <!-- Grid column: Contact Us -->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Contact Us</h5>
-                <ul class="list-unstyled mb-0">
-                    <li>
-                        <p>For inquiries or support, contact us via mail<a class="btn btn-link btn-floating btn-lg text-white" href="{% url 'about:about' %}#contact-us" role="button" data-mdb-ripple-color="white"><i class="fas fa-envelope"></i></a>or social media</p>
-                    </li>
-                    <li>
-                        <a href="https://www.termsfeed.com/live/1ef9e4d0-3b73-4a97-9672-a1939610d116" target="_blank" rel="nofollow">
-                            <p class="text-white">Privacy Policy</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                <!-- Grid column: Contact Us -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Contact Us</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <p>For inquiries or support, contact us via mail<a
+                                    class="btn btn-link btn-floating btn-lg text-white"
+                                    href="{% url 'about:about' %}#contact-us"
+                                    role="button"
+                                    data-mdb-ripple-color="white"><i
+                                        class="fas fa-envelope"></i></a>or
+                                social media</p>
+                        </li>
+                        <li>
+                            <a href="https://www.termsfeed.com/live/1ef9e4d0-3b73-4a97-9672-a1939610d116"
+                                target="_blank" rel="nofollow">
+                                <p class="text-white">Privacy Policy</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
                 <!-- Grid column: Newsletter Form -->
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0 px-lg-5">

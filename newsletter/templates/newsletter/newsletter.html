@@ -1,8 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
-{% block title %}Subscribe to Artzy Newsletter - Get Exclusive Art Insights{% endblock %}
-{% block description %}Stay updated with the latest from Artzy by signing up for our newsletter. Get exclusive insights into new art collections, artist features, and behind-the-scenes content delivered directly to your inbox. Don't miss out on our monthly highlights, special offers, and a peek into the art world through Artzy's lens. Sign up today to be part of our art-loving community!{% endblock %}
+{% block title %}Subscribe for Exclusive Art Insights & Offers | Artzy
+Newsletter{% endblock %}
+{% block description %}Join the Artzy community: Subscribe to our newsletter for
+exclusive art insights, special offers, and behind-the-scenes access to the art
+world. Discover new art collections, meet emerging artists, and get the inside
+scoop on art events. Sign up now to explore the world of art with
+Artzy!{% endblock %}
 {% block content %}
 <div class="overlay"></div>
 <div class="container mt-5">
@@ -21,8 +26,11 @@
             <div class="text-left mt-3">
                 <!-- Add margin top for the text -->
                 <h2>{{ newsletter.title }}</h2>
-                <p class="mb-2"><em>Created on: {{ newsletter.created_on|date:"F d, Y" }}</em></p>
-                <div><p>{{ newsletter.content | safe }}</p></div>
+                <p class="mb-2"><em>Created on:
+                        {{ newsletter.created_on|date:"F d, Y" }}</em></p>
+                <div>
+                    <p>{{ newsletter.content | safe }}</p>
+                </div>
             </div>
         </div>
     </div>
@@ -31,13 +39,17 @@
     <div class="col text-center">
 
         {% if request.user.is_superuser %}
-        <a href="{% url 'newsletter:newsletter_management' %}" class="btn btn-primary btn-lg">Create or Send Newsletter</a>
+        <a href="{% url 'newsletter:newsletter_management' %}"
+            class="btn btn-primary btn-lg">Create or Send Newsletter</a>
 
 
-        <form action="" method="get"><p>Change to another newsletter in the list:</p>
+        <form action="" method="get">
+            <p>Change to another newsletter in the list:</p>
             <select name="id" onchange="this.form.submit()">
                 {% for n in all_newsletters %}
-                    <option value="{{ n.id }}" {% if n.id == newsletter.id %}selected{% endif %}>{{ n.title }}</option>
+                <option value="{{ n.id }}"
+                    {% if n.id == newsletter.id %}selected{% endif %}>
+                    {{ n.title }}</option>
                 {% endfor %}
             </select>
         </form>
@@ -48,22 +60,32 @@
 <div class="container mt-5">
     <div class="row justify-content-center align-items-center">
         <div class="col-12 col-md-8 text-left">
-        <h3>Explore More on Artzy</h3>
-        <p>While you wait for our next newsletter, dive deeper into the art world with these curated resources:</p>
-        <ul class="list-unstyled">
-            <li><a class="text-black" href="https://www.metmuseum.org/art/collection" target="_blank" rel="noopener noreferrer">Explore The Met's Art Collection</a></li>
-            <li><a class="text-black" href="https://www.tate.org.uk/visit/tate-modern" target="_blank" rel="noopener noreferrer">Visit Tate Modern Exhibitions</a></li>
-            <li><a class="text-black" href="https://www.deviantart.com" target="_blank" rel="noopener noreferrer">Join the DeviantArt Community</a></li>
-        </ul>
+            <h3>Explore More on Artzy</h3>
+            <p>While you wait for our next newsletter, dive deeper into the art
+                world with these curated resources:</p>
+            <ul class="list-unstyled">
+                <li><a class="text-black"
+                        href="https://www.metmuseum.org/art/collection"
+                        target="_blank" rel="noopener noreferrer">Explore The
+                        Met's Art Collection</a></li>
+                <li><a class="text-black"
+                        href="https://www.tate.org.uk/visit/tate-modern"
+                        target="_blank" rel="noopener noreferrer">Visit Tate
+                        Modern Exhibitions</a></li>
+                <li><a class="text-black" href="https://www.deviantart.com"
+                        target="_blank" rel="noopener noreferrer">Join the
+                        DeviantArt Community</a></li>
+            </ul>
+        </div>
     </div>
-</div>
 </div>
 <div class="row justify-content-center">
 
     <div class="col-12 col-md-6 my-5">
         <h2>Sign up for our newsletter</h2>
         <!-- Sign up newsletter form -->
-        <form method="post" action="{% url 'newsletter:subscribe_to_newsletter' %}">
+        <form method="post"
+            action="{% url 'newsletter:subscribe_to_newsletter' %}">
             {{ subscriber_form | crispy }}
             {% csrf_token %}
             <button class="btn btn-secondary" type="submit">Submit</button>
@@ -71,7 +93,8 @@
         {% if messages %}
         <div class="alert alert-dismissible">
             {% for message in messages %}
-            <div {% if message.tags %} class="alert {{ message.tags }}" {% endif %}>
+            <div {% if message.tags %} class="alert {{ message.tags }}"
+                {% endif %}>
                 {{ message }}
             </div>
             {% endfor %}

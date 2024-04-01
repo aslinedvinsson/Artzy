@@ -3,8 +3,13 @@ and then modified -->
 {% extends 'base.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
-{% block title %}About Artzy - Our Mission, Vision, and Story | Empowering Art Enthusiasts{% endblock %}
-{% block description %}Discover the story behind Artzy - Your gateway to accessible art. Learn about our mission to bring art to everyone, from novice enthusiasts to seasoned collectors. Join us on our journey to democratize art, making it easy and affordable to find the perfect piece that speaks to you. Find out how Artzy is changing the way people discover, buy, and love art.{% endblock %}
+{% block title %}About Artzy: Empowering Enthusiasts in Our Online Art
+Marketplace | Our Mission and Vision{% endblock %}
+{% block description %}Discover Artzy's journey to make art accessible and
+affordable for everyone. As an online art marketplace, we're dedicated to
+empowering novice enthusiasts and seasoned collectors alike. Learn about our
+mission to democratize the art world, making it easy for anyone to find and fall
+in love with the perfect piece of art.{% endblock %}
 
 {% block content %}
 <div class="overlay"></div>
@@ -30,7 +35,8 @@ and then modified -->
 </div>
 <div class="row">
     <div class="col text-center">
-        <p class=""><em>Updated on: {{ about.updated_on|date:"F d, Y"  }}</em></p>
+        <p class=""><em>Updated on: {{ about.updated_on|date:"F d, Y"  }}</em>
+        </p>
 
     </div>
 </div>
@@ -51,4 +57,3 @@ and then modified -->
 </div>
 
 {% endblock content %}
-
