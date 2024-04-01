@@ -7,6 +7,7 @@ from profiles.models import UserProfile
 from products.models import Product
 from .models import Wishlist, WishlistItem
 
+
 @login_required
 def user_wishlists(request):
     """ List all the wishlists associated with the currently logged-in user """
@@ -16,7 +17,6 @@ def user_wishlists(request):
         wishlist_items = WishlistItem.objects.filter(wishlist=wishlist)
     except Wishlist.DoesNotExist:
         wishlist_items = None
-
 
     context = {
         'wishlist_items': wishlist_items,
@@ -42,7 +42,8 @@ def add_to_wishlist(request, item_id):
         print_type = request.POST['print_paper']
     user_profile = UserProfile.objects.get(user=request.user)
     wishlist, created = Wishlist.objects.get_or_create(user=user_profile)
-    if WishlistItem.objects.filter(wishlist=wishlist, product=product).exists():
+    if WishlistItem.objects.filter(
+            wishlist=wishlist, product=product).exists():
         messages.info(request, 'The product is already in your wishlist.')
     else:
         WishlistItem.objects.create(wishlist=wishlist, product=product)
@@ -64,6 +65,7 @@ def remove_from_wishlist(request, item_id):
     wishlist_item.delete()
     messages.success(request, 'Product removed from wishlist')
     return redirect('wishlists:user_wishlists')
+
 
 @login_required
 def add_wish_to_cart(request, item_id):
@@ -88,7 +90,8 @@ def add_wish_to_cart(request, item_id):
 
     if item_id_str in cart:
         cart[item_id_str] += quantity
-        messages.success(request, f'Updated {product.name} quantity to {cart[item_id_str]}')
+        messages.success(request, f'Updated {product.name} quantity to '
+                         '{cart[item_id_str]}')
     else:
         cart[item_id_str] = quantity
         messages.success(request, f'Added {product.name} to your cart')

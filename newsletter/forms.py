@@ -26,15 +26,19 @@ class SubscriberForm(forms.ModelForm):
             else:
                 placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = 'border-black profile-form-input'
+            self.fields[field].widget.attrs[
+                'class'] = 'border-black profile-form-input'
             self.fields[field].label = False
+
 
 class CreateNewsletterForm(forms.ModelForm):
     content = forms.CharField(widget=SummernoteWidget())
+
     class Meta:
         model = Newsletter
         fields = ['title', 'content', 'newsletter_image']
 
 
 class SendNewsletterForm(forms.Form):
-    newsletter = forms.ModelChoiceField(queryset=Newsletter.objects.all(), label="Select Newsletter")
+    newsletter = forms.ModelChoiceField(queryset=Newsletter.objects.all(),
+                                        label="Select Newsletter")

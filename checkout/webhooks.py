@@ -5,6 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 from checkout.webhook_handler import StripeWH_Handler
 import stripe
 
+
 # Code from Code Institute Boutique Ado Walksthrough
 
 @require_POST
@@ -39,9 +40,8 @@ def webhook(request):
     # Map webhook events to relevant handler functions
     event_map = {
         'payment_intent.succeeded': handler.handle_payment_intent_succeeded,
-        'payment_intent.payment_failed': handler.handle_payment_intent_payment_failed,
-        #'charge.succeeded': handler.handle_charge_succeeded,
-        #'payment_intent.created': handler.handle_payment_intent_created,
+        'payment_intent.payment_failed':
+            handler.handle_payment_intent_payment_failed,
     }
 
     # Get the webhook type from Stripe
@@ -49,10 +49,8 @@ def webhook(request):
     print('event_type', event_type)
     # If there's a handler for it, get it from the event map
     # Use the generic one by default
-    #print('handler.handler_event', handler.handler_event)
+
     event_handler = event_map.get(event_type, handler.handle_event)
-    print('event_handler', event_handler)
     # Call the event handler with the event
     response = event_handler(event)
-    print('response', response)
     return response

@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Product, Category
 
+
 # Code from Code Institute Boutique Ado Walksthrough
 class ProductAdmin(admin.ModelAdmin):
     """
@@ -18,6 +19,7 @@ class ProductAdmin(admin.ModelAdmin):
 
     ordering = ('sku',)
 
+
 class CategoryAdmin(admin.ModelAdmin):
     """
     Admin view for Category.
@@ -26,6 +28,7 @@ class CategoryAdmin(admin.ModelAdmin):
         'friendly_name',
         'name',
     )
+
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)

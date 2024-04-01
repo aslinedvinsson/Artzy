@@ -3,6 +3,7 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
 
+
 # Code from Code Institute Boutique Ado Walksthrough
 def cart_contents(request):
     """
@@ -15,7 +16,8 @@ def cart_contents(request):
     - request (HttpRequest): The HttpRequest object.
 
     Returns:
-    - context (dict): Context dictionary containing cart details and grand total.
+    - context (dict): Context dictionary containing cart details and grand
+    total.
     """
     cart_items = []
     total = Decimal('0')

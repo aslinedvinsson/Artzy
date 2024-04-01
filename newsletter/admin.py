@@ -14,6 +14,7 @@ class SubscriberAdmin(admin.ModelAdmin):
 
     ordering = ('name',)
 
+
 class NewsletterAdmin(admin.ModelAdmin):
     """
     Administration for Newsletter models.
@@ -25,6 +26,7 @@ class NewsletterAdmin(admin.ModelAdmin):
         'created_on',
     )
     ordering = ('-created_on',)
+
 
 admin.site.register(Subscriber, SubscriberAdmin)
 admin.site.register(Newsletter, NewsletterAdmin)

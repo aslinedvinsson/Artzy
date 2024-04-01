@@ -29,10 +29,10 @@ def newsletter(request):
 
     all_newsletters = Newsletter.objects.all().order_by('-created_on')
     return render(request, "newsletter/newsletter.html", {
-    "newsletter": newsletter,
-    "all_newsletters": all_newsletters,
-    "subscriber_form": SubscriberForm(),
-})
+                           "newsletter": newsletter,
+                           "all_newsletters": all_newsletters,
+                           "subscriber_form": SubscriberForm(),
+    })
 
 
 @login_required
@@ -74,28 +74,11 @@ def newsletter_management(request):
 
                 return redirect('newsletter:newsletter')
 
-
     return render(request, 'newsletter/newsletter_management.html', {
         'create_form': create_form,
         'send_form': send_form
     })
 
-"""
-def display_newsletter(request):
-    # Get newsletter ID from query parameter, default to None
-    newsletter_id = request.GET.get('id', None)
-
-    if newsletter_id:
-        # If an ID is provided, try to get the corresponding newsletter
-        newsletter = get_object_or_404(Newsletter, id=newsletter_id)
-    else:
-        # If no ID is provided, get the most recent newsletter
-        newsletter = Newsletter.objects.all().order_by('-created_on').first()
-
-    # Render the template with the selected newsletter
-    return render(request, 'newsletter/newsletter.html', {'newsletter': newsletter})
-
-"""
 
 def subscribe_to_newsletter(request):
     """
@@ -124,23 +107,27 @@ def subscribe_to_newsletter(request):
     else:
         form = SubscriberForm()
 
-    return render(request, 'newsletter/newsletter.html', {'subscriber_form': form})
+    return render(request, 'newsletter/newsletter.html', {
+        'subscriber_form': form})
+
 
 def send_confirmation_email(subscriber, request):
     """
     Sends a confirmation email to a new subscriber. Constructs an unsubscribe
-    URL, prepares both HTML and plain text versions of the confirmation message,
-    and sends an email to the subscriber's email address.
+    URL, prepares both HTML and plain text versions of the confirmation
+    message, and sends an email to the subscriber's email address.
     Args:
         subscriber: Subscriber instance to whom the confirmation email is sent.
         request: HttpRequest object, used to build absolute URIs.
     """
-    unsubscribe_url = request.build_absolute_uri(reverse('newsletter:unsubscribe', args=[subscriber.id]))
+    unsubscribe_url = request.build_absolute_uri(reverse(
+        'newsletter:unsubscribe', args=[subscriber.id]))
     context = {
         'unsubscribe_url': unsubscribe_url,
         'subscriber': subscriber,
     }
-    html_message = render_to_string('newsletter/confirmation_newsletter.html', context)
+    html_message = render_to_string(
+        'newsletter/confirmation_newsletter.html', context)
     plain_message = strip_tags(html_message)
 
     send_mail(
@@ -151,6 +138,7 @@ def send_confirmation_email(subscriber, request):
         html_message=html_message,
         fail_silently=False,
     )
+
 
 def unsubscribe(request, subscriber_id):
     """
@@ -167,6 +155,8 @@ def unsubscribe(request, subscriber_id):
     try:
         subscriber = Subscriber.objects.get(id=subscriber_id)
         subscriber.delete()
-        return HttpResponse("You have been successfully unsubscribed. If you ever change your mind, just visit artzy.com and join us again! Best regards, Artzy")
+        return HttpResponse("You have been successfully unsubscribed. "
+                            "If you ever change your mind, just visit "
+                            "artzy.com and join us again! Best regards, Artzy")
     except Subscriber.DoesNotExist:
         return HttpResponse("Invalid request.", status=404)

@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Code from Code Institute Boutique Ado Walksthrough
 # Slightly modified model by adding description
 class Category(models.Model):
@@ -44,14 +45,16 @@ class Product(models.Model):
         image_url (URLField): The URL of the product's image, optional.
         image (ImageField): An uploaded image of the product, optional.
     """
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey('Category', null=True, blank=True,
+                                 on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
     is_print = models.BooleanField(default=False, null=True, blank=True)
     artist = models.CharField(max_length=254)
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True,
+                                 blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 

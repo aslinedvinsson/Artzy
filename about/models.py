@@ -2,6 +2,7 @@
 # and slightly moified
 from django.db import models
 
+
 class About(models.Model):
     """
     Model for storing 'About Us' section details.
@@ -18,7 +19,8 @@ class About(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
     updated_on = models.DateTimeField(auto_now=True)
-    about_image = models.ImageField(null=True, blank=True, default='USE_STATIC_FALLBACK')
+    about_image = models.ImageField(null=True, blank=True,
+                                    default='USE_STATIC_FALLBACK')
 
     def __str__(self):
         return f'{self.title}'

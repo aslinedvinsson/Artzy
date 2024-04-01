@@ -15,7 +15,6 @@ import json
 
 
 # Code from Code Institute Boutique Ado Walksthrough
-
 @require_POST
 def cache_checkout_data(request):
     try:
@@ -28,8 +27,11 @@ def cache_checkout_data(request):
         })
         return HttpResponse(status=200)
     except Exception as e:
-        messages.error(request, 'Sorry, your payment cannot be \
-            processed right now. Please try again later.')
+        messages.error(
+            request,
+            'Sorry, your payment cannot be processed right now. '
+            'Please try again later.'
+        )
         return HttpResponse(content=e, status=400)
 
 
@@ -62,39 +64,24 @@ def checkout(request):
             for item_id, item_data in cart.items():
                 try:
                     product = Product.objects.get(id=item_id)
-                    if isinstance(item_data, int):
-                        order_line_item = OrderLineItem(
-                            order=order,
-                            product=product,
-                            quantity=item_data,
-                        )
-                        order_line_item.save()
-                    else:
-                        for print_type, quantity in item_data['items_by_print'].items():
-                            order_line_item = OrderLineItem(
-                                order=order,
-                                product=product,
-                                quantity=quantity,
-                                print_paper=print_type,
-                            )
-                            order_line_item.save()
+                    process_cart_item(product, item_data, order)
                 except Product.DoesNotExist:
-                    messages.error(request, (
-                        "One of the products in your cart wasn't found in our database. "
-                        "Please contact us for assistance!")
-                    )
-                    order.delete()
+                    order_not_found_error(order)
                     return redirect(reverse('view_cart'))
 
-            # Save the info to the user's profile if all is well
-            request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            save_info = 'save-info' in request.POST
+            request.session['save_info'] = save_info
+            return redirect(reverse('checkout_success',
+                                    args=[order.order_number]))
         else:
-            messages.error(request, 'There was an error with your form. Please double check your information.')
+            messages.error(request,
+                           'There was an error with your form. '
+                           'Please double check your information.')
     else:
         cart = request.session.get('cart', {})
         if not cart:
-            messages.error(request, "There's nothing in your cart at the moment")
+            messages.error(request,
+                           "There's nothing in your cart at the moment")
             return redirect(reverse('products'))
 
         current_cart = cart_contents(request)
@@ -106,29 +93,19 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        # Attempt to prefill the form with any info the user maintains in their profile
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)
-                order_form = OrderForm(initial={
-                    'full_name': profile.user.get_full_name(),
-                    'email': profile.user.email,
-                    'phone_number': profile.default_phone_number,
-                    'country': profile.default_country,
-                    'postcode': profile.default_postcode,
-                    'town_or_city': profile.default_town_or_city,
-                    'street_address1': profile.default_street_address1,
-                    'street_address2': profile.default_street_address2,
-                    'county': profile.default_county,
-                })
+                order_form = prefill_order_form(profile)
             except UserProfile.DoesNotExist:
                 order_form = OrderForm()
         else:
             order_form = OrderForm()
 
     if not stripe_public_key:
-        messages.warning(request, 'Stripe public key is missing. \
-            Did you forget to set it in your environment?')
+        messages.warning(request,
+                         'Stripe public key is missing. '
+                         'Did you forget to set it in your environment?')
 
     template = 'checkout/checkout.html'
     context = {
@@ -141,9 +118,7 @@ def checkout(request):
 
 
 def checkout_success(request, order_number):
-    """
-    Handle successful checkouts
-    """
+    # Handle successful checkouts
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
 
@@ -155,7 +130,7 @@ def checkout_success(request, order_number):
 
         # Save the user's info
         if save_info:
-            profile_data = {
+            user_profile_form = UserProfileForm({
                 'default_phone_number': order.phone_number,
                 'default_country': order.country,
                 'default_postcode': order.postcode,
@@ -163,21 +138,19 @@ def checkout_success(request, order_number):
                 'default_street_address1': order.street_address1,
                 'default_street_address2': order.street_address2,
                 'default_county': order.county,
-            }
-            user_profile_form = UserProfileForm(profile_data, instance=profile)
+            }, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
-    messages.success(request, f'Order successfully processed! \
-        Your order number is {order_number}. A confirmation \
-        email will be sent to {order.email}.')
+    messages.success(request,
+                     f'Order successfully processed! '
+                     f'Your order number is {order_number}. A confirmation '
+                     f'email will be sent to {order.email}.')
 
     if 'cart' in request.session:
         del request.session['cart']
 
     template = 'checkout/checkout_success.html'
-    context = {
-        'order': order,
-    }
+    context = {'order': order}
 
     return render(request, template, context)

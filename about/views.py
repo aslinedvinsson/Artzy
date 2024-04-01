@@ -37,4 +37,3 @@ def about_us(request):
                         "contact_form": contact_form,
                      },
     )
-

@@ -16,7 +16,6 @@ class AboutAdmin(SummernoteModelAdmin):
     summernote_fields = ('content',)
 
 
-
 @admin.register(ContactRequest)
 class ContactRequestAdmin(admin.ModelAdmin):
     """
@@ -29,5 +28,3 @@ class ContactRequestAdmin(admin.ModelAdmin):
     """
 
     list_display = ('message', 'read',)
-
-

@@ -6,7 +6,9 @@ from django.db.models.functions import Lower
 from .models import Product, Category
 from .forms import ProductForm
 
-# Code from Code Institute Boutique Ado Walksthrough customized with sorting on print or painting
+
+# Code from Code Institute Boutique Ado Walksthrough customized with sorting
+# on print or painting
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
     products = Product.objects.all()
@@ -15,25 +17,24 @@ def all_products(request):
     sort = None
     direction = None
 
-    if request.GET:
-        if 'sort' in request.GET:
-            sortkey = request.GET['sort']
-            sort = sortkey
-            if sortkey == 'name':
-                sortkey = 'lower_name'
-                products = products.annotate(lower_name=Lower('name'))
-            elif sortkey == 'category':
-                sortkey = 'category__name'
-            elif sortkey == 'type':
-                if 'direction' in request.GET and request.GET['direction'] == 'print':
-                    sortkey = '-is_print'
-                else:
-                    sortkey = 'is_print'
-            if 'direction' in request.GET:
-                direction = request.GET['direction']
-                if direction == 'desc' and sortkey != 'is_print' and sortkey != '-is_print':
-                    sortkey = f'-{sortkey}'
-            products = products.order_by(sortkey)
+
+if request.GET:
+    if 'sort' in request.GET:
+        sortkey = request.GET['sort']
+        sort = sortkey
+        if sortkey == 'name':
+            sortkey = 'lower_name'
+            products = products.annotate(lower_name=Lower('name'))
+        elif sortkey == 'category':
+            sortkey = 'category__name'
+        elif sortkey == 'type':
+            direction = request.GET.get('direction', '')
+            sortkey = '-is_print' if direction == 'print' else 'is_print'
+        if 'direction' in request.GET:
+            direction = request.GET['direction']
+            if direction == 'desc' and sortkey not in ['is_print', '-is_print']:
+                sortkey = f'-{sortkey}'
+        products = products.order_by(sortkey)
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
@@ -43,10 +44,12 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request, "You didn't enter any search "
+                                        "criteria!")
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | Q(
+                    description__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -57,7 +60,6 @@ def all_products(request):
         'current_sorting': current_sorting,
     }
     return render(request, 'products/products.html', context)
-
 
 
 def product_detail(request, product_id):
@@ -83,7 +85,8 @@ def add_product(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add product. Please ensure the '
+                                    'form is valid.')
     else:
         form = ProductForm()
 
@@ -110,7 +113,8 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update product. Please ensure'
+                                    'the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
