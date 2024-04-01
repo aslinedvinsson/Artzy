@@ -1,7 +1,8 @@
 ***Must haves to include except everything i PP4***
 
 # Artzy
-screenshot am i responsive
+![](docs/responsive.png)////
+
 
 Artzy is a distinctive e-commerce platform developed as a part of Portfolio Project 5 for the Code Institute's Full Stack Software Developer Course. Utilizing Django, HTML, CSS, JavaScript, and Python, Artzy dismantles the barriers to art appreciation, offering an extensive array of paintings and prints accessible to everyone, irrespective of their art knowledge.
 
@@ -14,35 +15,108 @@ In essence, Artzy is not just a platform; it's a movement toward making art acce
 The site was deployed via Heroku - the live site can be found here -
 [Artzy](https://artzy-f5e67145006a.herokuapp.com/)
 
-## Table of Contents ////
+# Table of Contents
 
-* [UI/UX Design](#UI/UX Design)
-  * [User Stories](#user-stories)
-* [Features](#features)
-* [Technologies](#technologies)
-* [Testing](#testing)
-* [Deployment](#deployment)
-* [References and Credits](#References and Credits)
+- **[Project Rationale - Bridging the Art Appreciation Gap](#project-rationale---bridging-the-art-appreciation-gap)**
+  - [Purpose and Goal: Mission to Simplify Art Discovery and Ownership](#purpose-and-goal-mission-to-simplify-art-discovery-and-ownership)
+  - [Target Audience: Who Artzy Serves - Connecting with Our Audience](#target-audience-who-artzy-serves---connecting-with-our-audience)
+  - [Addressing Target Audience Needs: A Tailored Approach to Meeting Our Audience's Needs](#addressing-target-audience-needs-a-tailored-approach-to-meeting-our-audiences-needs)
+  - [Business Model and Customer Goals: Accessibility at Scale and Enhancing Customer Experience through Art](#business-model-and-customer-goals-accessibility-at-scale-and-enhancing-customer-experience-through-art)
+
+- **[Marketing and SEO Strategies](#marketing-and-seo-strategies)**
+  - [SEO Strategies](#seo-strategies)
+  - [Sitemap.xml](#sitemapxml)
+  - [Robots.txt](#robotstxt)
+  - [Marketing Strategies](#marketing-strategies)
+    - [Content Marketing](#content-marketing)
+    - [Social Media Engagement](#social-media-engagement)
+    - [Email Marketing](#email-marketing)
+
+- **[UI/UX Design](#uiux-design)**
+  - [Wireframes](#wireframes)
+  - [Colors](#colors)
+  - [Fonts](#fonts)
+  - [Images and Icons](#images-and-icons)
+
+- **[Features Overview](#features-overview)**
+  - [Navigation Bar](#navigation-bar)
+  - [Home Page](#home-page)
+  - [Account Registration and Management Pages](#account-registration-and-management-pages)
+    - [Registration](#registration)
+    - [Login](#login)
+    - [Logout](#logout)
+    - [User Profile](#user-profile)
+    - [Update Profile](#update-profile)
+  - [Product Exploration Pages](#product-exploration-pages)
+    - [Listing](#listing)
+    - [Detail](#detail)
+    - [Wishlist](#wishlist)
+  - [About and Contact Pages](#about-and-contact-pages)
+  - [Newsletter and Communication Pages](#newsletter-and-communication-pages)
+  - [Shopping Cart and Checkout Process](#shopping-cart-and-checkout-process)
+  - [Checkout Page](#checkout-page)
+  - [Checkout Success Page](#checkout-success-page)
+
+- **[Security Features and Defensive Design](#security-features-and-defensive-design)**
+  - [User Authentication](#user-authentication)
+  - [Form Validation](#form-validation)
+  - [Database Security](#database-security)
+  - [Error Pages](#error-pages)
+
+- **[Database Design](#database-design)**
+  - [Entity Relationship Diagram](#entity-relationship-diagram)
+  - [Custom Models](#custom-models)
+
+- **[Technologies Used](#technologies-used)**
+  - [Languages](#languages)
+  - [Frameworks and Libraries](#frameworks-and-libraries)
+  - [Programs and Services](#programs-and-services)
+
+- **[Testing](#testing)**
+  - [Responsive Testing](#responsive-testing)
+  - [Browser Compatibility](#browser-compatibility)
+  - [Bugs and Resolutions](#bugs-and-resolutions)
+  - [Code Validation](#code-validation)
+  - [User Stories Testing](#user-stories-testing)
+  - [Feature Testing](#feature-testing)
+
+- **[Deployment](#deployment)**
+  - [Heroku](#heroku)
+  - [Stripe](#stripe)
+  - [AWS](#aws)
+  - [Forking the GitHub Repository](#forking-the-github-repository)
+  - [Cloning the Repository](#cloning-the-repository)
+
+- **[References and Credits](#references-and-credits)**
+  - [Content and Media](#content-and-media)
+  - [Acknowledgements](#acknowledgements)
+
+- **[Disclaimer](#disclaimer)**
 
 
-# Project Rationale - Bridging the Art Appreciation Gap
-Artzy was created to bridge the gap between the art community and those who feel intimidated by their limited knowledge of art. It aims to make art appreciation and acquisition more accessible to everyone through an easy-to-use e-commerce platform.
 
-## Purpose and Goal: Mission to Simplify Art Discovery and Ownership
-Artzy's mission is to simplify the process of discovering and purchasing art, making it welcoming for everyone, regardless of their art background. The platform offers a wide range of paintings and prints to foster emotional connections between individuals and art, encouraging exploration and expression through art ownership.
 
-## Target Audience: Who Artzy Serves - Connecting with Our Audience
-Artzy serves art enthusiasts, gift shoppers, and decorators who are overwhelmed by traditional art purchasing processes. It targets those looking to enhance their personal spaces, find unique gifts, or embark on an art discovery journey.
+# Project Rationale - Bridging the Art Appreciation Gap with Artzy
+Artzy is a pioneering e-commerce platform designed to bridge the gap between the vibrant art community and those who may feel daunted by the world of art due to their limited knowledge. With a focus on simplifying art appreciation and making the acquisition of art pieces like paintings and prints more accessible, Artzy aims to connect a diverse audience to the art world. By utilizing strategic keywords such as "accessible art", "online art platform", and "art for beginners", we enhance our visibility and appeal to a wide range of art enthusiasts searching for easy entry points into art collection and appreciation.
 
-## Addressing Target Audience Needs: A Tailored Approach to Meeting Our Audience's Needs
-Artzy offers an intuitive platform with features such as detailed art descriptions and emotion-based recommendations, making art selection more informative and less intimidating. It strives to create a welcoming space for art lovers of all levels by tailoring the platform’s services to meet the diverse needs and preferences of its users.
+## Purpose and Goal: Simplifying Art Discovery and Ownership for Everyone
+Artzy’s mission is deeply rooted in demystifying the art discovery and purchase process. By offering a curated selection of "affordable paintings", "limited edition prints", and "digital art", we cater to a broad audience ranging from art novices to seasoned collectors. Keywords like "simplifying art discovery" and "online art buying" are integral to our content strategy, ensuring Artzy is easily found by those seeking to enrich their lives with art without the intimidation often associated with traditional art galleries.
 
-## Business Model and Customer Goals: Accessibility at Scale and Enhancing Customer Experience through Art
-Artzy operates as a B2C e-commerce platform dedicated to democratizing access to art. The platform is scalable and user-friendly, featuring a diverse collection to suit various tastes. With a digital-first marketing strategy, including social media and newsletters, Artzy engages with its community and promotes new art pieces. Its business model emphasizes a seamless shopping experience, ensuring customer satisfaction and fostering a culture of art appreciation among a broad audience.
+## Target Audience: Artzy's Commitment to Art Enthusiasts and Beyond
+Artzy is dedicated to serving a diverse group including "art enthusiasts", "gift shoppers", and "home decorators" looking for "unique art gifts" and "wall art" to personalize their spaces. Our platform targets individuals embarking on their "art discovery journey", leveraging keywords to resonate with users seeking "easy art buying experiences" and "art for personal spaces", ensuring a wide reach and relevance in search queries.
 
-## SEO Strategies
-To maximize SEO for Artzy, I conduct research on specific, relevant keywords that potential customers might use when searching for art online. This involves using tools like Google Trends and Keyword Planner to identify terms related to popular art styles, mediums (e.g., paintings, prints), and broader art-related queries. The aim is to strike a balance between high-traffic keywords and those with lower competition to attract both broad and niche audiences. Incorporating these keywords naturally into the site content, metadata, and newsletters enhances Artzy's online visibility and search engine ranking.
-I employ different meta titles and descriptions on various pages to improve SEO, providing search engines and potential visitors with a concise summary of the page’s content.
+## Addressing Audience Needs: Tailoring the Artzy Experience
+We understand the unique needs of our audience, from those making their first art purchase to seasoned collectors. Artzy's intuitive platform offers "emotion-based art", employing keywords that highlight our unique selling points like "informative art descriptions" and "user-friendly art selection". This strategic use of language not only aids in SEO but ensures our platform meets the varied needs of our users, making art selection an informative and enjoyable process.
+
+## Business Model and Customer Goals: Promoting Art Accessibility and Engagement
+As a B2C e-commerce platform, Artzy champions "democratizing art access" and enhancing the art purchasing experience. Our diverse collection, ensuring there's something for every taste and preference. By integrating keywords related to "art e-commerce" and "digital art marketplace" into our digital marketing strategies, we aim to attract a broad audience and foster a culture of art appreciation, making art accessible to all.
+
+
+## SEO Strategies: Enhancing Artzy's Digital Footprint
+To maximize Artzy’s visibility online, we meticulously research and integrate specific keywords like "buy art online", and "start an art collection". Utilizing tools like Google Trends and Keyword Planner allows us to identify and incorporate terms that potential customers frequently use. Our content, from website metadata to newsletters, is carefully crafted to include these keywords, ensuring Artzy ranks highly in art-related searches. This strategic approach not only improves our search engine rankings but also makes art more accessible to those seeking it.
+
+### Note on SEO and Keyword Strategy
+In our mission to make art more accessible and to enhance Artzy's visibility online, we've employed a strategic approach to SEO (Search Engine Optimization). You'll notice terms within quotation marks, such as "buy art online" and "digital art marketplace," throughout this document. These aren't random; they're strategic keywords identified to enhance Artzy's search engine visibility. The quotation marks highlight these carefully chosen keywords, underscoring our targeted SEO efforts to connect with our audience more effectively. This transparent approach is part of our ongoing strategy to make Artzy easily discoverable and accessible to all art enthusiasts and newcomers alike.
 
 ## Sitemap.xml
 Adding a sitemap.xml to Artzy aids search engines in quickly finding and indexing the pages, thereby improving the site's visibility and SEO, leading to increased traffic. The sitemap.xml acts as a roadmap of the website, listing all important pages and content. This facilitates easier discovery, indexing, and understanding of the site’s structure and content hierarchy by search engine crawlers, enhancing SEO by ensuring all art collections and related content are found and ranked appropriately, ultimately driving more organic traffic to Artzy.
@@ -209,13 +283,18 @@ Choosing a vibrant and colorful image for the homepage against a white backgroun
 The contrasting white header and black footer enhance readability and frame the homepage art beautifully, without overshadowing the main attraction. On subsequent pages, the white background with black text continues this theme of simplicity and focus, ensuring that the colorful homepage art remains the visual highlight of the website.
 
 This color scheme is not just about aesthetics; it's a deliberate choice to make the shopping experience more engaging and memorable. By keeping the design elements minimal and focused, the website directs visitors' attention exactly where it needs to be: on the products and the vibrant imagery that represents them. This approach not only improves user engagement but also strengthens the site's branding.
-## Fonts
-* The Ibsite uses googlefonts/////
-## Images
-* The site uses images from [Unsplash]( https://unsplash.com/).
-## Icons
-* The site uses icons from [Font AIsome]( https://fontaIsome.com/ ).
 
+## Fonts
+PT Sans from [Google Fonts](https://fonts.google.com/?query=pt+sans) is a versatile, open-source font that's free and easy to use across all digital platforms. Its wide language support and variety of styles make it suitable for global projects and diverse design needs, ensuring the content is both accessible and visually appealing.
+
+## Images
+The site uses images from [Unsplash]( https://unsplash.com/).
+
+## Icons
+The site uses icons from [Font AIsome]( https://fontaIsome.com/ ).
+
+## Text content
+Text content, such as the names of artworks, artists, descriptions of the art, newsletter text is generated by ChatGPT.
 
 ## User stories
 <details>
@@ -364,91 +443,107 @@ li>
 
 Git Hub Kanban board can be viewed [here](https://github.com/users/aslinedvinsson/projects/8/views/1)
 
-## Features
-#### Navigation Bar
-Logout/ Not Registered User- displays links, logo- redirects user to home page, search bar,  Login/Sign Up link, shopping bag | print screen////|
-| Login User - displays links, logo- redirects user to home page, search bar, username Account, shopping cart | screen shot///|
-#### Home Page///
 
+## Features Overview///
 
-Logout/ Not Registered User | print sceen////|
-#### Register Account Page
+### Navigation Bar
+- Unregistered User: Displays navigation links, brand logo (redirects to the home page), search bar, Login/Sign Up link, and shopping bag icon
+- Registered User: Displays navigation links, brand logo (redirects to the home page), search bar, user's account name, and shopping cart icon
 
+### Home Page
+Visible elements vary based on user registration status
 
-| Dispays registration form, login link | printscreen////|
-#### Login Page
+### Account Registration Page
+Displays a registration form and a link to the login page
 
+### Login Page
+Features a login form, "Remember Me" option, links to the home page and password recovery
 
-| Displays register link, login form, remeber label, home link, forgot pasword link| printscreen////|
-#### Logout Page
+### Logout Page
+Shows a logout button
 
-| Displays logout button,  | printscreen////>|
-#### Product Page ////vad heter den
+### Product Listing Page
+Lists products with an image, name, artist, category, and price Includes a "Back to Top" button
 
-| Displays product image, name, artist, category price, back to top button | printscreen////>|
+### Product Detail Page
+Details product name, artist, category, price, description, quantity selector, "Keep Shopping" and "Add to Bag" buttons, and an "Add to Wishlist" option
 
-| Product Detail Page  - Displays product name, artist, category price, product description, quantity, keep shopping button, add to bag button, add to wishlist button| printscreen////|
+### Wishlist Page
+Specific contents undisclosed
 
-#### Wishlist page
+### About Page
+Showcases an image and text about Artzy
 
-|Displays //////| printscreen////>|
-#### About page
+### Contact Page
+Contains a user contact form
 
-|Displays image and a text about Artzy | printscreen////>|
-#### Contact page
+### Newsletter Page
+Displays an image and the latest newsletter, which is also distributed to subscribers
 
-|Displays a contact form for the user to fill in | printscreen////>|
-#### Newsletter page
+### User Experience Differentiation
+Describes the difference in site visibility and access between logged-in and logged-out users
 
-|Displays image and the latest newsletter posted by Artzy witch is also sent to all subscribers | printscreen////>|
+### Shopping Cart Page
+Lists order information, including price, quantity, subtotal, item management options, cart total, delivery charges, free delivery threshold, and navigation buttons
 
-#### Display difference for registered and unregistered users
+### Checkout Page
+Presents an order summary, delivery information, payment options, and completion steps
 
-|Login User-displays  of different sites what can be seen an not
+### Checkout Success Page
+Confirms the order and informs about the confirmation email sent
 
-#### Shopping Cart Page
-
-| Displays order info, price, quantity, subtotal, update and remove item, shopping cart total, delivery, total free delivery availability, keep shopping button, checkout button| printscreen///|
-#### Checkout Page
-
-| Displays order form- ythe details, order oIrvie| printscreen///|
-| Displays delivery info, save delivery info tag, add payment, ythe card charges, adjust cart button, complete order button|printscreen|
-#### Checkout Success Page
-
-| Displays order confirmation, info confirmation email sent to user email| printscreen///|
 ### User Profile Page
+Displays the user's default picture, delivery details, order history, with links to detailed order confirmation, and profile management options
 
-| Displays user default picture, delivery information, order history, order number link- redirects to past order confirmation page, update profile button, homelink| printscreen///|
-#### Update User Profile Page//////
+### Update Profile Page
+Offers a form for updating the user profile, including image selection, order history review, and navigation options
 
-| Displays update profile form, select image button, order history, delete order histor, order number link- redirects to past order confirmation page, update button, cancel link| screenscreen////|
-#### Super User - Product Management
+### Super User - Product Management
+Includes options for adding, updating, and deleting products
 
-| Add Product- displays add product form, select image button, home page link, cancel button, add button|screenscreen//// |
-| Update and Delete product displayed in product detail page| screenscreen////|
-| Update product page - displays update product form, curent image, select image button, cancel button, update product button | screenscreen////|
-#### Footer////
+### Footer
+Visible on all pages, featuring a free delivery banner
 
-| Footer displayed on all pages, free delivery baner,| screenscreen////|
+
+## Security Features and Defensive Design
+
+### User Authentication
+User authentication is applied to protect user data and prevent unauthorized access. During registration, users create a unique username and a strong password, following stringent security requirements. The login process securely verifies these credentials.
+
+### Form Validation
+Should a form be submitted with incorrect or missing information, it will not proceed, and the user will receive a notification identifying the field that triggered the error.
+
+### Database Security
+The env.py file securely stores the database URL and secret key to safeguard against unauthorized database access, a setup established prior to the initial push to GitHub.
+
+To enhance site security, Cross-Site Request Forgery (CSRF) tokens have been implemented across all forms.
+
+### Error Page
+404 - Page Not Found error page was created to guide them back to the site.
+
+![404-Error](docs/web/404.png)
 
 
 ## Database Design
-ERD diagram
-explain any relationships betIen tables(models)
+### Entity Relationship Diagram
+ ![](docs/erd.png)
 
-Custom models:
-Newsletter
-Subscriber
-Wishlist
-wishlistitem
+### Custom Models
+Custom models for this project include:
+- Newsletter
+- Subscriber
+- Wishlist
+- Wishlist Item
 
-## Technoligies
+Additionally, there are minor alterations to some of the other models.
+
+## Technologies
 
 ### Language
-* HTML5 - Provides the content and structure for the Ibsite.
-* CSS - Provides the styling for the Ibsite.
+* HTML5 - Provides the content and structure for the website.
+* CSS - Provides the styling for the website.
 * Python - Provides the functionality for the site.
-* Django - Used as the Python framework for the Ibsite.
+* Django - Used as the Python framework for the website.
 * Javascript - Used to add card payment, country field, sorting products, back to top click function, update the item quantity, and remove the item from the shopping cart
 
 
@@ -459,7 +554,7 @@ wishlistitem
 
 ### Frameworks
 - **Django**: A high-level Python Ib framework that enctheages rapid development and clean, pragmatic design. [Django](https://www.djangoproject.com/)
-- **Bootstrap**: A front-end framework for developing responsive and mobile-first Ibsites. [Bootstrap](https://getbootstrap.com/)
+- **Bootstrap**: A front-end framework for developing responsive and mobile-first websites. [Bootstrap](https://getbootstrap.com/)
 
 ### Libraries
 - **Psycopg2**: A PostgreSQL adapter for Python. [Psycopg2](https://pypi.org/project/psycopg2/)
@@ -470,30 +565,29 @@ wishlistitem
 - **GitPod**: A cloud-based Integrated Development Environment (IDE) that provides a complete dev environment for GitHub projects. [GitPod](https://www.gitpod.io/)
 - **ElephantSQL**: A cloud-based PostgreSQL database service. [ElephantSQL](https://customer.elephantsql.com/login)
 - **Prycopg2**:Used as a postgres database adapter. [Psycopg2](https://pypi.org/project/psycopg2/)
-- **Gunnicorn**: Used as a Ibsite server provider. [Gunicorn](https://gunicorn.org/)
+- **Gunnicorn**: Used as a website server provider. [Gunicorn](https://gunicorn.org/)
 - **Heroku**: A cloud platform service that enables developers to build, run, and operate applications entirely in the cloud. [Heroku](https://id.heroku.com/)
 - **Stripe**: A payment processing platform for handling secure payments. [Stripe](https://stripe.com/ie)
-- **XML-Sitemaps**: A tool for generating Ibsite sitemaps. [XML-Sitemaps](https://www.xml-sitemaps.com/)
-- **Privacy Policy Generator**: An online tool to generate privacy policies for Ibsites. [Privacy Policy Generator](https://www.privacypolicygenerator.info/)
+- **XML-Sitemaps**: A tool for generating website sitemaps. [XML-Sitemaps](https://www.xml-sitemaps.com/)
+- **Privacy Policy Generator**: An online tool to generate privacy policies for websites. [Privacy Policy Generator](https://www.privacypolicygenerator.info/)
 
 ### Additional Tools
 - **Balsamiq**: A wireframing tool for designing user interfaces. [Balsamiq](https://balsamiq.com/)
-- **AmIresponsive**: A tool to check how responsive a Ibsite is on different devices. [AmIresponsive](https://ui.dev/amiresponsive)
+- **LucidChart**:diagramming tool used for creating ERDs (Entity-Relationship Diagrams). [Lucidchart](https://lucidchart.com)
+- **AmIresponsive**: A tool to check how responsive a website is on different devices. [AmIresponsive](https://ui.dev/amiresponsive)
 - **Favicon**: A tool for creating favicons (the small icons that appear in the tab of a Ib browser). [Favicon](https://favicon.io/)
 - **Google Chrome DevTools**: A set of Ib developer tools built directly into the Google Chrome browser. [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/)
-- /////**Cloudinary**: A cloud service for hosting images and videos. [Cloudinary](https://cloudinary.com/)
-- ////**Canva**: An online design and publishing tool. [Canva](https://www.canva.com/colors/color-wheel/)
 - **HTML Validation Service**: A tool to check the markup validity of Ib documents in HTML. [HTML Validation](https://validator.w3.org/)
 - **CSS Validation Service**: A service to check the validity of Cascading Style Sheets (CSS). [CSS Validation](https://jigsaw.w3.org/css-validator/)
 
-- Pythonlinter/////
-- JSHint////
+- **CI Python Linter**: A Code Insitute tool to validate Python. [CI Python Linter](https://pep8ci.herokuapp.com/)
+- **JSHint**: A tool to validate JavaScript. [JSHint](https://jshint.com)
 
 - **Lighthouse**: An open-sthece, automated tool for improving the quality of Ib pages. [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
 
 
 ## Testing
-Full testing can be seen in [TESTING.md](https://github.com/Ixxxxxxxx/TESTING.md) file.
+Full testing can be seen in [TESTING.md](https://github.com/TESTING.md) file.
 /////
 responsive testing
 browser compatability
@@ -521,18 +615,18 @@ feature testing
 - Create a **Procfile** in the root directory, adding `Ib: gunicorn ytheapp.wsgi:application`.
 - Run the migration command in ythe terminal to migrate ythe database structure to the newly-connected ElephantSQL database: `python manage.py migrate`.
 - Run `python3 manage.py createsuperuser` to create a superuser.
-- Load the `.json` files for categories and items.
+- Load the `.json` files for categories and products.
 - Install `gunicorn` (`pip install gunicorn`) and add it to the `requirements.txt` file using the command `pip3 freeze > requirements.txt`.
 - In `ALLOID_HOSTS`, add the Heroku app and localhost to the list: `ALLOID_HOSTS = ['HEROKU_APP_NAME.herokuapp.com', 'localhost']`.
 - Add a config variable by typing `DISABLE_COLLECTSTATIC = 1`.
 - Connect Heroku to the GitHub repository and enable automatic deploys.
-- Deploy the app and access the Ibsite.
+- Deploy the app and access the website.
 
 ### Stripe
 - Sign up for a Stripe account.
 - Navigate to the **Developers** tab, then to the **API** area and retrieve ythe publishable and secret keys.
 - Incorporate `STRIPE_PUBLIC_KEY` and `STRIPE_SECRET_KEY` into `settings.py` and into ythe Heroku configuration, using the information from the API section.
-- Proceed to the **Ibhooks** area to establish a new Ibhook.
+- Proceed to the **webhooks** area to establish a new webhook.
 - Select the option to display all events and specify ythe endpoint.
 - Incorporate `STRIPE_WH_SECRET` into both ythe environment variables and Heroku setup.
 

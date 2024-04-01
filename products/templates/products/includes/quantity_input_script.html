@@ -1,23 +1,26 @@
 <script type="text/javascript">
-
     /*
-    * Disable +/- buttons outside 1-99 range.
-    * If no print_type is passed to the function, the parameter will have a value of undefined by default,
-    * which prevents any errors
-    */
+     * Disable +/- buttons outside 1-99 range.
+     * If no print_type is passed to the function, the parameter will have a value of undefined by default,
+     * which prevents any errors
+     */
     function handleEnableDisable(itemId, print_type) {
+        var currentValue;
         if (print_type) {
-            var currentValue = parseInt($(`.print_type_${itemId}_${print_type}`).val());
+            currentValue = parseInt($(`.print_type_${itemId}_${print_type}`)
+                .val());
         } else {
-            var currentValue = parseInt($(`.id_qty_${itemId}`).val());
+            currentValue = parseInt($(`.id_qty_${itemId}`).val());
         }
 
         var minusDisabled = currentValue < 2;
         var plusDisabled = currentValue > 98;
 
         if (print_type) {
-            $(`.decrement-print_type_${itemId}_${print_type}`).prop('disabled', minusDisabled);
-            $(`.increment-print_type_${itemId}_${print_type}`).prop('disabled', plusDisabled);
+            $(`.decrement-print_type_${itemId}_${print_type}`).prop('disabled',
+                minusDisabled);
+            $(`.increment-print_type_${itemId}_${print_type}`).prop('disabled',
+                plusDisabled);
         } else {
             $(`.decrement-qty_${itemId}`).prop('disabled', minusDisabled);
             $(`.increment-qty_${itemId}`).prop('disabled', plusDisabled);
@@ -26,48 +29,38 @@
 
     // Ensure proper enabling/disabling of all inputs on page load
     var allQtyInputs = $('.qty_input');
-    for(var i = 0; i < allQtyInputs.length; i++){
+    for (var i = 0; i < allQtyInputs.length; i++) {
         var itemId = $(allQtyInputs[i]).data('item_id');
         var print_type = $(allQtyInputs[i]).data('print_type');
         handleEnableDisable(itemId, print_type);
     }
 
     // Check enable/disable every time the input is changed
-    $('.qty_input').change(function() {
+    $('.qty_input').change(function () {
         var itemId = $(this).data('item_id');
         var print_type = $(this).data('print_type');
         handleEnableDisable(itemId, print_type);
     });
 
-    // Increment quantity
-    $('.increment-qty').click(function(e) {
-       e.preventDefault();
-       var itemId = $(this).data('item_id');
-       var print_type = $(this).data('print_type');
-       var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
-       if (print_type) {
-          var allQuantityInputs = $(`.input-group-${itemId} input[data-print_type='${print_type}']`);
-       } else {
-          var allQuantityInputs = $(`.input-group-${itemId} input[name='quantity']`);
-       }
-       var currentValue = parseInt($(closestInput).val());
-       $(allQuantityInputs).val(currentValue + 1);
-       handleEnableDisable(itemId, print_type);
-    });
-
-    // Decrement quantity
-    $('.decrement-qty').click(function(e) {
-       e.preventDefault();
-       var itemId = $(this).data('item_id');
-       var print_type = $(this).data('print_type');
-       var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
-       if (print_type) {
-          var allQuantityInputs = $(`.input-group-${itemId} input[data-print_type='${print_type}']`);
-       } else {
-          var allQuantityInputs = $(`.input-group-${itemId} input[name='quantity']`);
-       }
-       var currentValue = parseInt($(closestInput).val());
-       $(allQuantityInputs).val(currentValue - 1);
-       handleEnableDisable(itemId, print_type);
+    // Increment and Decrement quantity
+    $('.increment-qty, .decrement-qty').click(function (e) {
+        e.preventDefault();
+        var itemId = $(this).data('item_id');
+        var print_type = $(this).data('print_type');
+        var closestInput = $(this).closest('.input-group').find(
+            '.qty_input')[0];
+        var allQuantityInputs;
+        if (print_type) {
+            allQuantityInputs = $(
+                `.input-group-${itemId} input[data-print_type='${print_type}']`
+                );
+        } else {
+            allQuantityInputs = $(
+                `.input-group-${itemId} input[name='quantity']`);
+        }
+        var currentValue = parseInt($(closestInput).val());
+        var increment = $(this).hasClass('increment-qty') ? 1 : -1;
+        $(allQuantityInputs).val(currentValue + increment);
+        handleEnableDisable(itemId, print_type);
     });
 </script>
