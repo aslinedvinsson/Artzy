@@ -11,23 +11,29 @@ Result Mobile
 Result Desktop
 ![Lighthouser Result Desktop](docs/test/ligh.png)
 
-### HTML Validation////
+### HTML Validation////ev lägga upp print screen?
 [W3C](https://validator.w3.org/) were used to validate html. The HTML code I have written passed the W3C markup validation. The errors that occurred with my own code have been resolved.
 
-**Issues with Summernote in Recipe Forms**////////
-While validating the Add Recipe and Edit Recipe forms, I encountered several issues stemming from the Summernote library that activates upon using these forms. Since these errors originated from the Summernote library rather than my own code, I was unable to resolve them, leaving the issues unaddressed.
+**Issues with Forms**
+While validating the forms, I encountered several issues stemming from Django Crispy Form and the Summernote library that activates upon using these forms. Since these errors originated from Django Crispy Form and Summernote rather than my own code, I was unable to resolve them, leaving the issues unaddressed.
 
-
-### CSS Validation//
+### CSS Validation
 No errors were found when using [W3C Jigsaw validation](https://jigsaw.w3.org/css-validator/) for the custom CSS.
+<p>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Valid CSS!" />
+    </a>
+</p>
 
 ### JavaScript Validation
 No errors were found when using [JS Hint](https://jshint.com/) for the Javascript, when adding /* jshint esversion: 6 */ /* globals bootstrap */ in top of the code in JS Hint.
 
-### Console Results//
+### Console Results
 The browser console shows no errors.
 
-### Browser Testing//
+### Browser Testing
 The Website was tested on Google Chrome, Firefox, Safari browsers with no issues noted.
 
 ### Manual Testing

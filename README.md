@@ -146,7 +146,11 @@ We will optimize the website with relevant keywords identified through research.
 We will utilize platforms like Instagram and Facebook, where visual content thrives, to showcase our art pieces. Creating engaging posts and connecting with our audience through comments and stories will be key.
 
 #### Facebook
-//////// Include a mockup of a Facebook post or page here.
+![](docs/fb.png)
+
+Facebook posts
+![](docs/fbpost.png)
+![](docs/fbpost2.png)
 
 ### Email Marketing
 We will launch an email newsletter to keep subscribers informed about new arrivals, exclusive offers, and upcoming sales. This strategy is intended to encourage repeat visits and foster a community around the brand.
@@ -162,118 +166,110 @@ By focusing on a clean, engaging, and easy-to-navigate experience, I aim to enri
 ## Wireframes
 
 <details open>
-    <summary>Desktop Home Page Wireframe</summary>
+    <summary>Desktop home page</summary>
     <img src="docs/wireframes/home_dt.png">
 </details>
 
 <details>
-    <summary>Mobile Home Page Wireframe</summary>
+    <summary>Mobile home page</summary>
     <img src="docs/wireframes/home.png">
 </details>
 
 <details>
-    <summary>Desktop Products Page Wireframe</summary>
+    <summary>Desktop products page</summary>
     <img src="docs/wireframes/products_dt.png">
 </details>
 
 <details>
-    <summary>Mobile Products Page Wireframe</summary>
+    <summary>Mobile products, products_detail and product_management page</summary>
     <img src="docs/wireframes/products.png">
 </details>
 
 <details>
-    <summary>Desktop Product Detail Page Wireframe</summary>
+    <summary>Desktop product detail page</summary>
     <img src="docs/wireframes/product_detail_dt.png">
 </details>
-
 <details>
-    <summary>Mobile Product Detail Page Wireframe</summary>
-    <img src="docs/wireframes/product_detail.png">
-</details>
-
-<details>
-    <summary>Desktop Newsletter Page Wireframe</summary>
+    <summary>Desktop newsletter page</summary>
     <img src="docs/wireframes/newsletter_dt.png">
 </details>
 
 <details>
-    <summary>Mobile Newsletter Page Wireframe</summary>
+    <summary>Mobile newsletter page </summary>
     <img src="docs/wireframes/newsletter.png">
 </details>
 
 <details>
-    <summary>Desktop Shopping Cart Page Wireframe</summary>
+    <summary>Desktop shopping cart page</summary>
     <img src="docs/wireframes/shopping_cart_dt.png">
 </details>
 
 <details>
-    <summary>Mobile Shopping Cart Page Wireframe</summary>
+    <summary>Mobile shopping cart page////</summary>
     <img src="docs/wireframes/shopping_cart.png">
 </details>
 
 <details>
-    <summary>Desktop About Page Wireframe</summary>
+    <summary>Desktop about page</summary>
     <img src="docs/wireframes/about_dt.png">
 </details>
 
 <details>
-    <summary>Mobile About Page Wireframe</summary>
-    <img src="docs/wireframes/about.png">
+    <summary>Mobile about page with contact section</summary>
+    <img src="docs/wireframes/about_contact.png">
 </details>
 
 <details>
-    <summary>Desktop Contact Page Wireframe</summary>
+    <summary>Desktop contact page</summary>
     <img src="docs/wireframes/contact_dt.png">
 </details>
-
 <details>
-    <summary>Mobile Contact Page Wireframe</summary>
-    <img src="docs/wireframes/contact.png">
-</details>
-
-<details>
-    <summary>Desktop Profile Page Wireframe</summary>
+    <summary>Desktop profile page</summary>
     <img src="docs/wireframes/profile_dt.png">
 </details>
 
 <details>
-    <summary>Mobile Profile Page Wireframe</summary>
+    <summary>Mobile profile page////</summary>
     <img src="docs/wireframes/profile.png">
 </details>
 
 <details>
-    <summary>Desktop Checkout Page Wireframe</summary>
+    <summary>Desktop checkout page</summary>
     <img src="docs/wireframes/checkout_dt.png">
 </details>
 
 <details>
-    <summary>Mobile Checkout Page Wireframe</summary>
-    <img src="docs/wireframes/checkout.png">
+    <summary>Mobile shopping cart and checkout page</summary>
+    <img src="docs/wireframes/shoppingcart_checkout.png">
 </details>
 
 <details>
-    <summary>Desktop Product Management Page Wireframe</summary>
+    <summary>Desktop product management page</summary>
     <img src="docs/wireframes/product_management_dt.png">
 </details>
 
 <details>
-    <summary>Mobile Product Management Page Wireframe</summary>
+    <summary>Mobile product management page/// </summary>
     <img src="docs/wireframes/product_management.png">
 </details>
 
 <details>
-    <summary>Desktop Wishlist Page Wireframe</summary>
+    <summary>Desktop wishlist page</summary>
     <img src="docs/wireframes/wishlist_dt.png">
 </details>
 
 <details>
-    <summary>Mobile Wishlist Page Wireframe</summary>
+    <summary>Mobile wishlist page/// </summary>
     <img src="docs/wireframes/wishlist.png">
 </details>
 
 <details>
-    <summary>Sign Up for Newsletter Wireframe</summary>
-    <img src="docs/wireframes/signup_newsletter.png">
+    <summary>Desktop sign up for newsletter</summary>
+    <img src="docs/wireframes/signup_newsletter_dt.png">
+</details>
+<details>
+    <summary>Mobile newsletter and sign up for newsletter</summary>
+    <img src="docs/wireframes/newsletter.png">
 </details>
 
 
@@ -292,6 +288,8 @@ The site uses images from [Unsplash]( https://unsplash.com/).
 
 ## Icons
 The site uses icons from [Font AIsome]( https://fontaIsome.com/ ).
+
+Favicon comes from A by H Alberto Gongora from <a href="https://thenounproject.com/browse/icons/term/a/" target="_blank" title="A Icons">Noun Project</a> (CC BY 3.0)
 
 ## Text content
 Text content, such as the names of artworks, artists, descriptions of the art, newsletter text is generated by ChatGPT.
@@ -444,7 +442,7 @@ li>
 Git Hub Kanban board can be viewed [here](https://github.com/users/aslinedvinsson/projects/8/views/1)
 
 
-## Features Overview///
+## Features Overview/// Korrekturläs
 
 ### Navigation Bar
 - Unregistered User: Displays navigation links, brand logo (redirects to the home page), search bar, Login/Sign Up link, and shopping bag icon
@@ -662,6 +660,8 @@ feature testing
 
 ## References and Credits ////
 //////boutique Ado boilerploate
+
+    <!-- Footer Inspired by https://mdbootstrap.com/docs/standard/navigation/footer/-->↩
 additional tutorials
 media and content used for educational purpose
 
