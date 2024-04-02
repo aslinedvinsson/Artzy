@@ -31,8 +31,6 @@ footer {
     width: 100%;
 }
 
-
-
 /* from Bulma */
 .icon {
     align-items: center;
@@ -42,31 +40,34 @@ footer {
     width: 1.5rem;
 }
 
-
+.nav-item {
+    font-size: large;
+}
 
 .main-logo-link {
     width: fit-content;
+    font-size: larger;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-
-
-
-
 
 .shop-now-button {
     background: black;
     color: white;
     min-width: 260px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
 
 .btn-black {
     background: black;
     color: white;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
 
 .btn-outline-black {
     background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
+    color: black !important;
     border: 1px solid black;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
 
 .btn-outline-black:hover,
@@ -119,6 +120,7 @@ a.category-badge > span.badge:hover {
     position: fixed;
     bottom: 10px;
     right: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3)!important;
 }
 
 .btt-link,
@@ -329,7 +331,7 @@ input[name='q']::placeholder {
     }
 
     .display-4.logo-font.text-black {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .nav-link {
@@ -343,13 +345,10 @@ input[name='q']::placeholder {
     .navbar-toggler {
         padding: .6rem .6rem;
         font-size: 1rem;
+        box-shadow: 0 0 4px rgba(0,0,0,.5);
     }
-/*
-    #delivery-banner h4 {
-        font-size: .9rem;
-    }
-*/
-    .btn.btn-outline-black.rounded-0,
+
+    .btn.btn-outline-black,
     .btn.btn-black.rounded-0 {
         padding: .375rem .375rem;
     }
@@ -363,4 +362,21 @@ input[name='q']::placeholder {
     .increment-qty, .decrement-qty {
         padding: .25rem .5rem !important;
     }
+}
+
+@media (max-width: 768px) {
+    .card-img-top {
+        max-height: 300px;
+        margin-top: -30%;
+    }
+}
+
+@media (max-with: 432px) {
+    .hide-on-mobile {
+        display: none;
+      }
+
+    .my-5 {
+        margin-top: -1000px!important;
+      }
 }
