@@ -10,6 +10,8 @@
     <meta charset="utf-8">
     <meta name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="title"
+        content="{% block title %}Explore Artzy's Curated Collection of Accessible Art | Artzy{% endblock %}">
     <meta name="description"
         content="{% block description %}Explore Artzy's curated collection of accessible art, from contemporary pieces to classic treasures. Whether you're a curious beginner or an avid collector, discover the perfect piece to inspire your space. Shop now and start your art journey with us today!{% endblock %}">
 
@@ -48,7 +50,7 @@
                 window.scrollTo(0, 0);
             }
         });
-    </script>.
+    </script>
 
     <script src="https://kit.fontawesome.com/5322e9124b.js"
         crossorigin="anonymous"></script>
@@ -70,8 +72,8 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>{% block extra_title %}Buy Art Online | Accessible Art for Beginners
-        to Collectors{% endblock %} - Artzy</title>
+    <title>Buy Art Online | Accessible Art for Beginners
+        to Collectors - Artzy</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon"
         href="{% static 'images/favicon.ico' %}">
@@ -109,16 +111,16 @@
                 <ul
                     class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#"
-                            id="user-options" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                        <a class="text-black nav-link" href="#" id="user-option"
+                            data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
                                 <p class="my-0">My Account</p>
                             </div>
                         </a>
                         <div class="dropdown-menu border-0"
-                            aria-labelledby="user-options">
+                            aria-labelledby="user-option">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
                             <a href="{% url 'products:add_product' %}"
@@ -310,8 +312,7 @@
         </div>
     </footer>
     <!-- Footer -->
-    </div>
-    </footer>
+
 
     {% block postloadjs %}
 
