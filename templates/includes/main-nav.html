@@ -22,6 +22,10 @@
                     class="dropdown-item ">By Category</a>
                 <a href="{% url 'products:products' %}?sort=artist&direction=asc"
                     class="dropdown-item ">By Artist</a>
+                <a href="{% url 'products:products' %}?sort=is_print&direction=asc"
+                    class="dropdown-item ">By Print</a>
+                <a href="{% url 'products:products' %}?sort=is_print&direction=desc"
+                    class="dropdown-item ">By Painting</a>
                 <a href="{% url 'products:products' %}"
                     class="dropdown-item">All Art</a>
             </div>
