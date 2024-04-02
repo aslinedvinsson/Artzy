@@ -89,7 +89,7 @@ def add_wish_to_cart(request, item_id):
     item_id_str = str(item_id)
 
     if item_id_str in cart:
-        cart[item_id_str] += quantity
+        cart[item_id_str] = int(cart[item_id_str]) + quantity
         messages.success(request, f'Updated {product.name} quantity to '
                          '{cart[item_id_str]}')
     else:
