@@ -526,13 +526,65 @@ To enhance site security, Cross-Site Request Forgery (CSRF) tokens have been imp
 ### Entity Relationship Diagram
  ![](docs/erd.png)
 
-### Custom Models
-Custom models for this project include:
-- Newsletter
-- Subscriber
-- Wishlist
-- Wishlist Item
 
+### Custom Models
+#### Wishlist & WishlistItem Models
+
+In this Django application, I have developed two custom models designed to manage user wishlists and the items within them. These models are integral to a system that includes user profiles and product catalogs, aiming to provide a seamless e-commerce or retail experience.
+
+**Wishlist Model**
+
+The Wishlist model serves as a container for a user's desired products, enabling them to save items they are interested in purchasing at a later time. Each wishlist is linked to a user's profile and can be named for easy identification. The key features of the Wishlist model include:
+
+User Association: Each wishlist is connected to a specific user profile, ensuring personalized wishlists for each user.
+Name: Users can give their wishlist a name, making it easier to manage and access.
+
+**WishlistItem Model**
+The WishlistItem model represents individual items saved within a wishlist. This model allows users to add products from the product catalog to their wishlists. The key attributes include:
+
+Wishlist Association: Each item belongs to a specific wishlist, which aids in the organized management of wishlist items.
+Product Reference: Items within a wishlist are directly linked to products from the product catalog, making it easy for users to access product details and purchase options.
+These models are crucial for creating a user-friendly e-commerce platform, enhancing the shopping experience by allowing users to curate and manage lists of items they wish to purchase.
+
+#### Newsletter and Subscriber Models
+**Newsletter model**
+
+The Newsletter model is designed to create and manage newsletters within the application. Each newsletter includes a title, content, and an optional image. The created_on field automatically records the time when a newsletter is created. This model is essential for distributing information, updates, or promotional content to subscribers.
+
+Attributes:
+
+title: The title of the newsletter, allowing up to 200 characters.
+content: The main body of the newsletter, stored as text.
+created_on: The date and time when the newsletter was created, automatically set upon creation.
+newsletter_image: An optional image for the newsletter, enhancing its visual appeal.
+
+**Subscriber Model**
+
+The Subscriber model keeps track of individuals who subscribe to receive newsletters. It includes the subscriber's email, name, and a unique identifier. The email field is unique for each subscriber, ensuring that each email address is only registered once.
+
+Attributes:
+
+email: The email address of the subscriber, used as a unique identifier.
+name: The name of the subscriber.
+identifier: A unique UUID for each subscriber, generated automatically and not editable, serving as the primary key.
+These models together facilitate a straightforward yet effective system for managing newsletter subscriptions and distributing content to a list of subscribers.
+
+
+#### Other models
+The code used for the following models are taken from CodeInstitute Walkthroughs "I think, therefore I blog" and "Boutique Ado Walktrhough" and are slightly modified.
+
+**Product Model**
+
+The Product model was taken from Code Insistute Boutique Ado Walktrhough, and slightly altered. The model now includes artist and is_print attributes, providing a distinction between original artworks and prints. This adjustment allows users to filter products based on whether they are original paintings or prints. Furthermore, for prints, users can select the type of print paper from options such as Japanese Washi, Cotton Rag, Bristol Paper, and Photo Paper, enhancing customization and user choice.
+
+
+**About Model**
+
+The About model is crafted for the "About Us" section, providing a space to share details like the section's title, content, and an associated image. The updated_on field captures the last update timestamp, ensuring the section remains current. A default image can be used if none is specified.
+
+**ContactRequest Model**
+
+The ContactRequest model manages incoming messages through a contact form, recording the sender's name, email, and message. A boolean field, read, indicates whether the message has been reviewed. This setup streamlines communication, allowing for efficient tracking and response to inquiries.
 Additionally, there are minor alterations to some of the other models.
 
 ## Technologies
