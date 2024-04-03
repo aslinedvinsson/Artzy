@@ -21,7 +21,7 @@
             class="btn btn-primary">Create Newsletter</button>
     </form>
 
-    <form method="post" action="">
+    <form method="post" action="{% url 'newsletters:send_newsletter' %}">
         {% csrf_token %}
         {{ send_form|crispy }}
         <button type="submit" name="send_newsletter"
