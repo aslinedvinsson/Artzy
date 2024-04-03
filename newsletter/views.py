@@ -17,21 +17,45 @@ from .forms import SubscriberForm, SendNewsletterForm, CreateNewsletterForm
 def newsletter(request):
     """
     Renders a specific newsletter if an 'id' query parameter is provided,
-    otherwise renders the latest newsletter.
+    otherwise renders the latest newsletter. Additionally, sends an email
+    containing the newsletter content including an unsubscribe link, to all subscribers.
+    Parameters:
+    - request (HttpRequest): The request object containing the query parameters.
+    Returns:
+    - HttpResponse: A rendered template of the newsletter page, including
+      the newsletter content and a form for subscribers to subscribe.
     """
-
     newsletter_id = request.GET.get('id', None)
 
     if newsletter_id:
         newsletter = get_object_or_404(Newsletter, id=newsletter_id)
+        messages.success(request, f"You have chosen to display newsletter: {newsletter.title}")
     else:
         newsletter = Newsletter.objects.all().order_by('-created_on').first()
-
     all_newsletters = Newsletter.objects.all().order_by('-created_on')
+
+    html_content = render_to_string('newsletter/newsletter_email.html', {
+        'newsletter': newsletter,
+        'unsubscribe_url': 'unsubscribe/<int:subscriber_id>/',
+    })
+    plain_text_content = strip_tags(html_content)
+    subscribers = Subscriber.objects.all()
+    recipient_list = [subscriber.email for subscriber in subscribers]
+    from_email = 'info@artzy.com'
+
+    send_mail(
+        'Your Newsletter Subscription',
+        plain_text_content,
+        from_email,
+        recipient_list,
+        fail_silently=False,
+        html_message=html_content,
+    )
+
     return render(request, "newsletter/newsletter.html", {
-                           "newsletter": newsletter,
-                           "all_newsletters": all_newsletters,
-                           "subscriber_form": SubscriberForm(),
+        "newsletter": newsletter,
+        "all_newsletters": all_newsletters,
+        "subscriber_form": SubscriberForm(),
     })
 
 
@@ -56,6 +80,14 @@ def newsletter_management(request):
             if send_form.is_valid():
                 newsletter = send_form.cleaned_data['newsletter']
 
+                subscription_message = "\n\nThank you for subscribing to our "
+                "newsletter. If you wish to unsubscribe at any time, just "
+                "follow the link {{ unsubscribe_url }}"
+                content_with_subscription_message = (
+                    newsletter.content +
+                    subscription_message
+                )
+
                 title = newsletter.title
                 content = newsletter.content
                 subscribers = Subscriber.objects.all()
@@ -63,11 +95,11 @@ def newsletter_management(request):
 
                 send_mail(
                     title,
-                    strip_tags(content),
+                    strip_tags(content_with_subscription_message),
                     'aslin.ann@gmail.com',
                     emails,
                     fail_silently=False,
-                    html_message=content,
+                    html_message=content_with_subscription_message,
                 )
 
                 messages.success(request, 'Newsletter sent successfully!')

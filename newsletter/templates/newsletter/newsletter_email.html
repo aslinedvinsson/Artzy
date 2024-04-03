@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ newsletter.title }}</title>
+</head>
+<body>
+    <h2>{{ newsletter.title }}</h2>
+    {% if newsletter.newsletter_image %}
+        <img src="{{ newsletter.newsletter_image.url }}" alt="{{ newsletter.title }}">
+    {% endif %}
+    <div>
+        <p>{{ newsletter.content | safe }}</p>
+    </div>
+    <p><a href="{{ unsubscribe_url }}">Unsubscribe</a></p>
+</body>
+</html>

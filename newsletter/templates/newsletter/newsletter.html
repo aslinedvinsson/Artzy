@@ -37,14 +37,11 @@ Artzy!{% endblock %}
 </div>
 <div class="row">
     <div class="col text-center">
-
         {% if request.user.is_superuser %}
         <a href="{% url 'newsletter:newsletter_management' %}"
             class="btn btn-primary btn-lg">Create or Send Newsletter</a>
-
-
         <form action="" method="get">
-            <p>Change to another newsletter in the list:</p>
+            <p>Change to another newsletter in the list to display:</p>
             <select name="id" onchange="this.form.submit()">
                 {% for n in all_newsletters %}
                 <option value="{{ n.id }}"
@@ -56,7 +53,6 @@ Artzy!{% endblock %}
         {% endif %}
     </div>
 </div>
-
 <div class="container mt-5">
     <div class="row justify-content-center align-items-center">
         <div class="col-12 col-md-8 text-left">
@@ -94,9 +90,7 @@ Artzy!{% endblock %}
         </div>
     </div>
 </div>
-
 <div class="row justify-content-center">
-
     <div class="col-12 col-md-6 my-5">
         <h2>Sign up for our newsletter</h2>
         <!-- Sign up newsletter form -->
