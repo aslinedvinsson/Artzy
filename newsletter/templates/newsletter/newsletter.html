@@ -110,6 +110,21 @@ Artzy!{% endblock %}
             {% endfor %}
         </div>
         {% endif %}
+        <h2>Unsubscribe from our newsletter</h2>
+        <!-- Unsubscribe newsletter form -->
+        <form method="post" action="{% url 'newsletter:unsubscribe_website' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ unsubscribe_form.email|as_crispy_field }}
+            </div>
+            <div class="form-group">
+                {{ unsubscribe_form.confirm_unsubscribe|as_crispy_field }}
+            </div>
+            <button class="btn btn-danger" type="submit">Unsubscribe</button>
+        </form>
+
+
+
     </div>
 </div>
 

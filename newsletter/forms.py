@@ -42,3 +42,7 @@ class CreateNewsletterForm(forms.ModelForm):
 class SendNewsletterForm(forms.Form):
     newsletter = forms.ModelChoiceField(queryset=Newsletter.objects.all(),
                                         label="Select Newsletter")
+
+class UnsubscribeForm(forms.Form):
+    email = forms.EmailField(label='Email')
+    confirm_unsubscribe = forms.BooleanField(label='Confirm Unsubscribe')

@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>{{ newsletter.title }}</title>
 </head>
+
 <body>
     <h2>{{ newsletter.title }}</h2>
     {% if newsletter.newsletter_image %}
-        <img src="{{ newsletter.newsletter_image.url }}" alt="{{ newsletter.title }}">
+    <img src="{{ newsletter.newsletter_image.url }}"
+        alt="{{ newsletter.title }}">
     {% endif %}
     <div>
         <p>{{ newsletter.content | safe }}</p>
     </div>
-    <p><a href="https://artzy-f5e67145006a.herokuapp.com/unsubscribe/{{ subscriber.uuid }}">Unsubscribe</a></p>
+    <p>If you wish to unsubscribe to the newsletter, just visit us at
+        https://artzy-f5e67145006a.herokuapp.com/newsletter/</a></p>
 </body>
+
 </html>

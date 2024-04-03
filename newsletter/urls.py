@@ -9,4 +9,5 @@ urlpatterns = [
     path('send-newsletter/', views.send_newsletter, name='send_newsletter'),
     path('subscribe/', views.subscribe_to_newsletter, name='subscribe_to_newsletter'),
     path('unsubscribe/<uuid:subscriber_id>/', views.unsubscribe, name='unsubscribe'),
+    path('newsletter/unsubscribe-website/', views.unsubscribe_website, name='unsubscribe_website'),
 ]

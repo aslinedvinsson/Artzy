@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.core.mail import send_mail
+from django.core.exceptions import ObjectDoesNotExist
 from django.conf import settings
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
@@ -9,44 +10,58 @@ from django.contrib.auth.decorators import login_required
 from django.utils.http import urlsafe_base64_encode
 from django.utils.encoding import force_bytes
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 import re
 from .models import Newsletter, Subscriber
-from .forms import SubscriberForm, SendNewsletterForm, CreateNewsletterForm
+from .forms import (
+    SubscriberForm, SendNewsletterForm,
+    CreateNewsletterForm, UnsubscribeForm
+)
 
 
 def newsletter(request):
     """
-    Renders a specific newsletter if an 'id' query parameter is provided,
-    otherwise renders the latest newsletter.
+    Renders a specific newsletter if an 'id' query
+    parameter is provided, otherwise renders the latest
+    newsletter.
     """
-
+    unsubscribe_form = UnsubscribeForm()
     newsletter_id = request.GET.get('id', None)
 
     if newsletter_id:
-        newsletter = get_object_or_404(Newsletter, id=newsletter_id)
+        newsletter = get_object_or_404(
+            Newsletter, id=newsletter_id
+        )
     else:
-        newsletter = Newsletter.objects.all().order_by('-created_on').first()
+        newsletter = Newsletter.objects.all()\
+            .order_by('-created_on').first()
 
-    all_newsletters = Newsletter.objects.all().order_by('-created_on')
+    all_newsletters = Newsletter.objects.all()\
+        .order_by('-created_on')
     return render(request, "newsletter/newsletter.html", {
-                           "newsletter": newsletter,
-                           "all_newsletters": all_newsletters,
-                           "subscriber_form": SubscriberForm(),
+        "newsletter": newsletter,
+        "all_newsletters": all_newsletters,
+        "subscriber_form": SubscriberForm(),
+        'unsubscribe_form': unsubscribe_form
     })
 
-"""
+
 def send_newsletter(request):
     if request.method == 'POST':
         form = SendNewsletterForm(request.POST)
         if form.is_valid():
             newsletter = form.cleaned_data['newsletter']
-            html_content = render_to_string('newsletter/newsletter_mail.html', {
-                'newsletter': newsletter,
-                'unsubscribe_url': 'unsubscribe/<int:subscriber_id>/',
-            })
+            html_content = render_to_string(
+                'newsletter/newsletter_mail.html', {
+                    'newsletter': newsletter,
+                    'unsubscribe_url': 'unsubscribe/<int:subscriber_id>/',
+                }
+            )
             plain_text_content = strip_tags(html_content)
             subscribers = Subscriber.objects.all()
-            recipient_list = [subscriber.email for subscriber in subscribers]
+            recipient_list = [
+                subscriber.email for subscriber in subscribers
+            ]
             from_email = 'info@artzy.com'
 
             send_mail(
@@ -57,50 +72,21 @@ def send_newsletter(request):
                 fail_silently=False,
                 html_message=html_content,
             )
-            messages.success(request, f"Newsletter '{newsletter.title}' has been sent to all subscribers.")
-        else:
+            success_msg = (f"Newsletter '{newsletter.title}' has been "
+                           "sent to all subscribers.")
+            messages.success(request, success_msg)
             return redirect('newsletter:newsletter')
-            messages.error(request, "There was an error sending the newsletter.")
-    else:
-        form = SendNewsletterForm()
-
-    return render(request, "newsletter/newsletter_mail.html", {
-        "form": form,
-    })
-"""
-
-def send_newsletter(request):
-    if request.method == 'POST':
-        form = SendNewsletterForm(request.POST)
-        if form.is_valid():
-            newsletter = form.cleaned_data['newsletter']
-            html_content = render_to_string('newsletter/newsletter_mail.html', {
-                'newsletter': newsletter,
-                'unsubscribe_url': 'unsubscribe/<int:subscriber_id>/',
-            })
-            plain_text_content = strip_tags(html_content)
-            subscribers = Subscriber.objects.all()
-            recipient_list = [subscriber.email for subscriber in subscribers]
-            from_email = 'info@artzy.com'
-
-            send_mail(
-                'Your Newsletter Subscription',
-                plain_text_content,
-                from_email,
-                recipient_list,
-                fail_silently=False,
-                html_message=html_content,
+        else:
+            messages.error(
+                request, "There was an error sending the newsletter."
             )
-            messages.success(request, f"Newsletter '{newsletter.title}' has been sent to all subscribers.")
-            return redirect('newsletter:newsletter')
-        else:
-            messages.error(request, "There was an error sending the newsletter.")
     else:
         form = SendNewsletterForm()
 
     return render(request, "newsletter/newsletter_mail.html", {
         "form": form,
     })
+
 
 @login_required
 def newsletter_management(request):
@@ -199,7 +185,7 @@ def send_confirmation_email(subscriber, request):
         request: HttpRequest object, used to build absolute URIs.
     """
     unsubscribe_url = request.build_absolute_uri(reverse(
-        'newsletter:unsubscribe', args=[subscriber.id]))
+        'newsletter:unsubscribe', args=[subscriber.identifier]))
     context = {
         'unsubscribe_url': unsubscribe_url,
         'subscriber': subscriber,
@@ -217,34 +203,25 @@ def send_confirmation_email(subscriber, request):
         fail_silently=False,
     )
 
-"""
+
 def unsubscribe(request, subscriber_id):
-
-    Unsubscribes a subscriber from the newsletter and returns a confirmation
-    message. Attempts to find a Subscriber instance by ID and delete it.
-    If the subscriber does not exist, returns a 404 response.
-    Args:
-        request: HttpRequest object.
-        subscriber_id: ID of the Subscriber instance to be deleted.
-    Returns:
-        HttpResponse object with a success message if unsubscribed, or a 404
-        response if subscriber does not exist.
-
     try:
-        subscriber = Subscriber.objects.get(id=subscriber_id)
+        subscriber = Subscriber.objects.get(identifier=subscriber_id)
         subscriber.delete()
-        return HttpResponse("You have been successfully unsubscribed. "
-                            "If you ever change your mind, just visit "
-                            "artzy.com and join us again! Best regards, Artzy")
-    except Subscriber.DoesNotExist:
-        return HttpResponse("Invalid request.", status=404)
-"""
-
-def unsubscribe(request, subscriber_id):
-    try:
-        subscriber = Subscriber.objects.get(id=subscriber_id)
-        subscriber.is_subscribed = False
-        subscriber.save()
         return HttpResponse("You have been successfully unsubscribed.")
     except Subscriber.DoesNotExist:
         return HttpResponse("Invalid request.", status=404)
+
+
+@csrf_exempt
+def unsubscribe_website(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        if email:
+            try:
+                subscriber = Subscriber.objects.get(email=email)
+                subscriber.delete()
+                return HttpResponse("You have been successfully unsubscribed.")
+            except ObjectDoesNotExist:
+                return HttpResponse("Subscriber not found.", status=404)
+    return HttpResponse("Invalid request.", status=400)
