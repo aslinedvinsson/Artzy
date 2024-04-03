@@ -29,15 +29,19 @@ def newsletter(request):
     newsletter_id = request.GET.get('id', None)
 
     if newsletter_id:
-        newsletter = get_object_or_404(
-            Newsletter, id=newsletter_id
-        )
+        # If 'id' parameter is provided, save it to the session
+        request.session['selected_newsletter_id'] = newsletter_id
+        newsletter = get_object_or_404(Newsletter, id=newsletter_id)
     else:
-        newsletter = Newsletter.objects.all()\
-            .order_by('-created_on').first()
+        # Try to retrieve a saved newsletter ID from the session
+        saved_newsletter_id = request.session.get('selected_newsletter_id')
+        if saved_newsletter_id:
+            newsletter = get_object_or_404(Newsletter, id=saved_newsletter_id)
+        else:
+            # If no ID is provided and nothing is saved in the session, render the latest newsletter
+            newsletter = Newsletter.objects.all().order_by('-created_on').first()
 
-    all_newsletters = Newsletter.objects.all()\
-        .order_by('-created_on')
+    all_newsletters = Newsletter.objects.all().order_by('-created_on')
     return render(request, "newsletter/newsletter.html", {
         "newsletter": newsletter,
         "all_newsletters": all_newsletters,
