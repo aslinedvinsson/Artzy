@@ -4,6 +4,11 @@ from .models import Subscriber, Newsletter
 
 
 class SubscriberForm(forms.ModelForm):
+    """
+    A form for creating a new Subscriber. Initializes fields with custom
+    placeholders, classes, and sets autofocus on the first field. Removes
+    auto-generated labels for a cleaner UI.
+    """
     class Meta:
         model = Subscriber
         fields = ('name', 'email',)
@@ -32,6 +37,11 @@ class SubscriberForm(forms.ModelForm):
 
 
 class CreateNewsletterForm(forms.ModelForm):
+    """
+    A form for creating a new Newsletter. It includes a rich text editor field
+    for the newsletter's content via SummernoteWidget, and fields for the
+    newsletter's title and associated image.
+    """
     content = forms.CharField(widget=SummernoteWidget())
 
     class Meta:
@@ -40,9 +50,17 @@ class CreateNewsletterForm(forms.ModelForm):
 
 
 class SendNewsletterForm(forms.Form):
+    """
+    A form for selecting a Newsletter to send. Lists all available newsletters
+    for selection.
+    """
     newsletter = forms.ModelChoiceField(queryset=Newsletter.objects.all(),
                                         label="Select Newsletter")
 
 class UnsubscribeForm(forms.Form):
+    """
+    A form for unsubscribing from the newsletter. Requests email address and
+    confirmation to unsubscribe, ensuring user intent.
+    """
     email = forms.EmailField(label='Email')
     confirm_unsubscribe = forms.BooleanField(label='Confirm Unsubscribe')

@@ -21,24 +21,22 @@ from .forms import (
 
 def newsletter(request):
     """
-    Renders a specific newsletter if an 'id' query
-    parameter is provided, otherwise renders the latest
-    newsletter.
+    Display the requested newsletter by 'id' from query parameter, the last
+    selected newsletter saved in session, or the latest one. It also prepares
+    subscription and unsubscription forms for rendering.
     """
     unsubscribe_form = UnsubscribeForm()
     newsletter_id = request.GET.get('id', None)
 
     if newsletter_id:
-        # If 'id' parameter is provided, save it to the session
         request.session['selected_newsletter_id'] = newsletter_id
         newsletter = get_object_or_404(Newsletter, id=newsletter_id)
+        messages.success(request, "The newsletter display has been updated.")
     else:
-        # Try to retrieve a saved newsletter ID from the session
         saved_newsletter_id = request.session.get('selected_newsletter_id')
         if saved_newsletter_id:
             newsletter = get_object_or_404(Newsletter, id=saved_newsletter_id)
         else:
-            # If no ID is provided and nothing is saved in the session, render the latest newsletter
             newsletter = Newsletter.objects.all().order_by('-created_on').first()
 
     all_newsletters = Newsletter.objects.all().order_by('-created_on')
@@ -51,6 +49,10 @@ def newsletter(request):
 
 
 def send_newsletter(request):
+    """
+    Handles sending of selected newsletter to all subscribers via email on
+    POST request, and presents the send newsletter form otherwise.
+    """
     if request.method == 'POST':
         form = SendNewsletterForm(request.POST)
         if form.is_valid():
@@ -94,7 +96,10 @@ def send_newsletter(request):
 
 @login_required
 def newsletter_management(request):
-
+    """
+    Presents forms for creating and sending newsletters. Handles creation and
+    sending of newsletters on POST request, depending on the form submitted.
+    """
     create_form = CreateNewsletterForm()
     send_form = SendNewsletterForm()
 
@@ -150,16 +155,9 @@ def newsletter_management(request):
 
 def subscribe_to_newsletter(request):
     """
-    Handles subscription to the newsletter via POST request; renders
-    subscription form otherwise. If the request method is POST and the
-    submitted form is valid, saves the new subscriber, sends a confirmation
-    email, and redirects to the 'home' page. If the form is invalid,
-    it displays an error message.
-    Args:
-        request: HttpRequest object.
-    Returns:
-        If POST and form is valid, redirects to 'home'. Otherwise, renders
-        the subscription form with an errors.
+    Subscribes a user to the newsletter list via a POST request containing
+    their email. Validates the form, saves the subscriber, and sends a
+    confirmation email.
     """
     if request.method == 'POST':
         form = SubscriberForm(request.POST)
@@ -181,12 +179,8 @@ def subscribe_to_newsletter(request):
 
 def send_confirmation_email(subscriber, request):
     """
-    Sends a confirmation email to a new subscriber. Constructs an unsubscribe
-    URL, prepares both HTML and plain text versions of the confirmation
-    message, and sends an email to the subscriber's email address.
-    Args:
-        subscriber: Subscriber instance to whom the confirmation email is sent.
-        request: HttpRequest object, used to build absolute URIs.
+    Sends a confirmation email to a new subscriber, including an unsubscribe
+    ink. Constructs both HTML and plain text versions of the email.
     """
     unsubscribe_url = request.build_absolute_uri(reverse(
         'newsletter:unsubscribe', args=[subscriber.identifier]))
@@ -209,6 +203,10 @@ def send_confirmation_email(subscriber, request):
 
 
 def unsubscribe(request, subscriber_id):
+    """
+    Unsubscribes a subscriber based on their unique identifier. Handles the
+    request by attempting to delete the subscriber entry.
+    """
     try:
         subscriber = Subscriber.objects.get(identifier=subscriber_id)
         subscriber.delete()
@@ -219,6 +217,10 @@ def unsubscribe(request, subscriber_id):
 
 @csrf_exempt
 def unsubscribe_website(request):
+    """
+    Allows unsubscribing from the newsletter via a POST request containing
+    an email. Handles the request by finding and deleting the subscriber entry.
+    """
     if request.method == 'POST':
         email = request.POST.get('email')
         if email:
