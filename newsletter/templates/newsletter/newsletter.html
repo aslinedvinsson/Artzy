@@ -29,7 +29,7 @@ Artzy!{% endblock %}
                 <p class="mb-2"><em>Created on:
                         {{ newsletter.created_on|date:"F d, Y" }}</em></p>
                 <div>
-                    <p>{{ newsletter.content | safe }}</p>
+                    {{ newsletter.content | safe }}
                 </div>
             </div>
         </div>
@@ -40,7 +40,7 @@ Artzy!{% endblock %}
         {% if request.user.is_superuser %}
         <a href="{% url 'newsletter:newsletter_management' %}"
             class="btn btn-primary btn-lg">Create or Send Newsletter</a>
-        <form action="" method="get">
+        <form action="{% url 'newsletters:newsletter' %}" method="get">
             <p>Change to another newsletter in the list to display:</p>
             <select name="id" onchange="this.form.submit()">
                 {% for n in all_newsletters %}
