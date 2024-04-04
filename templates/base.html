@@ -4,7 +4,6 @@
 <html lang="en">
 
 <head>
-
     {% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
@@ -14,14 +13,13 @@
         content="{% block title %}Explore Artzy's Curated Collection of Accessible Art | Artzy{% endblock %}">
     <meta name="description"
         content="{% block description %}Explore Artzy's curated collection of accessible art, from contemporary pieces to classic treasures. Whether you're a curious beginner or an avid collector, discover the perfect piece to inspire your space. Shop now and start your art journey with us today!{% endblock %}">
-
-    {% endblock %}
+    <meta name="google-site-verification" content="wG9qMM7TQwnS3-T7ZnDvqZprUD323QHR4wVyD5c34h4" />
+        {% endblock %}
 
     {% block extra_meta %}
     {% endblock %}
 
     {% block corecss %}
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,11 +31,8 @@
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
         crossorigin="anonymous">
-
-
     <!-- Custom css -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
-
     {% endblock %}
 
     {% block extra_css %}
@@ -51,7 +46,6 @@
             }
         });
     </script>
-
     <script src="https://kit.fontawesome.com/5322e9124b.js"
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -80,7 +74,6 @@
 </head>
 
 <body>
-
     <header class="container-fluid fixed- header-background">
         <div class="row">
             <div
@@ -129,7 +122,7 @@
                             {% endif %}
                             <a href="{% url 'profile' %}"
                                 class="dropdown-item">My Profile</a>
-                                <a href="{% url 'wishlists:user_wishlists' %}"
+                            <a href="{% url 'wishlists:user_wishlists' %}"
                                 class="dropdown-item">My Wishlist</a>
                             <a href="{% url 'account_logout' %}"
                                 class="dropdown-item">Logout</a>
@@ -173,7 +166,6 @@
             </nav>
         </div>
     </header>
-
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
@@ -200,20 +192,16 @@
     <div class="flex-container">
     </div>
     {% endblock %}
-
     <!-- Footer Inspired by https://mdbootstrap.com/docs/standard/navigation/footer/-->
-
     <footer class="bg-body-tertiary bg-black text-white p-5 mt-3">
-
         <div class="col bg-black text-white text-center">
             <h3 class="mb-4">Free delivery on orders over
                 ${{ free_delivery_threshold }}!</h3>
         </div>
-
         <!-- Section: Links -->
         <div class="container text-left">
             <div class="row">
-                <!-- Grid column: Shop Hours -->
+                <!-- Shop Hours -->
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0 px-lg-5">
                     <h4 class="text-uppercase">Shop Hours</h4>
                     <ul class="list-unstyled mb-0">
@@ -224,8 +212,7 @@
                             awake for you 24/7. Shop anytime!</li>
                     </ul>
                 </div>
-
-                <!-- Grid column: Follow Us -->
+                <!-- Follow Us -->
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0 px-lg-5">
                     <h4 class="text-uppercase">Follow Us</h4>
                     <ul
@@ -250,8 +237,7 @@
                         </li>
                     </ul>
                 </div>
-
-                <!-- Grid column: Contact Us -->
+                <!-- Contact Us -->
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                     <h4 class="text-uppercase">Contact Us</h4>
                     <ul class="list-unstyled mb-0">
@@ -272,8 +258,7 @@
                         </li>
                     </ul>
                 </div>
-
-                <!-- Grid column: Newsletter Form -->
+                <!-- Newsletter Form -->
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0 px-lg-5">
                     <h4 class="text-uppercase">Newsletter</h4>
                     <form method="post"
@@ -301,11 +286,9 @@
                 </div>
             </div>
         </div>
-
         <!-- Copyright -->
         <div class="text-center p-3 mt-1">
             © 2024 Copyright: Artzy
-
             <p class="small mt-1">This website is solely for educational
                 purposes and does not offer real products or services for
                 purchase. All product images have been borrowed from <a
@@ -315,13 +298,10 @@
     </footer>
     <!-- Footer -->
 
-
     {% block postloadjs %}
-
     <script type="text/javascript">
         $('.toast').toast('show');
     </script>
-
     {% endblock %}
 
 
