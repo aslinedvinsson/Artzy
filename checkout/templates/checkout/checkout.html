@@ -30,7 +30,6 @@ confidence.
             <hr>
         </div>
     </div>
-
     <div class="row">
         <div class="col-12 col-lg-6 order-lg-last mb-5">
             <p class="text-muted">Order Summary ({{ product_count }})</p>
@@ -59,9 +58,10 @@ confidence.
                 <div class="col-7">
                     <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                     <p{% if item.product.is_print %} class="my-0 small">Print:
-                        {{ item.print_type }}{% endif %}</p>
-                    <p class="my-0 small text-muted">Qty: {{ item.quantity }}
-                    </p>
+                        {{ item.print_type }}{% else %}>{% endif %}
+                        <p class="my-0 small text-muted">Qty:
+                            {{ item.quantity }}
+                        </p>
                 </div>
                 <div class="col-3 text-right">
                     <p class="my-0 small text-muted">
@@ -128,9 +128,8 @@ confidence.
                 <fieldset class="px-3">
                     <legend class="fieldset-label small text-black px-2 w-auto">
                         Payment</legend>
-                    <!-- A Stripe card element will go here -->
+                    <!-- A Stripe card element  -->
                     <div class="mb-3" id="card-element"></div>
-
                     <!-- Used to display form errors -->
                     <div class="mb-3 text-danger" id="card-errors" role="alert">
                     </div>
@@ -138,7 +137,6 @@ confidence.
                     <input type="hidden" value="{{ client_secret }}"
                         name="client_secret">
                 </fieldset>
-
                 <div class="submit-button text-right mt-5 mb-2">
                     <a href="{% url 'cart:view_cart' %}"
                         class="btn btn-outline-black -0">

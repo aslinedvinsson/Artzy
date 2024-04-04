@@ -34,7 +34,8 @@ def cart_contents(request):
                 'quantity': item_data,
                 'product': product,
             })
-            # Minor custom adjustment to code by adding print_type
+            # Minor custom adjustment to code from Boutique Ado
+            # by adding print_type
         else:
             product = get_object_or_404(Product, pk=item_id)
             for print_type, quantity in item_data['items_by_print'].items():

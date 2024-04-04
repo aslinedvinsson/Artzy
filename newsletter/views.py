@@ -37,7 +37,8 @@ def newsletter(request):
         if saved_newsletter_id:
             newsletter = get_object_or_404(Newsletter, id=saved_newsletter_id)
         else:
-            newsletter = Newsletter.objects.all().order_by('-created_on').first()
+            newsletter = Newsletter.objects.all().order_by('-created_on')\
+                .first()
 
     all_newsletters = Newsletter.objects.all().order_by('-created_on')
     return render(request, "newsletter/newsletter.html", {

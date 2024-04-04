@@ -1,5 +1,4 @@
-[
-    {
+[{
         "pk": 1,
         "model": "products.product",
         "fields": {
@@ -26,8 +25,8 @@
             "price": 101.5,
             "category": 2,
             "rating": 3.2,
-            "image_url": "https://example.com/images/steve-johnson-3Sf_G9m0gcQ-unsplash (1).jpg",
-            "image": "steve-johnson-3Sf_G9m0gcQ-unsplash (1).jpg",
+            "image_url": "https://example.com/images/steve-johnson-3Sf_G9m0gcQ-unsplash.jpg",
+            "image": "steve-johnson-3Sf_G9m0gcQ-unsplash.jpg",
             "artist": "Van Glitch"
         }
     },
@@ -42,8 +41,8 @@
             "price": 103.0,
             "category": 3,
             "rating": 3.4,
-            "image_url": "https://example.com/images/jene-stephaniuk--MCrF6hnojU-unsplash (1).jpg",
-            "image": "jene-stephaniuk--MCrF6hnojU-unsplash (1).jpg",
+            "image_url": "https://example.com/images/jene-stephaniuk--MCrF6hnojU-unsplash.jpg",
+            "image": "jene-stephaniuk--MCrF6hnojU-unsplash.jpg",
             "artist": "Picassy Shadowman"
         }
     },
@@ -146,8 +145,8 @@
     {
         "pk": 10,
         "model": "products.product",
-        "fields":{
-        "sku": "art000010",
+        "fields": {
+            "sku": "art000010",
             "name": "Dreamscapes Unleashed",
             "description": "A journey through the abstract, this artwork invites viewers into a dreamlike world.",
             "is_print": false,
@@ -314,8 +313,8 @@
             "price": 128.5,
             "category": 6,
             "rating": 3.8,
-            "image_url": "https://example.com/images/steve-johnson-3Sf_G9m0gcQ-unsplash (1).jpg",
-            "image": "steve-johnson-3Sf_G9m0gcQ-unsplash (1).jpg",
+            "image_url": "https://example.com/images/steve-johnson-3Sf_G9m0gcQ-unsplash.jpg",
+            "image": "steve-johnson-3Sf_G9m0gcQ-unsplash.jpg",
             "artist": "Francis Goghya"
         }
     }

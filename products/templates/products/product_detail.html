@@ -65,7 +65,7 @@ someone special today.
                 {% endif %}
                 {% if request.user.is_superuser %}
                 <small class="ml-3">
-                    <a
+                    <a class="text-dark"
                         href="{% url 'products:edit_product' product.id %}">Edit</a>
                     |
                     <a class="text-danger"
@@ -82,8 +82,8 @@ someone special today.
                         {% if p %}
                         <div class="col-12">
                             <p><strong>Print paper:</strong></p>
-                            <select class="form-control w-50"
-                                name="print_paper" id='id_print_paper'>
+                            <select class="form-control w-50" name="print_paper"
+                                id='id_print_paper'>
                                 <option value="Japanese Washi">Japanese Washi
                                 </option>
                                 <option value="Cotton Rag" selected>Cotton Rag
@@ -98,20 +98,25 @@ someone special today.
                         <div class="col-12">
                             <p class="mt-3"><strong>Quantity:</strong></p>
                             <div class="form-group w-50">
-                                <div class="input-group input-group-{{ product.id }}">
+                                <div
+                                    class="input-group input-group-{{ product.id }}">
                                     <div class="input-group-prepend">
-                                        <button class="decrement-qty btn btn-black decrement-qty_{{ product.id }}"
+                                        <button
+                                            class="decrement-qty btn btn-black decrement-qty_{{ product.id }}"
                                             data-item_id="{{ product.id }}">
                                             <span class="icon">
                                                 <i class="fas fa-minus"></i>
                                             </span>
                                         </button>
                                     </div>
-                                    <input class="form-control qty_input id_qty_{{ product.id }}" type="number"
-                                        name="quantity" value="1" min="1" max="99"
+                                    <input
+                                        class="form-control qty_input id_qty_{{ product.id }}"
+                                        type="number" name="quantity" value="1"
+                                        min="1" max="99"
                                         data-item_id="{{ product.id }}">
                                     <div class="input-group-append">
-                                        <button class="increment-qty btn btn-black increment-qty_{{ product.id }}"
+                                        <button
+                                            class="increment-qty btn btn-black increment-qty_{{ product.id }}"
                                             data-item_id="{{ product.id }}">
                                             <span class="icon">
                                                 <i class="fas fa-plus"></i>

@@ -13,8 +13,9 @@
         content="{% block title %}Explore Artzy's Curated Collection of Accessible Art | Artzy{% endblock %}">
     <meta name="description"
         content="{% block description %}Explore Artzy's curated collection of accessible art, from contemporary pieces to classic treasures. Whether you're a curious beginner or an avid collector, discover the perfect piece to inspire your space. Shop now and start your art journey with us today!{% endblock %}">
-    <meta name="google-site-verification" content="wG9qMM7TQwnS3-T7ZnDvqZprUD323QHR4wVyD5c34h4" />
-        {% endblock %}
+    <meta name="google-site-verification"
+        content="wG9qMM7TQwnS3-T7ZnDvqZprUD323QHR4wVyD5c34h4" />
+    {% endblock %}
 
     {% block extra_meta %}
     {% endblock %}
@@ -267,12 +268,13 @@
                         <div class="form-outline mb-4">
                             <input type="text" name="name" id="id_name"
                                 class="form-control text-white bg-dark border-white  profile-form-input"
-                                placeholder="Name *" autofocus
+                                placeholder="Name *"
                                 {% if form.name.value %}value="{{ form.name.value }}"
                                 {% endif %}>
                         </div>
                         <div class="form-outline mb-4">
-                            <input type="email" name="email" id="id_email"
+                            <input type="email" name="email"
+                                id="id_email_footer"
                                 class="form-control text-white bg-dark border-white profile-form-input"
                                 placeholder="Email *"
                                 {% if form.email.value %}value="{{ form.email.value }}"
