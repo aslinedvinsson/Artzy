@@ -202,12 +202,6 @@ Navigation on my site is intentionally streamlined and intuitive, allowing you t
     <summary>Desktop shopping cart page</summary>
     <img src="docs/wireframes/shopping_cart_dt.png">
 </details>
-
-<details>
-    <summary>Mobile shopping cart page////</summary>
-    <img src="docs/wireframes/shopping_cart.png">
-</details>
-
 <details>
     <summary>Desktop about page</summary>
     <img src="docs/wireframes/about_dt.png">
@@ -226,12 +220,6 @@ Navigation on my site is intentionally streamlined and intuitive, allowing you t
     <summary>Desktop profile page</summary>
     <img src="docs/wireframes/profile_dt.png">
 </details>
-
-<details>
-    <summary>Mobile profile page////</summary>
-    <img src="docs/wireframes/profile.png">
-</details>
-
 <details>
     <summary>Desktop checkout page</summary>
     <img src="docs/wireframes/checkout_dt.png">
@@ -246,22 +234,10 @@ Navigation on my site is intentionally streamlined and intuitive, allowing you t
     <summary>Desktop product management page</summary>
     <img src="docs/wireframes/product_management_dt.png">
 </details>
-
-<details>
-    <summary>Mobile product management page/// </summary>
-    <img src="docs/wireframes/product_management.png">
-</details>
-
 <details>
     <summary>Desktop wishlist page</summary>
     <img src="docs/wireframes/wishlist_dt.png">
 </details>
-
-<details>
-    <summary>Mobile wishlist page/// </summary>
-    <img src="docs/wireframes/wishlist.png">
-</details>
-
 <details>
     <summary>Desktop sign up for newsletter</summary>
     <img src="docs/wireframes/signup_newsletter_dt.png">
@@ -272,12 +248,14 @@ Navigation on my site is intentionally streamlined and intuitive, allowing you t
 </details>
 
 
-## Colors////
+## Colors
 Choosing a vibrant and colorful image for the homepage with black text is a strategic move designed to instantly grab the visitor's attention. This pop of color makes a bold statement, ensuring the artwork and, by extension, the products, are the stars of the show.
 
 The header integrates well with the colors of the index page, as well as with the white background on other pages and together with the black footer they enhance readability and frame the homepage art beautifully, without overshadowing the main attraction. On subsequent pages, the white background with black text continues this theme of simplicity and focus, ensuring that the colorful homepage art remains the visual highlight of the website.
 
 This color scheme is not just about aesthetics; it's a deliberate choice to make the shopping experience more engaging and memorable. By keeping the design elements minimal and focused, the website directs visitors' attention exactly where it needs to be: on the products and the vibrant imagery that represents them.
+
+![](docs/white.png) ![](docs/black.png)
 
 ## Fonts
 PT Sans from [Google Fonts](https://fonts.google.com/?query=pt+sans) is a versatile, open-source font that's free and easy to use across all digital platforms. Its wide language support and variety of styles make it suitable for global projects and diverse design needs, ensuring the content is both accessible and visually appealing.
@@ -441,9 +419,11 @@ li>
 Git Hub Kanban board can be viewed [here](https://github.com/users/aslinedvinsson/projects/8/views/1) ////
 
 
-## Features Overview/// Korrekturläs lägg printscreen
+## Features Overview
 
 ### Navigation Bar
+![](docs/navigation.png)
+
 ![](docs/navigationdt.png)
 
 The navigation bar is designed to be intuitive and user-friendly, offering a seamless browsing experience regardless of the user's registration status.
@@ -452,72 +432,75 @@ Registered User: For logged-in users, the navigation bar becomes more personaliz
 
 
 ### Home Page
-![](docs/navigationdt.png)
+![](docs/home.png)
+![](docs/homedt.png)
 The home page of Artzy displays a large image that inspires a desire to see more art, accompanied by a message: "Knowing Nothing About Art Yet Having That Burning Desire to Stare at Something, with Feelings Unnamed," along with a "Shop Art" button.
 
 ### Account Registration Page
-![](docs/navigationdt.png)
+![](docs/registration.png)
 The registration page is straightforward and welcoming to new users. It features a simple registration form asking for basic information to create an account. Below the form, there's a direct link for users who already have an account to log in, making the transition between registering and logging in seamless.
 
 ### Login Page
-![](docs/navigationdt.png)
+![](docs/signin.png)
 The login page is clean and user-centric, featuring a form for email or username and password input, a "Remember Me" checkbox for convenience, and a password recovery link for those who need it. Links back to the home page are provided for users who decide against logging in at the moment.
 
 ### Logout Page
-![](docs/navigationdt.png)
+![](docs/signout.png)
 On the logout page, users find a simple and clear interface with a logout button. This page confirms the user's intention to log out and provides a smooth exit route from their profile.
 
 ### Product Listing Page
-![](docs/navigationdt.png)
+![](docs/productsdt.png)
 Artzy’s product listing page is a gallery of available artworks, showcasing images, artists, categories, ratings, and prices. It’s designed for easy navigation, including filters for categories, artists, print or painting and price ranges. A "Back to Top" button improves user navigation.
 
 ### Product Detail Page
-![](docs/navigationdt.png)
+![](docs/productdt.png)
 The product detail page offers images of the artwork, detailed information about the artist, category, rating, print paper, price, and a thorough description. Users can select the quantity they wish to purchase and have the option to keep shopping or add the product to their bag. An "Add to Wishlist" button is available for registered users, encouraging engagement and return visits.
 
 ### Wishlist Page
-![](docs/navigationdt.png)
+![](docs/wishlist.png)
 Designing models to efficiently represent wishlists and wishlist items, along with writing queries to manage the relationships between users, wishlists, products, and wishlist items, proved complex. I focused on ensuring efficient data retrieval and updates, a task that became increasingly crucial as the dataset grew. I had scenarios where a user attempted to add a product already present in their wishlist. To address this, I implemented logic to prevent duplicate entries and to provide appropriate feedback to the user. Additionally, adding items from the wishlist to the shopping cart required coordination among different parts of the application. I ensured that items were added correctly and quantities were managed appropriately, all while providing feedback to the user. Moreover, I worked on implementing dynamic updates to the wishlist without full page reloads to enhance the user experience, making it more responsive.
 
 ### About Page
-![](docs/navigationdt.png)
+![](docs/about.png)
 The About Page is a space that tells the story of Artzy. It features an image that embodies the essence of the platform, accompanied by text that narrates the mission and vision of Artzy.
 
 ### Contact Page
-![](docs/navigationdt.png)
+![](docs/contact.png)
 Designed for ease of communication, the Contact Page includes a straightforward user contact form. This form allows visitors and users to quickly send inquiries or feedback directly to the Artzy team, ensuring that voices are heard and any concerns are addressed promptly.
 
 ### User Experience Differentiation
 Artzy offers a tailored browsing experience depending on the user's login status. Logged-out users see a general overview of the platform's features and art products. They can still purchase art and subscribe to the newsletter without creating an account. Logged-in users have access to a profile page, where they can view their order history and access their wishlist, allowing them to save products for future purchases.
 
 ### Newsletter Page
-![](docs/navigationdt.png)
+![](docs/newsletter.png)
+
 The newsletter page displays an image and the latest newsletter, which is also distributed to subscribers.
 
 I integrated multiple complex newsletter functionality, covering subscription, newsletter management, and email distribution. Managing the flow and ensuring all parts worked together seamlessly was a bit challenging. When creating dynamic unsubscribe links unique to each subscriber, as demonstrated in the send_confirmation_email function, it was necessary to carefully construct URLs and encode subscriber IDs. This process ensured that the unsubscribe functionality worked correctly and securely for each user. To enable superusers to select which newsletter appears on the page, I utilized session variables to remember their choices.
 
 ### Shopping Cart Page
-![](docs/navigationdt.png)
+![](docs/cartdt.png)
 The Shopping Cart Page is a detailed overview of a user's intended purchases. It lists each item's price, quantity, and subtotal, alongside options to manage the cart items. The page also summarizes the total cost, delivery charges, and highlights the free delivery threshold. Navigation buttons offer a smooth transition to continue shopping or proceed to checkout.
 
 ### Checkout Page
-![](docs/navigationdt.png)
+![](docs/checkout.png)
 The Checkout Page provides users with a final review of their order, including a summary of the items, delivery information, and available payment options. It outlines the steps needed to complete the purchase, ensuring a transparent and user-friendly checkout process.
 
 ### Checkout Success Page
-![](docs/navigationdt.png)
 After a successful purchase, the Checkout Success Page confirms the order and informs the user that a confirmation email has been sent. This page serves as reassurance of the successful transaction, providing details on next steps and delivery expectations.
 
 ### User Profile Page
-![](docs/navigationdt.png)
+![](docs/profiledt.png)
 Displays the user's delivery details and order history, with links to detailed order confirmation, profile management and wishlist.
 
-### Super User - Product Management
-![](docs/navigationdt.png)
+### Super User - Product & Newletter Management
+![](docs/product_management.png)
+![](docs/newsletter_management.png)
+
 Exclusively accessible to super users, this section provides tools for adding, updating, and deleting products from the Artzy catalog. The superuser can also create and send newsletters, as well as change the displayed newsletter, directly from the site without accessing the Django admin panel.
 
 ### Footer
-![](docs/navigationdt.png)
+![](docs/footerdt.png)
 Present on every page, the footer is a constant element that enhances the user's navigation experience. It prominently features a free delivery banner, along with information such as shop hours, contact us, follow us on social media, privacy policy, and a newsletter sign-up form, which is also available on the newsletter site.
 
 
@@ -537,7 +520,7 @@ To enhance site security, Cross-Site Request Forgery (CSRF) tokens have been imp
 ### Error Page
 404 - Page Not Found error page was created to guide them back to the site.
 
-![404-Error](docs/web/404.png)
+![404-Error](docs/404.png)
 
 
 ## Database Design

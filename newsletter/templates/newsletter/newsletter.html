@@ -48,6 +48,7 @@ Artzy!{% endblock %}
                     <form action="{% url 'newsletters:newsletter' %}" method="get">
                         <p>Change to another newsletter in the list to display, in the dropdown menu:</p>
                         <div class="mb-3">
+                            <label for="newsletterSelect" class="form-label"></label>
                             <select name="id" class="form-select" onchange="this.form.submit()">
                                 {% for n in all_newsletters %}
                                 <option value="{{ n.id }}" {% if n.id == newsletter.id %}selected{% endif %}>{{ n.title }}</option>
