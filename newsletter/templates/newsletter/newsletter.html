@@ -35,24 +35,39 @@ Artzy!{% endblock %}
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="col text-center">
-        {% if request.user.is_superuser %}
-        <a href="{% url 'newsletter:newsletter_management' %}"
-            class="btn btn-primary btn-lg">Create or Send Newsletter</a>
-        <form action="{% url 'newsletters:newsletter' %}" method="get">
-            <p>Change to another newsletter in the list to display:</p>
-            <select name="id" onchange="this.form.submit()">
-                {% for n in all_newsletters %}
-                <option value="{{ n.id }}"
-                    {% if n.id == newsletter.id %}selected{% endif %}>
-                    {{ n.title }}</option>
-                {% endfor %}
-            </select>
-        </form>
-        {% endif %}
+{% if request.user.is_superuser %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h3>Newsletter Management</h3>
+
+                    <a href="{% url 'newsletter:newsletter_management' %}"
+                        class="btn btn-primary btn-lg mb-3">Create or Send
+                        Newsletter</a>
+                    <form action="{% url 'newsletters:newsletter' %}"
+                        method="get">
+                        <p class="text-left">Change to another newsletter in the
+                            list to display, in the dropdown menu:</p>
+                        <div class="d-grid">
+                            <select name="id" class="form-select"
+                                onchange="this.form.submit()">
+                                {% for n in all_newsletters %}
+                                <option value="{{ n.id }}"
+                                    {% if n.id == newsletter.id %}selected{% endif %}>
+                                    {{ n.title }}
+                                </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+{% endif %}
 <div class="container mt-5">
     <div class="row justify-content-center align-items-center">
         <div class="col-12 col-md-8 text-left">
@@ -90,12 +105,11 @@ Artzy!{% endblock %}
         </div>
     </div>
 </div>
-<div class="row justify-content-center">
+<div class="row justify-content-center mx-2 mx-sm-0">
     <div class="col-12 col-md-6 my-5">
         <h2>Sign up for our newsletter</h2>
         <!-- Sign up newsletter form -->
-        <form method="post"
-            action="{% url 'newsletter:subscribe_to_newsletter' %}">
+        <form method="post" action="{% url 'newsletter:subscribe_to_newsletter' %}">
             {{ subscriber_form | crispy }}
             {% csrf_token %}
             <button class="btn btn-secondary" type="submit">Submit</button>
@@ -103,26 +117,20 @@ Artzy!{% endblock %}
         {% if messages %}
         <div class="alert alert-dismissible">
             {% for message in messages %}
-            <div {% if message.tags %} class="alert {{ message.tags }}"
-                {% endif %}>
+            <div {% if message.tags %} class="alert {{ message.tags }}" {% endif %}>
                 {{ message }}
             </div>
             {% endfor %}
         </div>
         {% endif %}
-        <h2>Unsubscribe from our newsletter</h2>
-        <!-- Unsubscribe newsletter form -->
+        <h3 class="mt-5">Unsubscribe</h3>
         <form method="post" action="{% url 'newsletter:unsubscribe_website' %}">
             {% csrf_token %}
-            <div class="form-group">
-                {{ unsubscribe_form.email|as_crispy_field }}
+            <div class="form-outline mb-4">
+                <input type="email" name="email" id="id_email_unsubscribe" class="form-control border-black profile-form-input" placeholder="Email *" {% if form.email.value %}value="{{ form.email.value }}" {% endif %}>
             </div>
-            <div class="form-group">
-                {{ unsubscribe_form.confirm_unsubscribe|as_crispy_field }}
-            </div>
-            <button class="btn btn-danger" type="submit">Unsubscribe</button>
+            <button type="submit" class="btn btn-danger text-white btn-outline-dark mb-4">Unsubscribe</button>
         </form>
     </div>
 </div>
-
 {% endblock content %}

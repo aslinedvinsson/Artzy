@@ -3,6 +3,7 @@ and then modified -->
 {% extends 'base.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
+
 {% block title %}About Artzy: Empowering Enthusiasts in Our Online Art
 Marketplace | Our Mission and Vision{% endblock %}
 {% block description %}Discover Artzy's journey to make art accessible and
@@ -14,44 +15,48 @@ in love with the perfect piece of art.{% endblock %}
 {% block content %}
 <div class="overlay"></div>
 <div class="container mt-5">
+    <!-- About Section -->
     <div class="row justify-content-center align-items-center">
-        <div class="col-12 col-md-8 text-center">
-            <h1 class="text-left">About Us</h1>
+        <div class="col-12 text-center">
+            <h1>About Us</h1>
+        </div>
+    </div>
+    <div class="row justify-content-center align-items-center align-items-lg-start pt-5">
+        <!-- Image Column -->
+        <div class="col-12 col-lg-6 d-flex align-items-center">
             {% if about.about_image %}
-            <img src="{{ about.about_image.url }}" class="about_image"
-                alt="{{ about.title }}" style="width: 100%;">
+            <img src="{{ about.about_image.url }}" class="img-fluid" alt="{{ about.title }}">
             {% else %}
             <!-- Fallback to static image 'about.jpg' -->
-            <img src="{% static 'images/about.jpg' %}" class="about_image"
-                alt="About Us" style="width: 100%;">
+            <img src="{% static 'images/about.jpg' %}" class="img-fluid" alt="About Us">
             {% endif %}
-            <div class="text-start mt-5">
-                <h2 class="text-left">{{ about.title }}</h2>
-                <div class="text-left">{{ about.content | safe }}</div>
+        </div>
+        <!-- Content Column -->
+        <div class="col-12 col-lg-6 d-flex align-items-center">
+            <div class="w-100"> <!-- Ensure the content also takes the full width -->
+                <h2>{{ about.title }}</h2>
+                <div>{{ about.content | safe }}</div>
             </div>
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="col text-center">
-        <p class=""><em>Updated on: {{ about.updated_on|date:"F d, Y"  }}</em>
-        </p>
 
-    </div>
-</div>
-<div id='contact-us' class="row justify-content-center mt-5">
-    <div class="col-12 col-md-6 my-5">
-        <h2>Contact Us!</h2>
-        <p>Thank you so much for reaching out to us! Your feedback and
-            questions mean a lot to us. In the meantime, feel free to explore
-            our art.
-        </p>
-        <!-- Contact form -->
-        <form method="post">
-            {{ contact_form | crispy }}
-            {% csrf_token %}
-            <button class="btn btn-secondary" type="submit">Submit</button>
-        </form>
+<!-- Contact Section -->
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-6 text-center">
+            <h2>Contact Us!</h2>
+            <p>Thank you so much for reaching out to us! Your feedback and
+                questions mean a lot to us. In the meantime, feel free to
+                explore
+                our art.</p>
+            <!-- Contact form -->
+            <form method="post">
+                {{ contact_form | crispy }}
+                {% csrf_token %}
+                <button class="btn btn-secondary" type="submit">Submit</button>
+            </form>
+        </div>
     </div>
 </div>
 

@@ -2,24 +2,26 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container">
-    <div class="row">
-        <div class="col"></div>
-    </div>
-</div>
+<!-- ... existing header code ... -->
 {% endblock %}
-{% block head_title %}Discover Art Without Prejudice | Artzy: Shop Unique
-Artworks Online{% endblock %}
-{% block meta_description %}Embark on a journey of art discovery with Artzy,
-where curiosity meets the
+
+{% block head_title %}
+Discover Art Without Prejudice | Artzy: Shop Unique Artworks Online
+{% endblock %}
+
+{% block meta_description %}
+Embark on a journey of art discovery with Artzy, where curiosity meets the
 canvas. Shop a diverse collection of artworks accessible to all, no art
 background required. Start your art collection today and find pieces that speak
-to you.{% endblock %}
+to you.
+{% endblock %}
+
 <meta name="google-site-verification" content="wG9qMM7TQwnS3-T7ZnDvqZprUD323QHR4wVyD5c34h4" />
+
 {% block content %}
-<div class="container h-100">
-    <div class="row h-100">
-        <div class="col-7 col-md-6 my-auto">
+<div class="container d-flex flex-column min-vh-100">
+    <div class="row flex-grow-1">
+        <div class="col-12 col-md-7 col-lg-6 my-auto mb-5">
             <h1 class="display-4 logo-font text-black">
                 KNOWING NOTHING ABOUT ART
             </h1>
@@ -32,9 +34,6 @@ to you.{% endblock %}
                         Art</a>
                 </h4>
             </div>
-
-
-
         </div>
     </div>
 </div>
