@@ -21,7 +21,7 @@ class SubscriberForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         placeholders = {
             'name': 'Name',
-            'email': 'Email Address',
+            'email': 'Email',
         }
 
         self.fields['name'].widget.attrs['autofocus'] = True
@@ -34,6 +34,29 @@ class SubscriberForm(forms.ModelForm):
             self.fields[field].widget.attrs[
                 'class'] = 'border-black profile-form-input'
             self.fields[field].label = False
+
+
+
+class UnsubscribeForm(forms.Form):
+    """
+    A form for unsubscribing from the newsletter. Requests email address and
+    confirmation to unsubscribe, ensuring user intent.
+    """
+    email = forms.EmailField(
+        label='Email',
+        widget=forms.EmailInput(attrs={
+            'id': 'unsubscribe_email',
+            'class': 'border-black profile-form-input',
+            'placeholder': 'Email Address *',
+        })
+    )
+    confirm_unsubscribe = forms.BooleanField(
+        label='Confirm Unsubscribe',
+        widget=forms.CheckboxInput(attrs={
+            'id': 'confirm_unsubscribe',
+            'class': 'custom-checkbox'
+        })
+    )
 
 
 class CreateNewsletterForm(forms.ModelForm):
@@ -56,11 +79,3 @@ class SendNewsletterForm(forms.Form):
     """
     newsletter = forms.ModelChoiceField(queryset=Newsletter.objects.all(),
                                         label="Select Newsletter")
-
-class UnsubscribeForm(forms.Form):
-    """
-    A form for unsubscribing from the newsletter. Requests email address and
-    confirmation to unsubscribe, ensuring user intent.
-    """
-    email = forms.EmailField(label='Email')
-    confirm_unsubscribe = forms.BooleanField(label='Confirm Unsubscribe')
