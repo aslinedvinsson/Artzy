@@ -1,4 +1,4 @@
-***Must haves to include except everything i PP4***
+
 
 # Artzy
 ![](docs/responsive.png)////
@@ -106,14 +106,14 @@ Artzy’s mission is deeply rooted in demystifying the art discovery and purchas
 Artzy is dedicated to serving a diverse group including "art enthusiasts", "gift shoppers", and "home decorators" looking for "unique art gifts" and "wall art" to personalize their spaces. Our platform targets individuals embarking on their "art discovery journey", leveraging keywords to resonate with users seeking "easy art buying experiences" and "art for personal spaces", ensuring a wide reach and relevance in search queries.
 
 ## Addressing Audience Needs: Tailoring the Artzy Experience
-We understand the unique needs of our audience, from those making their first art purchase to seasoned collectors. Artzy's intuitive platform offers "emotion-based art", employing keywords that highlight our unique selling points like "informative art descriptions" and "user-friendly art selection". This strategic use of language not only aids in SEO but ensures our platform meets the varied needs of our users, making art selection an informative and enjoyable process.
+We understand the unique needs of our audience, from those making their first art purchase to seasoned collectors. Artzy's intuitive platform offers "emotion-based art", employing keywords that highlight our unique selling point like "user-friendly art selection" and "emotion-based art". This strategic use of language not only aids in SEO but ensures our platform meets the varied needs of our users, making art selection an informative and enjoyable process.
 
 ## Business Model and Customer Goals: Promoting Art Accessibility and Engagement
 As a B2C e-commerce platform, Artzy champions "democratizing art access" and enhancing the art purchasing experience. Our diverse collection, ensuring there's something for every taste and preference. By integrating keywords related to "art e-commerce" and "digital art marketplace" into our digital marketing strategies, we aim to attract a broad audience and foster a culture of art appreciation, making art accessible to all.
 
 
 ## SEO Strategies: Enhancing Artzy's Digital Footprint
-To maximize Artzy’s visibility online, we meticulously research and integrate specific keywords like "buy art online", and "start an art collection". Utilizing tools like Google Trends and Keyword Planner allows us to identify and incorporate terms that potential customers frequently use. Our content, from website metadata to newsletters, is carefully crafted to include these keywords, ensuring Artzy ranks highly in art-related searches. This strategic approach not only improves our search engine rankings but also makes art more accessible to those seeking it.
+To maximize Artzy’s visibility online, we research and integrate specific keywords like "buy art online", and "start an art collection". Utilizing tools like Google Trends and Keyword Planner allows us to identify and incorporate terms that potential customers frequently use. Our content, from website metadata to newsletters, is carefully crafted to include these keywords, ensuring Artzy ranks highly in art-related searches. This strategic approach not only improves our search engine rankings but also makes art more accessible to those seeking it.
 
 ### Note on SEO and Keyword Strategy
 In our mission to make art more accessible and to enhance Artzy's visibility online, we've employed a strategic approach to SEO (Search Engine Optimization). You'll notice terms within quotation marks, such as "buy art online" and "digital art marketplace," throughout this document. These aren't random; they're strategic keywords identified to enhance Artzy's search engine visibility. The quotation marks highlight these carefully chosen keywords, underscoring our targeted SEO efforts to connect with our audience more effectively. This transparent approach is part of our ongoing strategy to make Artzy easily discoverable and accessible to all art enthusiasts and newcomers alike.
@@ -126,24 +126,25 @@ Utilizing a robots.txt file for Artzy directs search engine bots on which pages 
 
 
 ## Agile
-This project followes agile methods. I identified Epics and broke them down to user stories to map out what needs the customer and seller have. For every user story there are Acceptance criteria that needs to be met and in some cases more concrete tasks. The userstories are sorted with the use of the MoSCoW method, giving the userstories labels like "Must Have", "Should Have", "Could Have" and "Wount have". Git Hub projects is used to document it and track the progress of the deveoplment. The Epics and User stories are divided into to Milestone. The first one is Requirements Specification and Analysis, Technical set up and Design and the second one is Interface and user experience including CRUD functionality, search and sort.
+The project followes agile methods. I identified epics and broke them down to user stories to map out what needs the customer and seller have. For every user story there are acceptance criteria that needs to be met and in some cases more concrete tasks. The userstories are sorted with the use of the MoSCoW method, giving the userstories labels like "Must Have", "Should Have", "Could Have" and "Wount have". Git Hub projects is used to document it and track the progress of the deveoplment. The epics and user stories are divided into to milestone. The first one is Requirements Specification and Analysis, Technical set up and Design and the second one is Interface and User experience including CRUD functionalities, search, sort and checkout processes.
 
-The Epics and User stories are documented on a Kanban board on Git Hub and can be viewed [here](https://github.com/users/aslinedvinsson/projects/8/views/1)
+The epics and user stories are documented on a Kanban board on Git Hub and can be viewed [here](https://github.com/users/aslinedvinsson/projects/8/views/1) ////printscreen kanban
 
 ## Work approaach
 This project originated from a template provided by a Code Institute project called Boutique Ado. After implementing all the features from Boutique Ado, I transitioned the project into a unique creation of my own. I modified aspects of the front end and introduced new features to the back end. For much of the design work, I utilized Bootstrap.
 
 ## Marketing strategies
-To effectively market Artzy, the art e-commerce platform, I will employ a multi-faceted strategy designed to engage our target audience and enhance our online presence.
+To effectively market Artzy, the art e-commerce platform, I employ a multi-faceted strategy designed to engage our target audience and enhance online presence.
 
 ### Content Marketing
-We will develop newsletters and social media content that educates and inspires our audience about art. By focusing on storytelling, we aim to highlight artists and their work, making art more relatable and accessible to everyone.
+Newsletters and social media content are used to educate and inspire our audience about art. By focusing on storytelling, the aim is to highlight artists and their work, making art more relatable and accessible to everyone.
+![](docs/marketing_newsletter.png)////
 
 ### SEO
-We will optimize the website with relevant keywords identified through research. This will improve our visibility in search engine results and attract organic traffic from individuals interested in purchasing art.
+I optimize the website with relevant keywords identified through research. This will improve the visibility in search engine results and attract organic traffic from individuals interested in purchasing art.
 
 ### Social Media Engagement
-We will utilize platforms like Instagram and Facebook, where visual content thrives, to showcase our art pieces. Creating engaging posts and connecting with our audience through comments and stories will be key.
+Artzy utilize platforms like Instagram and Facebook, where visual content thrives, to showcase the art pieces. Creating engaging posts and connecting with the audience through comments and stories is key.
 
 #### Facebook
 ![](docs/fb.png)
@@ -153,15 +154,13 @@ Facebook posts
 ![](docs/fbpost2.png)
 
 ### Email Marketing
-We will launch an email newsletter to keep subscribers informed about new arrivals, exclusive offers, and upcoming sales. This strategy is intended to encourage repeat visits and foster a community around the brand.
+Artzy launch an email newsletter to keep subscribers informed about new arrivals, exclusive offers, and upcoming sales. This strategy is intended to encourage repeat visits and foster a community around the brand.
 
 
 # UI/UX Design
 Artzy e-commerce platform is a vibrant gateway to creativity, featuring an inspiring homepage alive with color, designed to captivate and draw art lovers into a world of visual delight. With a minimalist approach, I’ve chosen a white background for browsing art, ensuring each piece stands out with its true colors and details, offering a clean and focused viewing experience akin to an exclusive gallery.
 
 Navigation on my site is intentionally streamlined and intuitive, allowing you to explore curated collections effortlessly. The visual design emphasizes a user-friendly interface, highlighting simplicity and ease, making the discovery and acquisition of art an enjoyable and straightforward journey for every visitor.
-
-By focusing on a clean, engaging, and easy-to-navigate experience, I aim to enrich the art buying process, turning it into a journey of discovery and inspiration for all who visit.
 
 ## Wireframes
 
@@ -273,12 +272,12 @@ By focusing on a clean, engaging, and easy-to-navigate experience, I aim to enri
 </details>
 
 
-## Colors
-Choosing a vibrant and colorful image for the homepage against a white background with black text is a strategic move designed to instantly grab the visitor's attention. This pop of color makes a bold statement, ensuring the artwork and, by extension, the products, are the stars of the show.
+## Colors////
+Choosing a vibrant and colorful image for the homepage with black text is a strategic move designed to instantly grab the visitor's attention. This pop of color makes a bold statement, ensuring the artwork and, by extension, the products, are the stars of the show.
 
-The contrasting white header and black footer enhance readability and frame the homepage art beautifully, without overshadowing the main attraction. On subsequent pages, the white background with black text continues this theme of simplicity and focus, ensuring that the colorful homepage art remains the visual highlight of the website.
+The header integrates well with the colors of the index page, as well as with the white background on other pages and together with the black footer they enhance readability and frame the homepage art beautifully, without overshadowing the main attraction. On subsequent pages, the white background with black text continues this theme of simplicity and focus, ensuring that the colorful homepage art remains the visual highlight of the website.
 
-This color scheme is not just about aesthetics; it's a deliberate choice to make the shopping experience more engaging and memorable. By keeping the design elements minimal and focused, the website directs visitors' attention exactly where it needs to be: on the products and the vibrant imagery that represents them. This approach not only improves user engagement but also strengthens the site's branding.
+This color scheme is not just about aesthetics; it's a deliberate choice to make the shopping experience more engaging and memorable. By keeping the design elements minimal and focused, the website directs visitors' attention exactly where it needs to be: on the products and the vibrant imagery that represents them.
 
 ## Fonts
 PT Sans from [Google Fonts](https://fonts.google.com/?query=pt+sans) is a versatile, open-source font that's free and easy to use across all digital platforms. Its wide language support and variety of styles make it suitable for global projects and diverse design needs, ensuring the content is both accessible and visually appealing.
@@ -439,68 +438,87 @@ li>
 </ul>
 </details>
 
-Git Hub Kanban board can be viewed [here](https://github.com/users/aslinedvinsson/projects/8/views/1)
+Git Hub Kanban board can be viewed [here](https://github.com/users/aslinedvinsson/projects/8/views/1) ////
 
 
-## Features Overview/// Korrekturläs
+## Features Overview/// Korrekturläs lägg printscreen
 
 ### Navigation Bar
-- Unregistered User: Displays navigation links, brand logo (redirects to the home page), search bar, Login/Sign Up link, and shopping bag icon
-- Registered User: Displays navigation links, brand logo (redirects to the home page), search bar, user's account name, and shopping cart icon
+![](docs/navigationdt.png)
+
+The navigation bar is designed to be intuitive and user-friendly, offering a seamless browsing experience regardless of the user's registration status.
+Unregistered User: For visitors who still need to sign up, the navigation bar features easy access to the site's offerings. It includes a brand logo that serves as a home button, a search bar for finding artwork, a link to the login/signup page for easy account creation, and a shopping cart icon that previews items selected for purchase.
+Registered User: For logged-in users, the navigation bar becomes more personalized. It still includes the brand logo, search functionality, and a shopping cart icon reflecting the user's selected items. Additionally, it provides a dropdown menu for easy access to the profile page and wishlist, enhancing the user's shopping experience.
+
 
 ### Home Page
-Visible elements vary based on user registration status
+![](docs/navigationdt.png)
+The home page of Artzy displays a large image that inspires a desire to see more art, accompanied by a message: "Knowing Nothing About Art Yet Having That Burning Desire to Stare at Something, with Feelings Unnamed," along with a "Shop Art" button.
 
 ### Account Registration Page
-Displays a registration form and a link to the login page
+![](docs/navigationdt.png)
+The registration page is straightforward and welcoming to new users. It features a simple registration form asking for basic information to create an account. Below the form, there's a direct link for users who already have an account to log in, making the transition between registering and logging in seamless.
 
 ### Login Page
-Features a login form, "Remember Me" option, links to the home page and password recovery
+![](docs/navigationdt.png)
+The login page is clean and user-centric, featuring a form for email or username and password input, a "Remember Me" checkbox for convenience, and a password recovery link for those who need it. Links back to the home page are provided for users who decide against logging in at the moment.
 
 ### Logout Page
-Shows a logout button
+![](docs/navigationdt.png)
+On the logout page, users find a simple and clear interface with a logout button. This page confirms the user's intention to log out and provides a smooth exit route from their profile.
 
 ### Product Listing Page
-Lists products with an image, name, artist, category, and price Includes a "Back to Top" button
+![](docs/navigationdt.png)
+Artzy’s product listing page is a gallery of available artworks, showcasing images, artists, categories, ratings, and prices. It’s designed for easy navigation, including filters for categories, artists, print or painting and price ranges. A "Back to Top" button improves user navigation.
 
 ### Product Detail Page
-Details product name, artist, category, price, description, quantity selector, "Keep Shopping" and "Add to Bag" buttons, and an "Add to Wishlist" option
+![](docs/navigationdt.png)
+The product detail page offers images of the artwork, detailed information about the artist, category, rating, print paper, price, and a thorough description. Users can select the quantity they wish to purchase and have the option to keep shopping or add the product to their bag. An "Add to Wishlist" button is available for registered users, encouraging engagement and return visits.
 
 ### Wishlist Page
-Specific contents undisclosed
+![](docs/navigationdt.png)
+Designing models to efficiently represent wishlists and wishlist items, along with writing queries to manage the relationships between users, wishlists, products, and wishlist items, proved complex. I focused on ensuring efficient data retrieval and updates, a task that became increasingly crucial as the dataset grew. I had scenarios where a user attempted to add a product already present in their wishlist. To address this, I implemented logic to prevent duplicate entries and to provide appropriate feedback to the user. Additionally, adding items from the wishlist to the shopping cart required coordination among different parts of the application. I ensured that items were added correctly and quantities were managed appropriately, all while providing feedback to the user. Moreover, I worked on implementing dynamic updates to the wishlist without full page reloads to enhance the user experience, making it more responsive.
 
 ### About Page
-Showcases an image and text about Artzy
+![](docs/navigationdt.png)
+The About Page is a space that tells the story of Artzy. It features an image that embodies the essence of the platform, accompanied by text that narrates the mission and vision of Artzy.
 
 ### Contact Page
-Contains a user contact form
-
-### Newsletter Page
-Displays an image and the latest newsletter, which is also distributed to subscribers
+![](docs/navigationdt.png)
+Designed for ease of communication, the Contact Page includes a straightforward user contact form. This form allows visitors and users to quickly send inquiries or feedback directly to the Artzy team, ensuring that voices are heard and any concerns are addressed promptly.
 
 ### User Experience Differentiation
-Describes the difference in site visibility and access between logged-in and logged-out users
+Artzy offers a tailored browsing experience depending on the user's login status. Logged-out users see a general overview of the platform's features and art products. They can still purchase art and subscribe to the newsletter without creating an account. Logged-in users have access to a profile page, where they can view their order history and access their wishlist, allowing them to save products for future purchases.
+
+### Newsletter Page
+![](docs/navigationdt.png)
+The newsletter page displays an image and the latest newsletter, which is also distributed to subscribers.
+
+I integrated multiple complex newsletter functionality, covering subscription, newsletter management, and email distribution. Managing the flow and ensuring all parts worked together seamlessly was a bit challenging. When creating dynamic unsubscribe links unique to each subscriber, as demonstrated in the send_confirmation_email function, it was necessary to carefully construct URLs and encode subscriber IDs. This process ensured that the unsubscribe functionality worked correctly and securely for each user. To enable superusers to select which newsletter appears on the page, I utilized session variables to remember their choices.
 
 ### Shopping Cart Page
-Lists order information, including price, quantity, subtotal, item management options, cart total, delivery charges, free delivery threshold, and navigation buttons
+![](docs/navigationdt.png)
+The Shopping Cart Page is a detailed overview of a user's intended purchases. It lists each item's price, quantity, and subtotal, alongside options to manage the cart items. The page also summarizes the total cost, delivery charges, and highlights the free delivery threshold. Navigation buttons offer a smooth transition to continue shopping or proceed to checkout.
 
 ### Checkout Page
-Presents an order summary, delivery information, payment options, and completion steps
+![](docs/navigationdt.png)
+The Checkout Page provides users with a final review of their order, including a summary of the items, delivery information, and available payment options. It outlines the steps needed to complete the purchase, ensuring a transparent and user-friendly checkout process.
 
 ### Checkout Success Page
-Confirms the order and informs about the confirmation email sent
+![](docs/navigationdt.png)
+After a successful purchase, the Checkout Success Page confirms the order and informs the user that a confirmation email has been sent. This page serves as reassurance of the successful transaction, providing details on next steps and delivery expectations.
 
 ### User Profile Page
-Displays the user's default picture, delivery details, order history, with links to detailed order confirmation, and profile management options
-
-### Update Profile Page
-Offers a form for updating the user profile, including image selection, order history review, and navigation options
+![](docs/navigationdt.png)
+Displays the user's delivery details and order history, with links to detailed order confirmation, profile management and wishlist.
 
 ### Super User - Product Management
-Includes options for adding, updating, and deleting products
+![](docs/navigationdt.png)
+Exclusively accessible to super users, this section provides tools for adding, updating, and deleting products from the Artzy catalog. The superuser can also create and send newsletters, as well as change the displayed newsletter, directly from the site without accessing the Django admin panel.
 
 ### Footer
-Visible on all pages, featuring a free delivery banner
+![](docs/navigationdt.png)
+Present on every page, the footer is a constant element that enhances the user's navigation experience. It prominently features a free delivery banner, along with information such as shop hours, contact us, follow us on social media, privacy policy, and a newsletter sign-up form, which is also available on the newsletter site.
 
 
 ## Security Features and Defensive Design
@@ -530,52 +548,40 @@ To enhance site security, Cross-Site Request Forgery (CSRF) tokens have been imp
 ### Custom Models
 #### Wishlist & WishlistItem Models
 
-In this Django application, I have developed two custom models designed to manage user wishlists and the items within them. These models are integral to a system that includes user profiles and product catalogs, aiming to provide a seamless e-commerce or retail experience.
+In this Django application, I have developed custom models designed to manage user wishlists and the items within them. These models are integral to a system that includes user profiles and product catalogs, aiming to provide a seamless e-commerce or retail experience.
 
 **Wishlist Model**
 
-The Wishlist model serves as a container for a user's desired products, enabling them to save items they are interested in purchasing at a later time. Each wishlist is linked to a user's profile and can be named for easy identification. The key features of the Wishlist model include:
+The Wishlist model functions within the application's relational database, designed to store product IDs that users intend to purchase later. It is directly linked to the User Profile model through a foreign key, establishing a one-to-many relationship. Currently, this relationship allows each user to maintain a single wishlist. Future enhancements are planned to expand this functionality, enabling users to create and manage multiple wishlists.
 
-User Association: Each wishlist is connected to a specific user profile, ensuring personalized wishlists for each user.
-Name: Users can give their wishlist a name, making it easier to manage and access.
+User association is achieved by incorporating a foreign key in the Wishlist model that references the User Profiel models's primary key. This setup ensures that each wishlist is unequivocally associated with a single user account.
+
+The model includes a varchar field named 'name', permitting users to assign a unique, descriptive title to each wishlist. This feature is in a later stage of development crucial for users who wish to organize their desired items under various categories or themes for easier future access.
 
 **WishlistItem Model**
-The WishlistItem model represents individual items saved within a wishlist. This model allows users to add products from the product catalog to their wishlists. The key attributes include:
+
+The WishlistItem model represents individual items saved within a wishlist. This model allows users to add products from the product catalog to their wishlists.
 
 Wishlist Association: Each item belongs to a specific wishlist, which aids in the organized management of wishlist items.
 Product Reference: Items within a wishlist are directly linked to products from the product catalog, making it easy for users to access product details and purchase options.
-These models are crucial for creating a user-friendly e-commerce platform, enhancing the shopping experience by allowing users to curate and manage lists of items they wish to purchase.
 
-#### Newsletter and Subscriber Models
+#### Custom Newsletter and Subscriber Models
+The Newsletter and subscriber models together facilitate a straightforward yet effective system for managing newsletter subscriptions and distributing content to a list of subscribers.
+
 **Newsletter model**
 
-The Newsletter model is designed to create and manage newsletters within the application. Each newsletter includes a title, content, and an optional image. The created_on field automatically records the time when a newsletter is created. This model is essential for distributing information, updates, or promotional content to subscribers.
-
-Attributes:
-
-title: The title of the newsletter, allowing up to 200 characters.
-content: The main body of the newsletter, stored as text.
-created_on: The date and time when the newsletter was created, automatically set upon creation.
-newsletter_image: An optional image for the newsletter, enhancing its visual appeal.
+The custom Newsletter model is designed to create and manage newsletters within the application. Each newsletter includes a title, content, and an optional image. The created_on field automatically records the time when a newsletter is created. This model is essential for distributing information, updates, or promotional content to subscribers.
 
 **Subscriber Model**
 
-The Subscriber model keeps track of individuals who subscribe to receive newsletters. It includes the subscriber's email, name, and a unique identifier. The email field is unique for each subscriber, ensuring that each email address is only registered once.
-
-Attributes:
-
-email: The email address of the subscriber, used as a unique identifier.
-name: The name of the subscriber.
-identifier: A unique UUID for each subscriber, generated automatically and not editable, serving as the primary key.
-These models together facilitate a straightforward yet effective system for managing newsletter subscriptions and distributing content to a list of subscribers.
-
+The custom Subscriber model keeps track of individuals who subscribe to receive newsletters. It includes the subscriber's email, name, and a unique identifier. The email field is unique for each subscriber, ensuring that each email address is only registered once.
 
 #### Other models
 The code used for the following models are taken from CodeInstitute Walkthroughs "I think, therefore I blog" and "Boutique Ado Walktrhough" and are slightly modified.
 
 **Product Model**
 
-The Product model was taken from Code Insistute Boutique Ado Walktrhough, and slightly altered. The model now includes artist and is_print attributes, providing a distinction between original artworks and prints. This adjustment allows users to filter products based on whether they are original paintings or prints. Furthermore, for prints, users can select the type of print paper from options such as Japanese Washi, Cotton Rag, Bristol Paper, and Photo Paper, enhancing customization and user choice.
+ The model is altered and now includes artist and is_print attributes, providing a distinction between original artworks and prints. This adjustment allows users to filter products based on whether they are original paintings or prints. Furthermore, for prints, users can select the type of print paper from options such as Japanese Washi, Cotton Rag, Bristol Paper, and Photo Paper, enhancing customization and user choice.
 
 
 **About Model**
@@ -584,7 +590,8 @@ The About model is crafted for the "About Us" section, providing a space to shar
 
 **ContactRequest Model**
 
-The ContactRequest model manages incoming messages through a contact form, recording the sender's name, email, and message. A boolean field, read, indicates whether the message has been reviewed. This setup streamlines communication, allowing for efficient tracking and response to inquiries.
+The ContactRequest model manages incoming messages through a contact form, recording the sender's name, email, and message. A boolean field, read, indicates whether the message has been reviewed.
+
 Additionally, there are minor alterations to some of the other models.
 
 ## Technologies
@@ -602,11 +609,9 @@ Additionally, there are minor alterations to some of the other models.
 
 - **AWS S3 and IAM**: Amazon Ib Services (AWS) provides cloud computing services. S3 (Simple Storage Service) is for storage, and IAM (Identity and Access Management) is for managing access to AWS services securely. [AWS S3 and IAM](https://aws.amazon.com/)
 
-### Frameworks
-- **Django**: A high-level Python Ib framework that enctheages rapid development and clean, pragmatic design. [Django](https://www.djangoproject.com/)
+### Frameworks and Libraries
+- **Django**: A high-level Python framework that enctheages rapid development and clean, pragmatic design. [Django](https://www.djangoproject.com/)
 - **Bootstrap**: A front-end framework for developing responsive and mobile-first websites. [Bootstrap](https://getbootstrap.com/)
-
-### Libraries
 - **Psycopg2**: A PostgreSQL adapter for Python. [Psycopg2](https://pypi.org/project/psycopg2/)
 - **Gunicorn**: A Python WSGI HTTP Server for UNIX, used to run Python Ib applications. [Gunicorn](https://gunicorn.org/)
 
@@ -629,23 +634,16 @@ Additionally, there are minor alterations to some of the other models.
 - **Google Chrome DevTools**: A set of Ib developer tools built directly into the Google Chrome browser. [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/)
 - **HTML Validation Service**: A tool to check the markup validity of Ib documents in HTML. [HTML Validation](https://validator.w3.org/)
 - **CSS Validation Service**: A service to check the validity of Cascading Style Sheets (CSS). [CSS Validation](https://jigsaw.w3.org/css-validator/)
-
 - **CI Python Linter**: A Code Insitute tool to validate Python. [CI Python Linter](https://pep8ci.herokuapp.com/)
 - **JSHint**: A tool to validate JavaScript. [JSHint](https://jshint.com)
 
-- **Lighthouse**: An open-sthece, automated tool for improving the quality of Ib pages. [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
+- **Lighthouse**: Google Lighthouse is a web performance and SEO auditing tool that analyzes web pages, providing detailed reports and recommendations for improving page speed, accessibility, and user experience. [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
 
 
 ## Testing
 Full testing can be seen in [TESTING.md](https://github.com/TESTING.md) file.
 /////
-responsive testing
-browser compatability
-bugs resolved and unresolved
-lighthouse tesing
-code validation
-user stories testing
-feature testing
+
 ### Bugs
 
 ## Deployment
@@ -710,12 +708,24 @@ feature testing
 - Hit enter to execute the cloning command, creating a local copy of the repository.
 
 
-## References and Credits ////
-//////boutique Ado boilerploate
+## References and Credits
+### References
+The Code Institute's repository boilerplate for Gitpod was utilized, along with code from the two walkthroughs: Boutique Ado and I Think Therefore I Blog.
 
-    <!-- Footer Inspired by https://mdbootstrap.com/docs/standard/navigation/footer/-->↩
-additional tutorials
-media and content used for educational purpose
+Footer is inspired by https://mdbootstrap.com/docs/standard/navigation/footer/
+
+### Credits
+A heartfelt thank you to all the Code Institute tutors for their invaluable guidance and support throughout this journey.
+
+My deepest appreciation goes to my mentor Jad Mokdad, whose support, wisdom, and endless patience have been the cornerstone of my learning journey. His expert guidance navigated me through the intricate challenges of this project, encouraging me to expand my horizons and aim for a higher standard. The successful completion of this project and my growth into a full-stack developer are direct results of his mentorship. I am immensely grateful for his significant role in shaping my path in the tech world. Thank you for being an integral part of my journey towards becoming a full-stack developer.
+
+
+
+
+
+
+
+
 
 ### Disclaimer
 The content available on this site is solely for educational purposes and should not be interpreted as professional advice.

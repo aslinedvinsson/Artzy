@@ -1,5 +1,0 @@
-User-agent: *
-Disallow: /cart/
-Disallow: /checkout/
-Disallow: /profiles/
-Sitemap: https://artzy-f5e67145006a.herokuapp.com/sitemap.xml
