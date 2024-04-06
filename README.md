@@ -151,6 +151,7 @@ Artzy utilize platforms like Instagram and Facebook, where visual content thrive
 ![](docs/fb.png)
 
 Facebook posts
+
 ![](docs/fbpost.png)
 ![](docs/fbpost2.png)
 
@@ -417,7 +418,7 @@ li>
 </ul>
 </details>
 
-Git Hub Kanban board can be viewed [here](https://github.com/users/aslinedvinsson/projects/8/views/1)
+Git Hub Kanban board and all user stories can be viewed [here](https://github.com/users/aslinedvinsson/projects/8/views/1)
 ![](docs/kanban.png)
 
 
@@ -460,14 +461,17 @@ The product detail page offers images of the artwork, detailed information about
 
 ### Wishlist Page
 ![](docs/wishlist.png)
+
 Designing models to efficiently represent wishlists and wishlist items, along with writing queries to manage the relationships between users, wishlists, products, and wishlist items, proved complex. I focused on ensuring efficient data retrieval and updates, a task that became increasingly crucial as the dataset grew. I had scenarios where a user attempted to add a product already present in their wishlist. To address this, I implemented logic to prevent duplicate entries and to provide appropriate feedback to the user. Additionally, adding items from the wishlist to the shopping cart required coordination among different parts of the application. I ensured that items were added correctly and quantities were managed appropriately, all while providing feedback to the user. Moreover, I worked on implementing dynamic updates to the wishlist without full page reloads to enhance the user experience, making it more responsive.
 
 ### About Page
 ![](docs/about.png)
+
 The About Page is a space that tells the story of Artzy. It features an image that embodies the essence of the platform, accompanied by text that narrates the mission and vision of Artzy.
 
 ### Contact Page
 ![](docs/contact.png)
+
 Designed for ease of communication, the Contact Page includes a straightforward user contact form. This form allows visitors and users to quickly send inquiries or feedback directly to the Artzy team, ensuring that voices are heard and any concerns are addressed promptly.
 
 ### User Experience Differentiation
@@ -482,10 +486,12 @@ I integrated multiple complex newsletter functionality, covering subscription, n
 
 ### Shopping Cart Page
 ![](docs/cartdt.png)
+
 The Shopping Cart Page is a detailed overview of a user's intended purchases. It lists each item's price, quantity, and subtotal, alongside options to manage the cart items. The page also summarizes the total cost, delivery charges, and highlights the free delivery threshold. Navigation buttons offer a smooth transition to continue shopping or proceed to checkout.
 
 ### Checkout Page
 ![](docs/checkout.png)
+
 The Checkout Page provides users with a final review of their order, including a summary of the items, delivery information, and available payment options. It outlines the steps needed to complete the purchase, ensuring a transparent and user-friendly checkout process.
 
 ### Checkout Success Page
@@ -493,6 +499,7 @@ After a successful purchase, the Checkout Success Page confirms the order and in
 
 ### User Profile Page
 ![](docs/profiledt.png)
+
 Displays the user's delivery details and order history, with links to detailed order confirmation, profile management and wishlist.
 
 ### Super User - Product & Newletter Management
@@ -503,8 +510,14 @@ Exclusively accessible to super users, this section provides tools for adding, u
 
 ### Footer
 ![](docs/footerdt.png)
+
 Present on every page, the footer is a constant element that enhances the user's navigation experience. It prominently features a free delivery banner, along with information such as shop hours, contact us, follow us on social media, privacy policy, and a newsletter sign-up form, which is also available on the newsletter site.
 
+### Toast messages
+![](docs/success.png)
+![](docs/alert.png)
+
+Toast messages provide users with feedback on their actions within the web application. Using Django, these lightweight, dismissible notifications inform users about the result of their actions without redirecting them away from their current page.
 
 ## Security Features and Defensive Design
 
