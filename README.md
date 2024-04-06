@@ -1,7 +1,7 @@
 
 
 # Artzy
-![](docs/responsive.png)////
+![](docs/amiresponsive.png)
 
 
 Artzy is a distinctive e-commerce platform developed as a part of Portfolio Project 5 for the Code Institute's Full Stack Software Developer Course. Utilizing Django, HTML, CSS, JavaScript, and Python, Artzy dismantles the barriers to art appreciation, offering an extensive array of paintings and prints accessible to everyone, irrespective of their art knowledge.
