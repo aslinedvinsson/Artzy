@@ -16,84 +16,82 @@ The site was deployed via Heroku - the live site can be found here -
 [Artzy](https://artzy-f5e67145006a.herokuapp.com/)
 
 # Table of Contents
-
-- **[Project Rationale - Bridging the Art Appreciation Gap](#project-rationale---bridging-the-art-appreciation-gap)**
-  - [Purpose and Goal: Mission to Simplify Art Discovery and Ownership](#purpose-and-goal-mission-to-simplify-art-discovery-and-ownership)
-  - [Target Audience: Who Artzy Serves - Connecting with Our Audience](#target-audience-who-artzy-serves---connecting-with-our-audience)
-  - [Addressing Target Audience Needs: A Tailored Approach to Meeting Our Audience's Needs](#addressing-target-audience-needs-a-tailored-approach-to-meeting-our-audiences-needs)
-  - [Business Model and Customer Goals: Accessibility at Scale and Enhancing Customer Experience through Art](#business-model-and-customer-goals-accessibility-at-scale-and-enhancing-customer-experience-through-art)
-
-- **[Marketing and SEO Strategies](#marketing-and-seo-strategies)**
-  - [SEO Strategies](#seo-strategies)
+- [Artzy](#artzy)
+- [Table of Contents](#table-of-contents)
+- [Project Rationale - Bridging the Art Appreciation Gap with Artzy](#project-rationale---bridging-the-art-appreciation-gap-with-artzy)
+  - [Purpose and Goal: Simplifying Art Discovery and Ownership for Everyone](#purpose-and-goal-simplifying-art-discovery-and-ownership-for-everyone)
+  - [Target Audience: Artzy's Commitment to Art Enthusiasts and Beyond](#target-audience-artzys-commitment-to-art-enthusiasts-and-beyond)
+  - [Addressing Audience Needs: Tailoring the Artzy Experience](#addressing-audience-needs-tailoring-the-artzy-experience)
+  - [Business Model and Customer Goals: Promoting Art Accessibility and Engagement](#business-model-and-customer-goals-promoting-art-accessibility-and-engagement)
+  - [SEO Strategies: Enhancing Artzy's Digital Footprint](#seo-strategies-enhancing-artzys-digital-footprint)
+    - [Note on SEO and Keyword Strategy](#note-on-seo-and-keyword-strategy)
   - [Sitemap.xml](#sitemapxml)
   - [Robots.txt](#robotstxt)
-  - [Marketing Strategies](#marketing-strategies)
+  - [Agile](#agile)
+  - [Work approaach](#work-approaach)
+  - [Marketing strategies](#marketing-strategies)
     - [Content Marketing](#content-marketing)
+    - [SEO](#seo)
     - [Social Media Engagement](#social-media-engagement)
+      - [Facebook](#facebook)
     - [Email Marketing](#email-marketing)
-
-- **[UI/UX Design](#uiux-design)**
+- [UI/UX Design](#uiux-design)
   - [Wireframes](#wireframes)
   - [Colors](#colors)
   - [Fonts](#fonts)
-  - [Images and Icons](#images-and-icons)
-
-- **[Features Overview](#features-overview)**
-  - [Navigation Bar](#navigation-bar)
-  - [Home Page](#home-page)
-  - [Account Registration and Management Pages](#account-registration-and-management-pages)
-    - [Registration](#registration)
-    - [Login](#login)
-    - [Logout](#logout)
-    - [User Profile](#user-profile)
-    - [Update Profile](#update-profile)
-  - [Product Exploration Pages](#product-exploration-pages)
-    - [Listing](#listing)
-    - [Detail](#detail)
-    - [Wishlist](#wishlist)
-  - [About and Contact Pages](#about-and-contact-pages)
-  - [Newsletter and Communication Pages](#newsletter-and-communication-pages)
-  - [Shopping Cart and Checkout Process](#shopping-cart-and-checkout-process)
-  - [Checkout Page](#checkout-page)
-  - [Checkout Success Page](#checkout-success-page)
-
-- **[Security Features and Defensive Design](#security-features-and-defensive-design)**
-  - [User Authentication](#user-authentication)
-  - [Form Validation](#form-validation)
-  - [Database Security](#database-security)
-  - [Error Pages](#error-pages)
-
-- **[Database Design](#database-design)**
-  - [Entity Relationship Diagram](#entity-relationship-diagram)
-  - [Custom Models](#custom-models)
-
-- **[Technologies Used](#technologies-used)**
-  - [Languages](#languages)
-  - [Frameworks and Libraries](#frameworks-and-libraries)
-  - [Programs and Services](#programs-and-services)
-
-- **[Testing](#testing)**
-  - [Responsive Testing](#responsive-testing)
-  - [Browser Compatibility](#browser-compatibility)
-  - [Bugs and Resolutions](#bugs-and-resolutions)
-  - [Code Validation](#code-validation)
-  - [User Stories Testing](#user-stories-testing)
-  - [Feature Testing](#feature-testing)
-
-- **[Deployment](#deployment)**
-  - [Heroku](#heroku)
-  - [Stripe](#stripe)
-  - [AWS](#aws)
-  - [Forking the GitHub Repository](#forking-the-github-repository)
-  - [Cloning the Repository](#cloning-the-repository)
-
-- **[References and Credits](#references-and-credits)**
-  - [Content and Media](#content-and-media)
-  - [Acknowledgements](#acknowledgements)
-
-- **[Disclaimer](#disclaimer)**
-
-
+  - [Images](#images)
+  - [Icons](#icons)
+  - [Text content](#text-content)
+  - [User stories](#user-stories)
+  - [Features Overview](#features-overview)
+    - [Navigation Bar](#navigation-bar)
+    - [Home Page](#home-page)
+    - [Account Registration Page](#account-registration-page)
+    - [Login Page](#login-page)
+    - [Logout Page](#logout-page)
+    - [Product Listing Page](#product-listing-page)
+    - [Product Detail Page](#product-detail-page)
+    - [Wishlist Page](#wishlist-page)
+    - [About Page](#about-page)
+    - [Contact Page](#contact-page)
+    - [User Experience Differentiation](#user-experience-differentiation)
+    - [Newsletter Page](#newsletter-page)
+    - [Shopping Cart Page](#shopping-cart-page)
+    - [Checkout Page](#checkout-page)
+    - [Checkout Success Page](#checkout-success-page)
+    - [User Profile Page](#user-profile-page)
+    - [Super User - Product \& Newletter Management](#super-user---product--newletter-management)
+    - [Footer](#footer)
+    - [Toast messages](#toast-messages)
+  - [Security Features and Defensive Design](#security-features-and-defensive-design)
+    - [User Authentication](#user-authentication)
+    - [Form Validation](#form-validation)
+    - [Database Security](#database-security)
+    - [Error Page](#error-page)
+  - [Database Design](#database-design)
+    - [Entity Relationship Diagram](#entity-relationship-diagram)
+    - [Custom Models](#custom-models)
+      - [Wishlist \& WishlistItem Models](#wishlist--wishlistitem-models)
+      - [Custom Newsletter and Subscriber Models](#custom-newsletter-and-subscriber-models)
+      - [Other models](#other-models)
+  - [Technologies](#technologies)
+    - [Language](#language)
+    - [Systems](#systems)
+    - [Frameworks and Libraries](#frameworks-and-libraries)
+    - [Programs and Services](#programs-and-services)
+    - [Additional Tools](#additional-tools)
+  - [Testing](#testing)
+    - [Bugs](#bugs)
+  - [Deployment](#deployment)
+    - [Heroku](#heroku)
+    - [Stripe](#stripe)
+    - [AWS](#aws)
+    - [Forking repository](#forking-repository)
+    - [Cloning repository](#cloning-repository)
+  - [References and Credits](#references-and-credits)
+    - [References](#references)
+    - [Credits](#credits)
+    - [Disclaimer](#disclaimer)
 
 
 # Project Rationale - Bridging the Art Appreciation Gap with Artzy
