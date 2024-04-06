@@ -92,9 +92,9 @@
                         <div class="input-group-append">
                             <button
                                 class="form-control btn btn-black border border-black"
-                                type="submit">
+                                type="submit" aria-label="Search">
                                 <span class="icon">
-                                    <i class="fas fa-search" aria-label="Search"></i>
+                                    <i class="fas fa-search"></i>
                                 </span>
                             </button>
                         </div>
@@ -221,20 +221,22 @@
                         <li style="margin-left: 0; padding-left: 0;">
                             <a class="btn btn-link btn-floating btn-lg text-white"
                                 href="https://www.facebook.com" target="_blank"
-                                role="button" data-mdb-ripple-color="white"><i
-                                    class="fab fa-facebook-f" aria-label="Facebook"></i></a>
+                                role="button" data-mdb-ripple-color="white" aria-label="Facebook"><i
+                                    class="fab fa-facebook-f"></i></a>
                         </li>
                         <li>
                             <a class="btn btn-link btn-floating btn-lg text-white"
                                 href="https://www.instagram.com" target="_blank"
-                                role="button" data-mdb-ripple-color="white"><i
-                                    class="fab fa-instagram" aria-label="Instagram"></i></a>
+                                role="button" data-mdb-ripple-color="white" aria-label="Instagram"><i
+                                    class="fab fa-instagram"
+                                    ></i></a>
                         </li>
                         <li>
                             <a class="btn btn-link btn-floating btn-lg text-white"
                                 href="https://www.youtube.com" target="_blank"
-                                role="button" data-mdb-ripple-color="white"><i
-                                    class="fab fa-youtube" aria-label="You Tube"></i></a>
+                                role="button" data-mdb-ripple-color="white"aria-label="You Tube" ><i
+                                    class="fab fa-youtube"
+                                    ></i></a>
                         </li>
                     </ul>
                 </div>
@@ -246,14 +248,16 @@
                             <p>For inquiries or support, contact us via mail<a
                                     class="btn btn-link btn-floating btn-lg text-white"
                                     href="{% url 'about:about' %}#contact-us"
-                                    role="button" aria-label="Link to contact form"
+                                    role="button"
+                                    aria-label="Link to contact form"
                                     data-mdb-ripple-color="white"><i
                                         class="fas fa-envelope"></i></a>or
                                 social media</p>
                         </li>
                         <li>
                             <a href="https://www.termsfeed.com/live/1ef9e4d0-3b73-4a97-9672-a1939610d116"
-                                target="_blank" rel="nofollow" aria-label="Privacy Policy">
+                                target="_blank" rel="nofollow"
+                                aria-label="Privacy Policy">
                                 <p class="text-white">Privacy Policy</p>
                             </a>
                         </li>
@@ -266,7 +270,7 @@
                         action="{% url 'newsletter:subscribe_to_newsletter' %}">
                         {% csrf_token %}
                         <div class="form-outline mb-4">
-                            <input type="text" name="name" id="id_name"
+                            <input type="text" name="name" id="id_name_footer"
                                 class="form-control text-white bg-dark border-white  profile-form-input"
                                 placeholder="Name *"
                                 {% if form.name.value %}value="{{ form.name.value }}"
