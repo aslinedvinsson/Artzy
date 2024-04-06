@@ -637,7 +637,7 @@ Additionally, there are minor alterations to some of the other models.
 
 
 ## Testing
-Full testing can be seen in [TESTING.md](https://github.com/TESTING.md) file.
+Full testing can be seen in [TESTING.md](TESTING.md) file.
 
 
 ### Bugs
