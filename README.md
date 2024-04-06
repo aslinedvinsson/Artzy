@@ -128,7 +128,8 @@ Utilizing a robots.txt file for Artzy directs search engine bots on which pages 
 ## Agile
 The project followes agile methods. I identified epics and broke them down to user stories to map out what needs the customer and seller have. For every user story there are acceptance criteria that needs to be met and in some cases more concrete tasks. The userstories are sorted with the use of the MoSCoW method, giving the userstories labels like "Must Have", "Should Have", "Could Have" and "Wount have". Git Hub projects is used to document it and track the progress of the deveoplment. The epics and user stories are divided into to milestone. The first one is Requirements Specification and Analysis, Technical set up and Design and the second one is Interface and User experience including CRUD functionalities, search, sort and checkout processes.
 
-The epics and user stories are documented on a Kanban board on Git Hub and can be viewed [here](https://github.com/users/aslinedvinsson/projects/8/views/1) ////printscreen kanban
+The epics and user stories are documented on a Kanban board on Git Hub and can be viewed [here](https://github.com/users/aslinedvinsson/projects/8/views/1)
+![](docs/kanban.png)
 
 ## Work approaach
 This project originated from a template provided by a Code Institute project called Boutique Ado. After implementing all the features from Boutique Ado, I transitioned the project into a unique creation of my own. I modified aspects of the front end and introduced new features to the back end. For much of the design work, I utilized Bootstrap.
@@ -138,7 +139,7 @@ To effectively market Artzy, the art e-commerce platform, I employ a multi-facet
 
 ### Content Marketing
 Newsletters and social media content are used to educate and inspire our audience about art. By focusing on storytelling, the aim is to highlight artists and their work, making art more relatable and accessible to everyone.
-![](docs/marketing_newsletter.png)////
+![](docs/marketing_newsletter.png)
 
 ### SEO
 I optimize the website with relevant keywords identified through research. This will improve the visibility in search engine results and attract organic traffic from individuals interested in purchasing art.
@@ -416,7 +417,8 @@ li>
 </ul>
 </details>
 
-Git Hub Kanban board can be viewed [here](https://github.com/users/aslinedvinsson/projects/8/views/1) ////
+Git Hub Kanban board can be viewed [here](https://github.com/users/aslinedvinsson/projects/8/views/1)
+![](docs/kanban.png)
 
 
 ## Features Overview
@@ -625,9 +627,10 @@ Additionally, there are minor alterations to some of the other models.
 
 ## Testing
 Full testing can be seen in [TESTING.md](https://github.com/TESTING.md) file.
-/////
+
 
 ### Bugs
+All identified bugs were resolved.
 
 ## Deployment
 

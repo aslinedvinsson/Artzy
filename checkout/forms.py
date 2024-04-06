@@ -33,8 +33,15 @@ class OrderForm(forms.ModelForm):
             if field != 'country':
                 if self.fields[field].required:
                     placeholder = f'{placeholders[field]} *'
+                    aria_label = f'{placeholders[field]} (Required)'
                 else:
                     placeholder = placeholders[field]
-                self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = 'stripe-style-input'
+                    aria_label = placeholders[field]
+                self.fields[field].widget.attrs.update({
+                    'placeholder': placeholder,
+                    'class': 'stripe-style-input',
+                    'aria-label': aria_label
+                })
+            else:
+                self.fields[field].widget.attrs['class'] = 'stripe-style-input'
             self.fields[field].label = False
